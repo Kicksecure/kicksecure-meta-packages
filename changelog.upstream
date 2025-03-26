@@ -1,3 +1,22 @@
+commit cae49ed13a8c1a3ad5c0586337dba538d9d611de
+Merge: 99c6c8c 0a8be74
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Mar 26 04:41:08 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/sysmaint-panel'
+
+commit 0a8be74c2435ce64a8ee21127a58f585fc963691
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Mar 25 23:33:49 2025 -0500
+
+    Add sysmaint-panel to kicksecure-desktop-applications-xfce
+
+commit 99c6c8c8ca6ec6acf0649ea4f2f3fb18fee5b0e1
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Feb 4 09:46:40 2025 +0000
+
+    bumped changelog version
+
 commit fc28cfce1a6d7fd282dc4e16b2a5b2557958e770
 Merge: 7e302a5 d183520
 Author: Patrick Schleizer <adrelanos@whonix.org>
