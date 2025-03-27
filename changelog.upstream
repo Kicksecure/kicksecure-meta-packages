@@ -1,3 +1,22 @@
+commit 831aeee3e3a3a9d7a14a8e11c5395542c44ad51c
+Merge: 6f2dc63 a67215b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Mar 27 04:00:01 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/notifyd'
+
+commit a67215bd620232a0ce6381cccb37dfa825d73818
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Wed Mar 26 22:55:50 2025 -0500
+
+    Add xfce4-notifyd to essential GUI packages
+
+commit 6f2dc63c81f389f978f9829468d2e9421de144ef
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Mar 26 09:16:01 2025 +0000
+
+    bumped changelog version
+
 commit cae49ed13a8c1a3ad5c0586337dba538d9d611de
 Merge: 99c6c8c 0a8be74
 Author: Patrick Schleizer <adrelanos@whonix.org>
