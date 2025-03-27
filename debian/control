@@ -270,6 +270,7 @@ Depends: accountsservice,
          lightdm,
          xdg-desktop-portal-gtk,
          xfce4,
+         xfce4-notifyd,
          ${misc:Depends}
 Description: Recommended applications for hardened Xfce Desktop Environment
  A metapackage, which installs minimal, yet complete enough
