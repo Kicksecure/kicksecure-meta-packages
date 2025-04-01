@@ -1,3 +1,19 @@
+commit 2b78e9973552423b74b7c77a955a66b348e0dc7e
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Apr 1 08:19:29 2025 -0400
+
+    Revert "Add xfce4-notifyd to essential GUI packages"
+    
+    This reverts commit a67215bd620232a0ce6381cccb37dfa825d73818.
+    
+    mate-notification-daemon is better since it has not a 32 characters notification message maximum by default.
+
+commit 0691a08b60b95dd85839d2511435796d1aca4b54
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Mar 27 08:41:58 2025 +0000
+
+    bumped changelog version
+
 commit 831aeee3e3a3a9d7a14a8e11c5395542c44ad51c
 Merge: 6f2dc63 a67215b
 Author: Patrick Schleizer <adrelanos@whonix.org>
