@@ -173,7 +173,7 @@ Depends: apparmor-profiles-kicksecure | dummy-dependency-apparmor-profiles-kicks
          iputils-ping,
          jitterentropy-rngd,
          less,
-         libblockdev-crypto2,
+         libblockdev-crypto2 | libblockdev-crypto3,
          libpam-tmpdir,
          lsof,
          man-db,
