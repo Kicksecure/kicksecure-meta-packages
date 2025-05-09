@@ -78,6 +78,7 @@ Pre-Depends: legacy-dist
 Replaces: non-qubes-vm-enhancements-gui
 Depends: non-qubes-enhancements-cli,
  rads,
+ trayer,
  zulucrypt-gui,
  ${misc:Depends}
 Description: Recommended packages for graphical systems (GUI)
