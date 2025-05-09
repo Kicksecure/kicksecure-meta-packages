@@ -1,3 +1,23 @@
+commit 9c5c2fcd35d39f2c29e49e850f7ca2d97f2d7908
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri May 9 07:42:34 2025 -0400
+
+    add `trayer` to `non-qubes-enhancements-gui`
+    
+    because needed for sysmaint session in X11
+
+commit ce5d409fc8ed634b55611756de2371c257cd302a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri May 9 07:42:13 2025 -0400
+
+    refactoring
+
+commit 21c8b67cd861b0681b0c52556ca9b7445acb0aac
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Apr 1 12:20:25 2025 +0000
+
+    bumped changelog version
+
 commit 2b78e9973552423b74b7c77a955a66b348e0dc7e
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Apr 1 08:19:29 2025 -0400
