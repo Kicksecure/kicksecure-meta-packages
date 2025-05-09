@@ -76,7 +76,10 @@ Package: non-qubes-enhancements-gui
 Architecture: all
 Pre-Depends: legacy-dist
 Replaces: non-qubes-vm-enhancements-gui
-Depends: non-qubes-enhancements-cli, rads, zulucrypt-gui, ${misc:Depends}
+Depends: non-qubes-enhancements-cli,
+ rads,
+ zulucrypt-gui,
+ ${misc:Depends}
 Description: Recommended packages for graphical systems (GUI)
  A metapackage, which includes recommended packages which are useful within
  GUI based non-Qubes machines.
