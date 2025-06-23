@@ -1,3 +1,16 @@
+commit d04d571e1463c355d88fcd967122f402afb22c4b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Jun 22 16:20:46 2025 -0400
+
+    no longer install ZuluCrypt by default
+    https://forums.whonix.org/t/zulucrypt-luks-container-gui-cli/4876/19
+
+commit a6acbdf7c01bc20f63432f83f95477b3a1f9156b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri May 9 11:45:09 2025 +0000
+
+    bumped changelog version
+
 commit 9c5c2fcd35d39f2c29e49e850f7ca2d97f2d7908
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Fri May 9 07:42:34 2025 -0400
