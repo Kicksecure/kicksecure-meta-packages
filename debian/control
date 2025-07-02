@@ -298,6 +298,7 @@ Depends: gvfs,
          thunar-volman,
          xarchiver,
          xfce4-terminal,
+         xscreensaver,
          ${misc:Depends}
 Description: Recommended applications for hardened Xfce desktop GUI
  A metapackage, which installs minimal, yet complete enough
