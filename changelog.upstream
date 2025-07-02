@@ -1,3 +1,22 @@
+commit 567fa6a7925401c1a87d3c31cd01917452d6750e
+Merge: 4a413df b3bc86a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Jul 2 16:24:35 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/screen-lock'
+
+commit b3bc86a73d6277f103f5c4624182683bdc074525
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Jul 1 16:21:39 2025 -0500
+
+    Add XScreenSaver to kicksecure-desktop-applications-xfce
+
+commit 4a413dff4745404c1ebbce57db3d2fd3358bea8d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Jun 23 06:17:21 2025 +0000
+
+    bumped changelog version
+
 commit d04d571e1463c355d88fcd967122f402afb22c4b
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sun Jun 22 16:20:46 2025 -0400
