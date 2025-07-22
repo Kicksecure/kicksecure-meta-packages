@@ -1,3 +1,22 @@
+commit e76fb095c033216add8b8b522a96da6dfef5d8d0
+Merge: c77d49e 59dee21
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jul 22 03:19:15 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/default-browser'
+
+commit 59dee2126ea40d494668bbf81f34056994390bd3
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Mon Jul 21 19:31:34 2025 -0500
+
+    Replace firefox-esr with browser-choice
+
+commit c77d49ec1af24e338b0032c6a4be57eca3c31336
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Jul 2 20:49:32 2025 +0000
+
+    bumped changelog version
+
 commit 567fa6a7925401c1a87d3c31cd01917452d6750e
 Merge: 4a413df b3bc86a
 Author: Patrick Schleizer <adrelanos@whonix.org>
