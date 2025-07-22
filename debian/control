@@ -309,9 +309,9 @@ Description: Recommended applications for hardened Xfce desktop GUI
 Package: kicksecure-desktop-applications-recommended
 Architecture: all
 Pre-Depends: legacy-dist
-Depends: catfish,
+Depends: browser-choice | dummy-dependency,
+         catfish,
          electrum | dummy-dependency-electrum,
-         firefox-esr | dummy-dependency,
          flatpak,
          gpa,
          keepassxc,
@@ -596,7 +596,8 @@ Description: dummy nonfree package
 Package: dummy-dependency
 Architecture: all
 Depends: ${misc:Depends}
-Provides: firefox-esr,
+Provides: browser-choice,
+          firefox-esr,
           qubes-core-agent-passwordless-root,
           tb-default-browser,
           tb-starter,
