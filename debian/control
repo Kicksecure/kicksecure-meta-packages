@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 13), debhelper-compat (= 13)
 Homepage: https://github.com/Kicksecure/kicksecure-meta-packages
 Vcs-Browser: https://github.com/Kicksecure/kicksecure-meta-packages
 Vcs-Git: https://github.com/Kicksecure/kicksecure-meta-packages.git
-Standards-Version: 4.6.2
+Standards-Version: 4.7.2
 Rules-Requires-Root: no
 
 Package: firmware-nonfreedom
@@ -30,7 +30,6 @@ Depends: amd64-microcode,
          firmware-linux-free,
          firmware-linux-nonfree,
          firmware-misc-nonfree,
-         firmware-ralink,
          firmware-realtek,
          firmware-ti-connectivity,
          firmware-zd1211,
@@ -90,12 +89,12 @@ Description: Recommended packages for graphical systems (GUI)
 Package: non-qubes-audio
 Architecture: all
 Pre-Depends: legacy-dist
-Depends: libasound2,
+Depends: libasound2t64,
          pavucontrol,
          pipewire-audio | pulseaudio,
          pipewire-pulse | pulseaudio,
          rtkit | pulseaudio,
-         wireplumber | pipewire-media-session-pulseaudio | pulseaudio,
+         wireplumber | pulseaudio,
          ${misc:Depends}
 Description: Recommended packages for Audio Support in non-Qubes
  A metapackage, which includes recommended packages which are useful to provide
@@ -163,7 +162,7 @@ Depends: apparmor-profiles-kicksecure | dummy-dependency-apparmor-profiles-kicks
          debian-keyring,
          dbus-user-session,
          distro-info-data,
-         dnsutils,
+         bind9-dnsutils | dnsutils,
          e2fsprogs,
          eject,
          file,
@@ -174,7 +173,7 @@ Depends: apparmor-profiles-kicksecure | dummy-dependency-apparmor-profiles-kicks
          iputils-ping,
          jitterentropy-rngd,
          less,
-         libblockdev-crypto2,
+         libblockdev-crypto3,
          libpam-tmpdir,
          lsof,
          man-db,
@@ -184,7 +183,7 @@ Depends: apparmor-profiles-kicksecure | dummy-dependency-apparmor-profiles-kicks
          net-tools,
          open-link-confirmation,
          openvpn,
-         p7zip-full,
+         7zip,
          pciutils,
          pcmciautils,
          procps,
@@ -248,6 +247,7 @@ Depends: desktop-config-dist,
          libgl1-mesa-dri,
          mesa-vulkan-drivers,
          upower,
+         mate-polkit,
          x11-xserver-utils,
          xdg-desktop-portal,
          xserver-xorg,
@@ -290,7 +290,6 @@ Depends: gvfs,
          lxqt-sudo,
          mousepad,
          pkexec,
-         policykit-1-gnome,
          polkitd,
          sysmaint-panel,
          thunar,
@@ -313,7 +312,6 @@ Depends: browser-choice | dummy-dependency,
          catfish,
          electrum | dummy-dependency-electrum,
          flatpak,
-         gpa,
          keepassxc,
          kicksecure-welcome-page,
          msgcollector-gui,
@@ -535,7 +533,7 @@ Depends: kicksecure-desktop-applications-recommended,
          qubesdb-vm,
          pipewire-qubes | pulseaudio-qubes,
          pipewire-pulse | pulseaudio-qubes,
-         wireplumber | pipewire-media-session-pulseaudio | pulseaudio-qubes,
+         wireplumber | pulseaudio-qubes,
          rtkit | pulseaudio-qubes,
          dbus-user-session,
          xfce4-settings,
