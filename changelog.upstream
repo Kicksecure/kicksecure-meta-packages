@@ -1,3 +1,19 @@
+commit eda8a872236b25cd433dbb4fd7a4e446d8051782
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Aug 7 03:35:39 2025 -0400
+
+    no longer install firmware-b43-installer by default
+    
+    due to upstream bug
+    firmware-b43-installer: firmware download fails due to broken upstream URL and checksum mismatch
+    https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1109025
+
+commit de2e12bbf663b2ac7b1fb5effe611af7aa0639b8
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jul 22 07:24:55 2025 +0000
+
+    bumped changelog version
+
 commit e76fb095c033216add8b8b522a96da6dfef5d8d0
 Merge: c77d49e 59dee21
 Author: Patrick Schleizer <adrelanos@whonix.org>

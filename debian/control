@@ -12,6 +12,10 @@ Vcs-Git: https://github.com/Kicksecure/kicksecure-meta-packages.git
 Standards-Version: 4.7.2
 Rules-Requires-Root: no
 
+## package 'firmware-b43-installer' bug:
+## firmware-b43-installer: firmware download fails due to broken upstream URL and checksum mismatch
+## https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1109025
+## TODO: Fixed in trixie?
 Package: firmware-nonfreedom
 Architecture: all
 Pre-Depends: legacy-dist
@@ -20,7 +24,6 @@ Depends: amd64-microcode,
          firmware-amd-graphics,
          firmware-ath9k-htc,
          firmware-atheros,
-         firmware-b43-installer,
          firmware-brcm80211,
          firmware-intel-sound,
          firmware-ipw2x00,
