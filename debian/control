@@ -262,7 +262,28 @@ Description: Desktop Depends GUI
  A metapackage, which installs dependencies for desktop environments,
  such as KDE, GNOME, etc.
  .
- kicksecure-desktop-environment-essential-xfce depends on this package.
+ kicksecure-desktop-environment-essential-xfce and 
+ kicksecure-desktop-environment-essential-lxqt depend on this package.
+ 
+Package: kicksecure-desktop-environment-essential-gui-wayland
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: desktop-config-dist,
+         desktop-config-dist-dependencies,
+         gtk2-engines-pixbuf,
+         libgl1-mesa-dri,
+         mesa-vulkan-drivers,
+         upower,
+	 labwc,
+         kanshi,
+         waybar,
+         swaybg,
+         ${misc:Depends}
+Description: Desktop Depends GUI
+ A metapackage, which installs dependencies for desktop environments,
+ such as KDE, GNOME, etc. with Wayland support.
+ .
+ kicksecure-desktop-environment-essential-lxqt-wayland depends on this package.
 
 Package: kicksecure-desktop-environment-essential-xfce
 Architecture: all
@@ -278,6 +299,41 @@ Depends: accountsservice,
 Description: Recommended applications for hardened Xfce Desktop Environment
  A metapackage, which installs minimal, yet complete enough
  to contain a very basic Xfce Desktop Environment.
+ .
+ Safe to remove.
+ 
+Package: kicksecure-desktop-environment-essential-lxqt
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: accountsservice,
+         gnome-brave-icon-theme,
+         gnome-keyring,
+         kicksecure-desktop-environment-essential-gui,
+         lightdm,
+         xdg-desktop-portal-gtk,
+         lxqt-core,
+         openbox,
+         ${misc:Depends}
+Description: Recommended applications for hardened LXQt Desktop Environment
+ A metapackage, which installs minimal, yet complete enough
+ to contain a very basic LXQt Desktop Environment.
+ .
+ Safe to remove.
+
+Package: kicksecure-desktop-environment-essential-lxqt-wayland
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: accountsservice,
+         gnome-brave-icon-theme,
+         gnome-keyring,
+         kicksecure-desktop-environment-essential-gui-wayland,
+         lightdm,
+         xdg-desktop-portal-gtk,
+         lxqt-core,
+         ${misc:Depends}
+Description: Recommended applications for hardened LXQt Desktop Environment
+ A metapackage, which installs minimal, yet complete enough
+ to contain a very basic LXQt Desktop Environment with Wayland support.
  .
  Safe to remove.
 
@@ -306,6 +362,27 @@ Depends: gvfs,
 Description: Recommended applications for hardened Xfce desktop GUI
  A metapackage, which installs minimal, yet complete enough
  to contain the very basics, Xfce applications.
+ .
+ Safe to remove.
+ 
+Package: kicksecure-desktop-applications-lxqt
+Architecture: all
+Pre-Depends: legacy-dist
+## When depending on virtual package 'polkit-1-auth-agent', i.e.
+## 'policykit-1-gnome | polkit-1-auth-agent' then 'policykit-1-gnome' will not
+## be installed. At time of writing 'polkit-1-auth-agent' was the only package
+## that 'Provides:' 'polkit-1-auth-agent' anyhow.
+Depends: gvfs,
+         libexo-2-0,
+         lxqt-sudo,
+         pkexec,
+         policykit-1-gnome,
+         polkitd,
+         xarchiver,
+         ${misc:Depends}
+Description: Recommended applications for hardened LXQt desktop GUI
+ A metapackage, which installs minimal, yet complete enough
+ to contain the very basics, LXQt applications.
  .
  Safe to remove.
 
@@ -426,6 +503,18 @@ Description: Kicksecure Xfce GUI
  A metapackage, which installs packages, for Kicksecure Xfce.
  .
  Do not remove.
+ 
+Package: kicksecure-lxqt
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: kicksecure-cli,
+         kicksecure-desktop-applications-lxqt,
+         kicksecure-desktop-environment-essential-lxqt,
+         ${misc:Depends}
+Description: Kicksecure LXQt GUI
+ A metapackage, which installs packages, for Kicksecure LXQt.
+ .
+ Do not remove.
 
 Package: kicksecure-cli-host-packages-recommended
 Architecture: all
@@ -474,6 +563,41 @@ Description: Kicksecure Shared Host Xfce GUI
  (GUI).
  .
  Safe to remove, if you know what you are doing.
+ 
+Package: kicksecure-shared-host-lxqt
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: ddrescueview,
+         discover,
+         gddrescue,
+         gnome-disk-utility,
+         gnome-system-monitor,
+         gparted,
+         grub-live | grub-live-boot | boot-live,
+         gsmartcontrol,
+         hwinfo,
+         icon-pack-dist,
+         non-qubes-enhancements-gui,
+         laptop-detect,
+         lm-sensors,
+         lshw,
+         non-qubes-audio,
+         nvme-cli,
+         psensor,
+         pv,
+         sdwdate-gui,
+         smart-notifier,
+         smartmontools,
+         lxqt-powermanagement,
+         xscreensaver,
+         shutter,
+         ${misc:Depends}
+Description: Kicksecure Shared Host LXQt GUI
+ A metapackage, which installs packages, which are recommended for
+ Kicksecure LXQt Host as well as a Whonix-Host with a graphical user interface
+ (GUI).
+ .
+ Safe to remove, if you know what you are doing.
 
 Package: kicksecure-xfce-host
 Architecture: all
@@ -502,6 +626,40 @@ Depends: kicksecure-cli-vm,
          ${misc:Depends}
 Description: Kicksecure Xfce GUI for VMs
  A metapackage, which installs packages, for Kicksecure Xfce in Virtual
+ Machines.
+ .
+ Not suitable for Qubes since it depends on packages not yet compatible
+ with Qubes.
+ .
+ Do not remove.
+ 
+Package: kicksecure-lxqt-host
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: kicksecure-cli-host,
+         kicksecure-desktop-applications-recommended,
+         kicksecure-network-conf,
+         kicksecure-network-conf-gui,
+         kicksecure-shared-host-lxqt,
+         kicksecure-lxqt,
+         ${misc:Depends}
+Description: Kicksecure Host LXQt GUI
+ A metapackage, which installs packages, for Kicksecure LXQt Host.
+ .
+ Do not remove.
+
+Package: kicksecure-lxqt-vm
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: kicksecure-cli-vm,
+         kicksecure-desktop-applications-recommended,
+         kicksecure-network-conf-gui,
+         kicksecure-lxqt,
+         non-qubes-audio,
+         non-qubes-enhancements-gui,
+         ${misc:Depends}
+Description: Kicksecure LXQt GUI for VMs
+ A metapackage, which installs packages, for Kicksecure LXQt in Virtual
  Machines.
  .
  Not suitable for Qubes since it depends on packages not yet compatible
