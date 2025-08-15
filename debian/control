@@ -144,6 +144,7 @@ Depends: apparmor-profile-dist,
          setup-dist,
          sudo,
          timesanitycheck,
+         usbguard,
          usrmerge,
          ${misc:Depends}
 Description: Dependencies for hardened systems CLI
