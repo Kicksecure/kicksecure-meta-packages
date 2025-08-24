@@ -111,7 +111,7 @@ Description: Recommended packages for Audio Support in non-Qubes
 Package: kicksecure-dependencies-system
 Architecture: all
 Pre-Depends: legacy-dist
-Depends: dracut, ${misc:Depends}
+Depends: dracut, systemd-cryptsetup, ${misc:Depends}
 Description: System for hardened systems
  A metapackage, which installs system packages which
  should be installed on hardened systems.
