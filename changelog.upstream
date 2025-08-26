@@ -1,3 +1,41 @@
+commit 38cc8899ca5f49aea4a0c9a8010be946343c34a0
+Merge: 208e8d2 2e1a140
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 20 07:41:15 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 208e8d2a7161b024bbb0430d6e0b959cbf34ab8f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 20 06:57:26 2025 -0400
+
+    bumped Standards-Version
+
+commit 2b088ef5a946651db8876d569b5e52795340b5bb
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 20 06:25:33 2025 -0400
+
+    readme
+
+commit 2e1a1406960fe2ff773d844563a67900022bdf6a
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Fri Aug 15 17:18:28 2025 -0500
+
+    Add dependency on USBGuard to enable security-misc's USBGuard configuration
+
+commit dbff29ccb59c73a1df5412402f1115d5e06854c7
+Merge: 20b2b4c ae4a098
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Aug 7 19:33:13 2025 -0500
+
+    Merge branch 'master' into arraybolt3/trixie
+
+commit ae4a0982ab99812c6fd3c4de0cd9eb9e6be909d9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Aug 7 07:36:18 2025 +0000
+
+    bumped changelog version
+
 commit eda8a872236b25cd433dbb4fd7a4e446d8051782
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Aug 7 03:35:39 2025 -0400
@@ -7,6 +45,12 @@ Date:   Thu Aug 7 03:35:39 2025 -0400
     due to upstream bug
     firmware-b43-installer: firmware download fails due to broken upstream URL and checksum mismatch
     https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1109025
+
+commit 20b2b4ccc1377d8843b35ac68e6f484e28cd3658
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Aug 5 22:58:02 2025 -0500
+
+    Port to Trixie.
 
 commit de2e12bbf663b2ac7b1fb5effe611af7aa0639b8
 Author: Patrick Schleizer <adrelanos@whonix.org>
