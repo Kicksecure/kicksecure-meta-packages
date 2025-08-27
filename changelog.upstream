@@ -1,3 +1,54 @@
+commit df0ea1bd204712e93894b570e36357dc6ac62b1d
+Merge: feb34e4 1e47013
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Aug 27 05:57:57 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 1e47013aff55ffad5587273f1dc0ccc0953da1c2
+Merge: 1bf4eea feb34e4
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Tue Aug 26 19:19:53 2025 -0500
+
+    Merge branch 'master' into arraybolt3/trixie
+
+commit feb34e4ea1caa53f5ecd824f86ff9797e8bd4e06
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Aug 26 09:07:42 2025 +0000
+
+    bumped changelog version
+
+commit 1bf4eeaf0739bf24d0527068098f82089e9db33d
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sun Aug 24 00:11:08 2025 -0500
+
+    Hard-depend on systemd-cryptsetup
+
+commit 61df4609cf39c5e39f31c0baa2a06af857e13b4c
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sat Aug 23 23:19:57 2025 -0500
+
+    Adjust grub-live installation code for initramfs-tools support removal
+
+commit 6c6c48cb326930b80947282550f1b4407109cf44
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Fri Aug 22 19:43:21 2025 -0500
+
+    Remove initramfs-tools support
+
+commit 4883bea78a03739f90b77e096ebf39d213fb1286
+Merge: 954f607 38cc889
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Aug 21 19:55:00 2025 -0500
+
+    Merge branch 'master' into arraybolt3/trixie
+
+commit 954f607cb463cf920b294a9a2fc112d1e6bbfb7f
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Aug 21 18:25:18 2025 -0500
+
+    Switch desktop to LXQt.
+
 commit 38cc8899ca5f49aea4a0c9a8010be946343c34a0
 Merge: 208e8d2 2e1a140
 Author: Patrick Schleizer <adrelanos@whonix.org>
