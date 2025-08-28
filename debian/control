@@ -1,6 +1,3 @@
-## Copyright (C) 2012 - 2025 ENCRYPTED SUPPORT LLC <adrelanos@kicksecure.com>
-## See the file COPYING for copying conditions.
-
 Source: kicksecure-meta-packages
 Section: metapackages
 Priority: optional
@@ -12,10 +9,556 @@ Vcs-Git: https://github.com/Kicksecure/kicksecure-meta-packages.git
 Standards-Version: 4.7.2
 Rules-Requires-Root: no
 
-## package 'firmware-b43-installer' bug:
-## firmware-b43-installer: firmware download fails due to broken upstream URL and checksum mismatch
-## https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1109025
-## TODO: Fixed in trixie?
+Package: dist-general-cli
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: dracut,
+ systemd-cryptsetup,
+ apparmor-profile-dist,
+ apt-transport-tor,
+ apt-utils,
+ bootclockrandomization,
+ ca-certificates,
+ dialog,
+ dist-base-files,
+ gawk,
+ init,
+ initializer-dist,
+ locales,
+ menu,
+ repository-dist,
+ sdwdate,
+ security-misc,
+ setup-dist,
+ sudo,
+ timesanitycheck,
+ usbguard,
+ usrmerge,
+ apparmor-profiles-kicksecure | dummy-dependency-apparmor-profiles-kicksecure,
+ apparmor-utils,
+ bash-completion,
+ boot-info-script,
+ btrfs-progs,
+ bzip2,
+ curl,
+ debian-keyring,
+ dbus-user-session,
+ distro-info-data,
+ bind9-dnsutils | dnsutils,
+ e2fsprogs,
+ eject,
+ file,
+ haveged,
+ hunspell-en-us,
+ iotop,
+ iproute2,
+ iputils-ping,
+ jitterentropy-rngd,
+ less,
+ libblockdev-crypto3,
+ libpam-tmpdir,
+ lsof,
+ man-db,
+ most,
+ nano,
+ net-tools,
+ openvpn,
+ 7zip,
+ pciutils,
+ pcmciautils,
+ procps,
+ secure-delete,
+ sensible-utils,
+ strace,
+ sysfsutils,
+ systemcheck,
+ torsocks,
+ traceroute,
+ udisks2,
+ unar,
+ unzip,
+ usability-misc,
+ usbutils,
+ vim,
+ xz-utils,
+ zip,
+ codecrypt,
+ diceware,
+ dirmngr,
+ equivs,
+ extrepo,
+ fuse,
+ gpg,
+ gpg-agent,
+ magic-wormhole,
+ makepasswd,
+ pwgen,
+ htop,
+ pv,
+ cryptsetup,
+ dmsetup,
+ udev,
+ anon-apt-sources-list,
+ tor,
+ ${misc:Depends}
+Breaks: kicksecure-dependencies-system, kicksecure-dependencies-cli, kicksecure-recommended-cli, kicksecure-default-applications-cli
+Replaces: kicksecure-dependencies-system, kicksecure-dependencies-cli, kicksecure-recommended-cli, kicksecure-default-applications-cli
+Description: All systems, all hardware, command-line packages
+ For all hardened systems.
+ .
+ For all hardware platforms.
+ .
+ Provides packages for basic command-line-only installations.
+
+Package: dist-general-gui-all
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: desktop-config-dist,
+ desktop-config-dist-dependencies,
+ gtk2-engines-pixbuf,
+ libgl1-mesa-dri,
+ mesa-vulkan-drivers,
+ upower,
+ labwc,
+ mate-polkit,
+ xdg-desktop-portal,
+ catfish,
+ electrum | dummy-dependency-electrum,
+ msgcollector-gui,
+ repository-dist-wizard,
+ sdwdate-gui,
+ setup-wizard-dist,
+ mesa-utils,
+ open-link-confirmation,
+ accountsservice,
+ icon-pack-dist,
+ libasound2t64,
+ ${misc:Depends}
+Breaks: kicksecure-desktop-environment-essential-gui, kicksecure-desktop-applications-recommended
+Replaces: kicksecure-desktop-environment-essential-gui, kicksecure-desktop-applications-recommended
+Description: All systems, all hardware, GUI packages
+ For all hardened systems.
+ .
+ For all hardware platforms.
+ .
+ Provides packages for all graphical desktop installations.
+
+Package: dist-general-gui-lxqt
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: dummy-dependency-sway,
+ featherpad,
+ gnome-keyring,
+ greetd,
+ lxqt-about,
+ lxqt-admin,
+ lxqt-core,
+ lxqt-openssh-askpass,
+ lxqt-powermanagement,
+ lxqt-sudo,
+ lxqt-wayland-session,
+ papirus-icon-theme,
+ qps,
+ qt6-svg-plugins,
+ qt6-translations-l10n,
+ qt6-wayland,
+ qterminal,
+ swaybg,
+ wdisplays,
+ wlgreet,
+ xdg-desktop-portal-gtk,
+ xdg-desktop-portal-lxqt,
+ gvfs,
+ pkexec,
+ polkitd,
+ sysmaint-panel,
+ pcmanfm-qt,
+ discover,
+ grub-live-dracut | grub-live-boot | boot-live,
+ hwinfo,
+ laptop-detect,
+ lm-sensors,
+ lshw,
+ psensor,
+ partitionmanager,
+ screengrab,
+ smart-notifier,
+ ${misc:Depends}
+Breaks: kicksecure-desktop-environment-essential-lxqt, kicksecure-desktop-applications-lxqt, kicksecure-shared-host-lxqt
+Replaces: kicksecure-desktop-environment-essential-lxqt, kicksecure-desktop-applications-lxqt, kicksecure-shared-host-lxqt
+Description: All systems, all hardware, LXQt GUI packages
+ For all hardened systems.
+ .
+ For all hardware platforms.
+ .
+ Provides packages for LXQt graphical desktop installations.
+
+Package: dist-qubes-cli
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: qubes-core-agent-networking,
+ qubes-input-proxy-sender,
+ qubes-kernel-vm-support,
+ qubes-usb-proxy,
+ qubesdb-vm,
+ vm-config-dist,
+ ${misc:Depends}
+Description: All systems, Qubes VMs, command-line packages
+ For all hardened systems.
+ .
+ For Qubes virtual machines.
+ .
+ Provides packages for basic command-line-only installations.
+
+Package: dist-qubes-gui-lxqt
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: lxqt-config,
+ qubes-core-agent-thunar,
+ ${misc:Depends}
+Description: All systems, Qubes VMs, LXQt GUI packages
+ For all hardened systems.
+ .
+ For Qubes virtual machines.
+ .
+ Provides packages for LXQt graphical desktop installations.
+
+Package: dist-nonqubes-cli
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: acpi-support,
+ console-common,
+ console-setup,
+ grub-live-dracut | grub-live-boot | boot-live,
+ kbd,
+ keyboard-configuration,
+ swap-file-creator,
+ tirdad,
+ smartmontools,
+ ${misc:Depends}
+Breaks: non-qubes-enhancements-cli
+Replaces: non-qubes-enhancements-cli
+Description: All systems, not Qubes VMs, command-line packages
+ For all hardened systems.
+ .
+ For machines other than Qubes virtual machines.
+ .
+ Provides packages for basic command-line-only installations.
+
+Package: dist-nonqubes-gui-all
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: rads,
+ waybar,
+ gsmartcontrol,
+ ${misc:Depends}
+Breaks: non-qubes-enhancements-gui, non-qubes-audio
+Replaces: non-qubes-enhancements-gui, non-qubes-audio
+Description: All systems, not Qubes VMs, GUI packages
+ For all hardened systems.
+ .
+ For machines other than Qubes virtual machines.
+ .
+ Provides packages for all graphical desktop installations.
+
+Package: dist-nonqubes-gui-lxqt
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: swayidle,
+ swaylock,
+ ${misc:Depends}
+Description: All systems, not Qubes VMs, LXQt GUI packages
+ For all hardened systems.
+ .
+ For machines other than Qubes virtual machines.
+ .
+ Provides packages for LXQt graphical desktop installations.
+
+Package: dist-baremetal-cli
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: nvme-cli,
+ tirdad,
+ ${misc:Depends}
+Description: All systems, physical hardware, command-line packages
+ For all hardened systems.
+ .
+ For physical hardware.
+ .
+ Provides packages for basic command-line-only installations.
+
+Package: dist-vm-cli
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: vm-config-dist,
+ ${misc:Depends}
+Description: All systems, VMs, command-line packages
+ For all hardened systems.
+ .
+ For non-Qubes virtual machines.
+ .
+ Provides packages for basic command-line-only installations.
+
+Package: kicksecure-general-cli
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: dosfstools,
+ kicksecure-base-files,
+ lvm2,
+ ntfs-3g,
+ obfs4proxy,
+ gddrescue,
+ ${misc:Depends}
+Breaks: kicksecure-cli
+Replaces: kicksecure-cli
+Description: Kicksecure systems, all hardware, command-line packages
+ For Kicksecure systems.
+ .
+ For all hardware platforms.
+ .
+ Provides packages for basic command-line-only installations.
+
+Package: kicksecure-general-gui-all
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: browser-choice | dummy-dependency,
+ flatpak,
+ keepassxc,
+ kicksecure-welcome-page,
+ lximage-qt,
+ vlc,
+ ddrescueview,
+ pipewire-audio | pulseaudio,
+ pipewire-pulse | pulseaudio,
+ wireplumber | pulseaudio,
+ rtkit | pulseaudio,
+ ${misc:Depends}
+Description: Kicksecure systems, all hardware, GUI packages
+ For Kicksecure systems.
+ .
+ For all hardware platforms.
+ .
+ Provides packages for all graphical desktop installations.
+
+Package: kicksecure-general-gui-lxqt
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: lxqt-archiver,
+ network-manager-gnome,
+ pavucontrol-qt,
+ ${misc:Depends}
+Breaks: kicksecure-lxqt
+Replaces: kicksecure-lxqt
+Description: Kicksecure systems, all hardware, LXQt GUI packages
+ For Kicksecure systems.
+ .
+ For all hardware platforms.
+ .
+ Provides packages for LXQt graphical desktop installations.
+
+Package: kicksecure-qubes-cli
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: qubes-gpg-split,
+ qubes-img-converter,
+ qubes-pdf-converter,
+ ${misc:Depends}
+Description: Kicksecure systems, Qubes VMs, command-line packages
+ For Kicksecure systems.
+ .
+ For Qubes virtual machines.
+ .
+ Provides packages for basic command-line-only installations.
+
+Package: kicksecure-qubes-server
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: kicksecure-qubes-cli,
+ kicksecure-general-cli,
+ dist-qubes-cli,
+ dist-general-cli
+Description: Kicksecure systems, Qubes VMs, server packages
+ For Kicksecure systems.
+ .
+ For Qubes virtual machines.
+ .
+ Provides packages for server installations.
+
+Package: kicksecure-qubes-gui-all
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: pipewire-qubes,
+ ${misc:Depends}
+Description: Kicksecure systems, Qubes VMs, GUI packages
+ For Kicksecure systems.
+ .
+ For Qubes virtual machines.
+ .
+ Provides packages for all graphical desktop installations.
+
+Package: kicksecure-qubes-gui-lxqt
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: kicksecure-qubes-gui-all,
+ kicksecure-qubes-cli,
+ kicksecure-general-gui-lxqt,
+ kicksecure-general-gui-all,
+ kicksecure-general-cli,
+ dist-qubes-gui-lxqt,
+ dist-qubes-cli,
+ dist-general-gui-lxqt,
+ dist-general-gui-all,
+ dist-general-cli,
+ ${misc:Depends}
+Breaks: kicksecure-qubes-gui
+Replaces: kicksecure-qubes-gui
+Description: Kicksecure systems, Qubes VMs, LXQt GUI packages
+ For Kicksecure systems.
+ .
+ For Qubes virtual machines.
+ .
+ Provides packages for LXQt graphical desktop installations.
+
+Package: kicksecure-nonqubes-cli
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: kicksecure-network-conf,
+ ${misc:Depends}
+Description: Kicksecure systems, not Qubes VMs, command-line packages
+ For Kicksecure systems.
+ .
+ For machines other than Qubes virtual machines.
+ .
+ Provides packages for basic command-line-only installations.
+
+Package: kicksecure-nonqubes-gui-all
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: kicksecure-network-conf-gui,
+ ${misc:Depends}
+Description: Kicksecure systems, not Qubes VMs, GUI packages
+ For Kicksecure systems.
+ .
+ For machines other than Qubes virtual machines.
+ .
+ Provides packages for all graphical desktop installations.
+
+Package: kicksecure-baremetal-cli
+Architecture: all
+Pre-Depends: legacy-dist
+Breaks: kicksecure-cli-host, kicksecure-cli-host-packages-recommended
+Replaces: kicksecure-cli-host, kicksecure-cli-host-packages-recommended
+Description: Kicksecure systems, physical hardware, command-line packages
+ For Kicksecure systems.
+ .
+ For physical hardware.
+ .
+ Provides packages for basic command-line-only installations.
+
+Package: kicksecure-baremetal-server
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: kicksecure-baremetal-cli,
+ kicksecure-nonqubes-cli,
+ kicksecure-general-cli,
+ dist-baremetal-cli,
+ dist-nonqubes-cli,
+ dist-general-cli,
+ ${misc:Depends}
+Description: Kicksecure systems, physical hardware, server packages
+ For Kicksecure systems.
+ .
+ For physical hardware.
+ .
+ Provides packages for server installations.
+
+Package: kicksecure-baremetal-gui-lxqt
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: kicksecure-baremetal-cli,
+ kicksecure-nonqubes-gui-all,
+ kicksecure-nonqubes-cli,
+ kicksecure-general-gui-lxqt,
+ kicksecure-general-gui-all,
+ kicksecure-general-cli,
+ dist-baremetal-cli,
+ dist-nonqubes-gui-lxqt,
+ dist-nonqubes-gui-all,
+ dist-nonqubes-cli,
+ dist-general-gui-lxqt,
+ dist-general-gui-all,
+ dist-general-cli,
+ ${misc:Depends}
+Breaks: kicksecure-lxqt-host
+Replaces: kicksecure-lxqt-host
+Description: Kicksecure systems, physical hardware, LXQt GUI packages
+ For Kicksecure systems.
+ .
+ For physical hardware.
+ .
+ Provides packages for LXQt graphical desktop installations.
+
+Package: kicksecure-vm-cli
+Architecture: all
+Pre-Depends: legacy-dist
+Breaks: kicksecure-cli-vm
+Replaces: kicksecure-cli-vm
+Description: Kicksecure systems, VMs, command-line packages
+ For Kicksecure systems.
+ .
+ For non-Qubes virtual machines.
+ .
+ Provides packages for basic command-line-only installations.
+
+Package: kicksecure-vm-server
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: kicksecure-vm-cli,
+ kicksecure-nonqubes-cli,
+ kicksecure-general-cli,
+ dist-vm-cli,
+ dist-nonqubes-cli,
+ dist-general-cli
+Description: Kicksecure systems, VMs, server packages
+ For Kicksecure systems.
+ .
+ For non-Qubes virtual machines.
+ .
+ Provides packages for server installations.
+
+Package: kicksecure-vm-gui-lxqt
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: kicksecure-vm-cli,
+ kicksecure-nonqubes-gui-all,
+ kicksecure-nonqubes-cli,
+ kicksecure-general-gui-lxqt,
+ kicksecure-general-gui-all,
+ kicksecure-general-cli,
+ dist-vm-cli,
+ dist-nonqubes-gui-lxqt,
+ dist-nonqubes-gui-all,
+ dist-nonqubes-cli,
+ dist-general-gui-lxqt,
+ dist-general-gui-all,
+ dist-general-cli,
+ ${misc:Depends}
+Breaks: kicksecure-lxqt-vm
+Replaces: kicksecure-lxqt-vm
+Description: Kicksecure systems, VMs, LXQt GUI packages
+ For Kicksecure systems.
+ .
+ For non-Qubes virtual machines.
+ .
+ Provides packages for LXQt graphical desktop installations.
+
+Package: kicksecure-packages-dependencies-pre
+Architecture: all
+Depends: dist-base-files, kicksecure-network-conf, ${misc:Depends}
+Description: Dependencies for Kicksecure that changes network related files
+ A metapackage, which installs packages which Kicksecure depends on. Can not
+ be merged into another package due to conflicts with chroot build process.
+
 Package: firmware-nonfreedom
 Architecture: all
 Pre-Depends: legacy-dist
@@ -44,309 +587,6 @@ Description: Recommended packages for hosts with nonfreedom hardware design
  nonfreedom hardware design.
  .
  These are not useful in Qubes, since this would be up to Qubes.
- .
- Safe to remove, if you know what you are doing.
-
-Package: non-qubes-enhancements-cli
-Architecture: all
-Pre-Depends: legacy-dist
-Replaces: non-qubes-vm-enhancements-cli
-Depends: acpi-support,
-         console-common,
-         console-setup,
-         cryptsetup,
-         dmsetup,
-         grub-live-dracut | grub-live-boot | boot-live,
-         kbd,
-         keyboard-configuration,
-         swap-file-creator,
-         tirdad,
-         udev,
-         ${misc:Depends}
-Description: Recommended packages for terminal based machines (CLI)
- A metapackage, which includes recommended packages which are useful within
- CLI based non-Qubes machines.
- .
- These are not useful in Qubes, since Qubes
- already has native implementations for those.
- .
- Safe to remove, if you know what you are doing.
-
-Package: non-qubes-enhancements-gui
-Architecture: all
-Pre-Depends: legacy-dist
-Replaces: non-qubes-vm-enhancements-gui
-Depends: non-qubes-enhancements-cli,
- rads,
- waybar,
- ${misc:Depends}
-Description: Recommended packages for graphical systems (GUI)
- A metapackage, which includes recommended packages which are useful within
- GUI based non-Qubes machines.
- .
- These are not useful in Qubes, since Qubes
- already has native implementations for those.
- .
- Safe to remove, if you know what you are doing.
-
-Package: non-qubes-audio
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: libasound2t64,
-         pavucontrol-qt,
-         pipewire-audio | pulseaudio,
-         pipewire-pulse | pulseaudio,
-         rtkit | pulseaudio,
-         wireplumber | pulseaudio,
-         ${misc:Depends}
-Description: Recommended packages for Audio Support in non-Qubes
- A metapackage, which includes recommended packages which are useful to provide
- audio support.
- .
- These are not useful in Qubes, since Qubes
- already has its own native audio implementation.
- .
- Safe to remove, if you know what you are doing.
-
-Package: kicksecure-dependencies-system
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: dracut, systemd-cryptsetup, ${misc:Depends}
-Description: System for hardened systems
- A metapackage, which installs system packages which
- should be installed on hardened systems.
- .
- Currently only depends on boot process related dependencies.
- .
- Do not remove.
-
-## gawk: missing dependency by dracut-core
-## https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1081005
-Package: kicksecure-dependencies-cli
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: apparmor-profile-dist,
-         apt-transport-tor,
-         apt-utils,
-         bootclockrandomization,
-         ca-certificates,
-         desktop-config-dist,
-         dialog,
-         dist-base-files,
-         gawk,
-         init,
-         initializer-dist,
-         locales,
-         menu,
-         repository-dist,
-         sdwdate,
-         security-misc,
-         setup-dist,
-         sudo,
-         timesanitycheck,
-         usbguard,
-         usrmerge,
-         ${misc:Depends}
-Description: Dependencies for hardened systems CLI
- A metapackage, which installs command line interface (CLI) packages which
- should be installed on hardened systems.
- .
- Do not remove.
-
-Package: kicksecure-recommended-cli
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: apparmor-profiles-kicksecure | dummy-dependency-apparmor-profiles-kicksecure,
-         apparmor-utils,
-         bash-completion,
-         boot-info-script,
-         btrfs-progs,
-         bzip2,
-         curl,
-         debian-keyring,
-         dbus-user-session,
-         distro-info-data,
-         bind9-dnsutils | dnsutils,
-         e2fsprogs,
-         eject,
-         file,
-         haveged,
-         hunspell-en-us,
-         iotop,
-         iproute2,
-         iputils-ping,
-         jitterentropy-rngd,
-         less,
-         libblockdev-crypto3,
-         libpam-tmpdir,
-         lsof,
-         man-db,
-         mesa-utils,
-         most,
-         nano,
-         net-tools,
-         open-link-confirmation,
-         openvpn,
-         7zip,
-         pciutils,
-         pcmciautils,
-         procps,
-         secure-delete,
-         sensible-utils,
-         strace,
-         sysfsutils,
-         systemcheck,
-         torsocks,
-         traceroute,
-         udisks2,
-         unar,
-         unzip,
-         usability-misc,
-         usbutils,
-         vim,
-         xz-utils,
-         zip,
-         ${misc:Depends}
-Description: Recommended packages for Kicksecure
- A metapackage, which includes recommended packages to ensure, Kicksecure
- standard tools are available.
- .
- Safe to remove, if you know what you are doing.
-
-Package: kicksecure-default-applications-cli
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: codecrypt,
-         diceware,
-         dirmngr,
-         equivs,
-         extrepo,
-         fuse,
-         gpg,
-         gpg-agent,
-         magic-wormhole,
-         makepasswd,
-         pwgen,
-         ${misc:Depends}
-Description: Default applications packages for Kicksecure
- A metapackage, which includes default packages to ensure, Kicksecure
- useful recommended tools are installed.
- .
- Safe to remove, if you know what you are doing.
-
-## XXX: adding xserver-xorg-video-vmware (used by VirtualBox, yes VirtualBox)
-##      here is non-ideal as this
-##      installs these packages on the host and in all virtualizers too.
-##
-## xserver-xorg-video-vmware is required by VirtualBox which uses VMWare's
-## VMSVGA graphic device.
-##
-## mesa-vulkan-drivers is required for KVM 3D.
-Package: kicksecure-desktop-environment-essential-gui
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: desktop-config-dist,
-         desktop-config-dist-dependencies,
-         gtk2-engines-pixbuf,
-         libgl1-mesa-dri,
-         mesa-vulkan-drivers,
-         upower,
-         labwc,
-         lxqt-policykit,
-         xdg-desktop-portal,
-         ${misc:Depends}
-Description: Desktop Depends GUI
- A metapackage, which installs dependencies for desktop environments,
- such as LXQt, Xfce, etc.
- .
- kicksecure-desktop-environment-essential-lxqt depends on this package.
-
-## Note: Not using 'lxqt' metapackage because it pulls in 'desktop-base' which
-## pulls in unwanted Debian branding.
-Package: kicksecure-desktop-environment-essential-lxqt
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: accountsservice,
-         dummy-dependency-sway,
-         featherpad,
-         gnome-keyring,
-         greetd,
-         kicksecure-desktop-environment-essential-gui,
-         lximage-qt,
-         lxqt-about,
-         lxqt-admin,
-         lxqt-archiver,
-         lxqt-core,
-         lxqt-openssh-askpass,
-         lxqt-powermanagement,
-         lxqt-sudo,
-         lxqt-wayland-session,
-         network-manager-gnome,
-         papirus-icon-theme,
-         pavucontrol-qt,
-         qps,
-         qt6-svg-plugins,
-         qt6-translations-l10n,
-         qt6-wayland,
-         qterminal,
-         swaybg,
-         wdisplays,
-         wlgreet,
-         xdg-desktop-portal-gtk,
-         xdg-desktop-portal-lxqt,
-         ${misc:Depends}
-Description: Recommended applications for hardened LXQt Desktop Environment
- A metapackage, which installs minimal, yet complete enough
- to contain a very basic LXQt Desktop Environment.
- .
- Safe to remove.
-
-Package: kicksecure-desktop-applications-lxqt
-Architecture: all
-Pre-Depends: legacy-dist
-## When depending on virtual package 'polkit-1-auth-agent', i.e.
-## 'policykit-1-gnome | polkit-1-auth-agent' then 'policykit-1-gnome' will not
-## be installed. At time of writing 'polkit-1-auth-agent' was the only package
-## that 'Provides:' 'polkit-1-auth-agent' anyhow.
-Depends: gvfs,
-         lxqt-sudo,
-         featherpad,
-         pkexec,
-         polkitd,
-         swayidle,
-         swaylock,
-         sysmaint-panel,
-         pcmanfm-qt,
-         lxqt-archiver,
-         qterminal,
-         ${misc:Depends}
-Description: Recommended applications for hardened LXQt desktop GUI
- A metapackage, which installs minimal, yet complete enough
- to contain the very basics, LXQt applications.
- .
- Safe to remove.
-
-Package: kicksecure-desktop-applications-recommended
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: browser-choice | dummy-dependency,
-         catfish,
-         electrum | dummy-dependency-electrum,
-         flatpak,
-         keepassxc,
-         kicksecure-welcome-page,
-         msgcollector-gui,
-         repository-dist-wizard,
-         lximage-qt,
-         sdwdate-gui,
-         setup-wizard-dist,
-         vlc,
-         ${misc:Depends}
-Description: Kicksecure Recommended Desktop Applications
- A metapackage, which installs recommended packages, for graphical user
- interface (GUI) Kicksecure.
- .
- Do not remove.
 
 Package: apparmor-profiles-kicksecure
 Architecture: all
@@ -370,215 +610,6 @@ Description: AppArmor profiles developed by the Kicksecure Team
   * apparmor-profile-hexchat
  .
  Increases security.
- .
- Safe to remove, if you know what you are doing.
-
-Package: kicksecure-packages-dependencies-pre
-Architecture: all
-Depends: dist-base-files, kicksecure-network-conf, ${misc:Depends}
-Description: Dependencies for Kicksecure that changes network related files
- A metapackage, which installs packages which Kicksecure depends on. Can not
- be merged into another package due to conflicts with chroot build process.
- .
- Do not remove.
-
-Package: kicksecure-cli
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: anon-apt-sources-list,
-         dosfstools,
-         kicksecure-base-files,
-         kicksecure-default-applications-cli,
-         kicksecure-dependencies-cli,
-         kicksecure-recommended-cli,
-         lvm2,
-         ntfs-3g,
-         obfs4proxy,
-         ${misc:Depends}
-Description: Kicksecure command line interface CLI
- A metapackage, which installs packages, for Kicksecure CLI.
- .
- Do not remove.
-
-Package: kicksecure-cli-host
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: kicksecure-cli,
-         kicksecure-cli-host-packages-recommended,
-         kicksecure-dependencies-system,
-         non-qubes-enhancements-cli,
-         ${misc:Depends}
-Description: Kicksecure Host command line interface CLI
- A metapackage, which installs packages, for Kicksecure CLI Host.
- .
- Do not remove.
-
-Package: kicksecure-cli-vm
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: kicksecure-cli,
-         kicksecure-dependencies-system,
-         kicksecure-network-conf,
-         non-qubes-enhancements-cli,
-         vm-config-dist,
-         ${misc:Depends}
-Description: Kicksecure command line interface CLI VMs
- A metapackage, which installs packages, for Kicksecure CLI Virtual Machines.
- .
- Not suitable for Qubes since it depends on packages not yet compatible
- with Qubes.
- .
- Do not remove.
-
-Package: kicksecure-lxqt
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: kicksecure-cli,
-         kicksecure-desktop-applications-lxqt,
-         kicksecure-desktop-environment-essential-lxqt,
-         ${misc:Depends}
-Description: Kicksecure LXQt GUI
- A metapackage, which installs packages, for Kicksecure LXQt.
- .
- Do not remove.
-
-Package: kicksecure-cli-host-packages-recommended
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: tirdad, ${misc:Depends}
-Description: Recommended Kicksecure Host CLI Packages
- A metapackage, which installs packages, which are recommended for
- Kicksecure CLI Host.
- .
- Not useful to have inside Qubes.
- .
- Safe to remove, if you know what you are doing.
-
-Package: kicksecure-shared-host-lxqt
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: ddrescueview,
-         discover,
-         gddrescue,
-         grub-live-dracut | grub-live-boot | boot-live,
-         gsmartcontrol,
-         htop,
-         hwinfo,
-         icon-pack-dist,
-         non-qubes-enhancements-gui,
-         laptop-detect,
-         lm-sensors,
-         lshw,
-         non-qubes-audio,
-         nvme-cli,
-         psensor,
-         partitionmanager,
-         pv,
-         qps,
-         screengrab,
-         sdwdate-gui,
-         smart-notifier,
-         smartmontools,
-         ${misc:Depends}
-Description: Kicksecure Shared Host LXQt GUI
- A metapackage, which installs packages, which are recommended for
- Kicksecure LXQt Host as well as a Whonix-Host with a graphical user interface
- (GUI).
- .
- Safe to remove, if you know what you are doing.
-
-Package: kicksecure-lxqt-host
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: kicksecure-cli-host,
-         kicksecure-desktop-applications-recommended,
-         kicksecure-network-conf,
-         kicksecure-network-conf-gui,
-         kicksecure-shared-host-lxqt,
-         kicksecure-lxqt,
-         ${misc:Depends}
-Description: Kicksecure Host LXQt GUI
- A metapackage, which installs packages, for Kicksecure LXQt Host.
- .
- Do not remove.
-
-Package: kicksecure-lxqt-vm
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: kicksecure-cli-vm,
-         kicksecure-desktop-applications-recommended,
-         kicksecure-network-conf-gui,
-         kicksecure-lxqt,
-         non-qubes-audio,
-         non-qubes-enhancements-gui,
-         ${misc:Depends}
-Description: Kicksecure LXQt GUI for VMs
- A metapackage, which installs packages, for Kicksecure LXQt in Virtual
- Machines.
- .
- Not suitable for Qubes since it depends on packages not yet compatible
- with Qubes.
- .
- Do not remove.
-
-Package: kicksecure-qubes-cli
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: kicksecure-cli,
-         qubes-core-agent-networking,
-         qubes-input-proxy-sender,
-         qubes-kernel-vm-support,
-         qubes-usb-proxy,
-         ${misc:Depends}
-Description: Default packages for Kicksecure-Qubes CLI
- A metapackage, which installs packages, for Kicksecure on Qubes without
- recommended GUI applications.
- .
- Do not remove.
-
-Package: kicksecure-qubes-gui
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: kicksecure-desktop-applications-recommended,
-         kicksecure-desktop-applications-lxqt,
-         kicksecure-qubes-cli,
-         lxqt-config,
-         qubes-core-agent-thunar,
-         qubes-gpg-split,
-         qubes-gui-agent-lxqt,
-         qubes-img-converter,
-         qubes-pdf-converter,
-         qubesdb-vm,
-         pipewire-qubes | pulseaudio-qubes,
-         pipewire-pulse | pulseaudio-qubes,
-         wireplumber | pulseaudio-qubes,
-         rtkit | pulseaudio-qubes,
-         dbus-user-session,
-         ${misc:Depends}
-Description: Default packages for Kicksecure-Qubes GUI
- A metapackage, which installs packages, for Kicksecure on Qubes including
- recommended GUI applications.
- .
- Do not remove.
-
-Package: orca-screen-reader-support
-Architecture: all
-Pre-Depends: legacy-dist
-Depends: gstreamer1.0-plugins-good,
-         libatk-adaptor,
-         libgail-common,
-         non-qubes-audio,
-         orca,
-         python3-gst-1.0,
-         sound-icons,
-         speech-dispatcher-espeak-ng,
-         xbrlapi,
-         ${misc:Depends}
-Description: dependencies for the orca screen reader
- A metapackage, which includes depencency packages for the orca screen reader.
- .
- Safe to remove if its removal does not remove another metapackage, which is
- not safe to remove.
 
 Package: dummy-contrib
 Architecture: all
@@ -591,8 +622,6 @@ Description: dummy contrib package
  This package itself is Free, Open, Freedom, Libre Software.
  .
  Useful for testing vrms without installation of an actual contrib package.
- .
- Safe to remove.
 
 Package: dummy-nonfree
 Architecture: all
@@ -605,8 +634,6 @@ Description: dummy nonfree package
  This package itself is Free, Open, Freedom, Libre Software.
  .
  Useful for testing vrms without installation of an actual nonfree package.
- .
- Safe to remove.
 
 Package: dummy-dependency
 Architecture: all
@@ -628,9 +655,6 @@ Description: dummy package to satisfy architecture specific dependencies
  .
  This package cannot provide a real implementation of that package. It is only
  a dummy to satisfy the dependency.
- .
- Safe to remove if its removal does not remove another metapackage, which is
- not safe to remove.
 
 Package: dummy-dependency-bindp
 Architecture: all
@@ -641,9 +665,6 @@ Description: dummy package to satisfy architecture specific dependency bindp
  .
  This package cannot provide a real implementation of that package. It is only
  a dummy to satisfy the dependency.
- .
- Safe to remove if its removal does not remove another metapackage, which is
- not safe to remove.
 
 Package: dummy-dependency-kloak
 Architecture: all
@@ -654,9 +675,6 @@ Description: dummy package to satisfy architecture specific dependency kloak
  .
  This package cannot provide a real implementation of that package. It is only
  a dummy to satisfy the dependency.
- .
- Safe to remove if its removal does not remove another metapackage, which is
- not safe to remove.
 
 Package: dummy-dependency-tirdad
 Architecture: all
@@ -667,9 +685,6 @@ Description: dummy package to satisfy architecture specific dependency tirdad
  .
  This package cannot provide a real implementation of that package. It is only
  a dummy to satisfy the dependency.
- .
- Safe to remove if its removal does not remove another metapackage, which is
- not safe to remove.
 
 Package: dummy-dependency-hardened-malloc
 Architecture: all
@@ -682,9 +697,6 @@ Description: dummy package to satisfy architecture specific dependency hardened-
  .
  This package cannot provide a real implementation of that package. It is only
  a dummy to satisfy the dependency.
- .
- Safe to remove if its removal does not remove another metapackage, which is
- not safe to remove.
 
 Package: dummy-dependency-electrum
 Architecture: all
@@ -696,9 +708,6 @@ Description: dummy package to satisfy architecture specific dependency electrum
  .
  This package cannot provide a real implementation of that package. It is only
  a dummy to satisfy the dependency.
- .
- Safe to remove if its removal does not remove another metapackage, which is
- not safe to remove.
 
 Package: dummy-dependency-xorg-vm
 Architecture: all
@@ -709,9 +718,6 @@ Description: dummy dependency xserver-xorg-video-vmware
  .
  This package cannot provide a real implementation of that package. It is only
  a dummy to satisfy the dependency.
- .
- Safe to remove if its removal does not remove another metapackage, which is
- not safe to remove.
 
 Package: dummy-dependency-apparmor-profiles-kicksecure
 Architecture: all
@@ -722,9 +728,6 @@ Description: dummy package apparmor-profiles-kicksecure
  .
  This package cannot provide a real implementation of that package. It is only
  a dummy to satisfy the dependency.
- .
- Safe to remove if its removal does not remove another metapackage, which is
- not safe to remove.
 
 Package: dummy-dependency-sway
 Architecture: all
@@ -736,6 +739,3 @@ Description: dummy package sway
  .
  This package cannot provide a real implementation of that package. It is only
  a dummy to satisfy the dependency.
- .
- Safe to remove if its removal does not remove another metapackage, which is
- not safe to remove.
