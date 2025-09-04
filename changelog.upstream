@@ -1,3 +1,22 @@
+commit cd133b850f0e63a4a76ed04efbd0a54a0c1b3ac5
+Merge: d712f4c 426ee72
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Sep 4 11:24:10 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 426ee7236c4979a14ee1ae6cab70c091b852f863
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Sep 4 09:57:14 2025 -0500
+
+    Don't install labwc on Qubes OS
+
+commit d712f4c63090f6aed924ca7911b18cbc2c58f854
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Sep 4 13:34:37 2025 +0000
+
+    bumped changelog version
+
 commit a7b21e0980560d482b45abf48bbd1ebdc54fba74
 Merge: 6e0c22e 184bf8d
 Author: Patrick Schleizer <adrelanos@whonix.org>
