@@ -273,6 +273,7 @@ Depends: swayidle,
  swaybg,
  wdisplays,
  flameshot,
+ grim,
  xdg-desktop-portal-wlr,
  ${misc:Depends}
 Description: All systems, not Qubes VMs, LXQt GUI packages
@@ -602,6 +603,10 @@ Depends: amd64-microcode,
          firmware-realtek,
          firmware-ti-connectivity,
          firmware-zd1211,
+         firmware-nvidia-graphics,
+         firmware-intel-graphics,
+         firmware-intel-misc,
+         firmware-mediatek,
          intel-microcode,
          ${misc:Depends}
 Section: non-free/metapackages
