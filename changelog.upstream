@@ -1,3 +1,28 @@
+commit e7fdd24ec3f5b3bd5f7bd4b9424d11d3bc46b061
+Merge: 7855ad8 30e1cd9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 7 03:15:18 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 30e1cd9d81e8b3678dc12e544f03b9538540a83f
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sat Sep 6 22:37:53 2025 -0500
+
+    Replace screengrab with flameshot
+
+commit 81d197ee8100221504d71b81f0c905fb508c11b4
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Fri Sep 5 16:36:45 2025 -0500
+
+    Adjust for Qubes OS compatibility
+
+commit 7855ad8702fd73b4d533f9ab8b360a799c42ef59
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Sep 5 07:59:20 2025 +0000
+
+    bumped changelog version
+
 commit 8c84c053be66bb76733ca309f7646920a99c45a3
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Sep 4 11:28:53 2025 -0400
