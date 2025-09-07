@@ -770,8 +770,8 @@ Depends: ${misc:Depends}
 Breaks: lxqt-policykit
 Provides: lxqt-policykit
 Description: dummy package sway
- A metapackage, which satisfies the dependency on sway. Used to install wlgreet
- without sway.
+ A metapackage, which satisfies the dependency on lxqt-policykit.
+ Because lxqt-policykit is buggy. Bugs out on pam-info stdout/stderr output.
  .
  This package cannot provide a real implementation of that package. It is only
  a dummy to satisfy the dependency.
