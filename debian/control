@@ -32,7 +32,7 @@ Depends: apparmor-profile-dist,
  timesanitycheck,
  usbguard,
  usrmerge,
- apparmor-profiles-kicksecure | dummy-dependency-apparmor-profiles-kicksecure,
+ apparmor-profiles-kicksecure,
  apparmor-utils,
  bash-completion,
  boot-info-script,
@@ -42,7 +42,7 @@ Depends: apparmor-profile-dist,
  debian-keyring,
  dbus-user-session,
  distro-info-data,
- bind9-dnsutils | dnsutils,
+ bind9-dnsutils,
  e2fsprogs,
  eject,
  file,
@@ -224,7 +224,7 @@ Depends: dracut,
  acpi-support,
  console-common,
  console-setup,
- grub-live-dracut | grub-live-boot | boot-live,
+ grub-live-dracut,
  kbd,
  keyboard-configuration,
  swap-file-creator,
@@ -329,19 +329,19 @@ Description: Kicksecure systems, all hardware, command-line packages
 Package: kicksecure-general-gui-all
 Architecture: all
 Pre-Depends: legacy-dist
-Depends: browser-choice | dummy-dependency,
+Depends: browser-choice,
  flatpak,
  keepassxc,
  kicksecure-welcome-page,
  lximage-qt,
  vlc,
  ddrescueview,
- pipewire-audio | pulseaudio,
- pipewire-pulse | pulseaudio,
- wireplumber | pulseaudio,
- rtkit | pulseaudio,
+ pipewire-audio,
+ pipewire-pulse,
+ wireplumber,
+ rtkit,
  catfish,
- electrum | dummy-dependency-electrum,
+ electrum,
  ${misc:Depends}
 Description: Kicksecure systems, all hardware, GUI packages
  For Kicksecure systems.
@@ -658,23 +658,62 @@ Description: dummy nonfree package
  .
  Useful for testing vrms without installation of an actual nonfree package.
 
-Package: dummy-dependency
+Package: dummy-dependency-browser-choice
 Architecture: all
 Depends: ${misc:Depends}
-Provides: browser-choice,
-          firefox-esr,
-          qubes-core-agent-passwordless-root,
-          tb-default-browser,
-          tb-starter,
-          tb-updater
-Description: dummy package to satisfy architecture specific dependencies
- A metapackage, which satisfies the dependency on:
+Conflicts: browser-choice
+Provides: browser-choice
+Description: dummy package browser-choice
+ A metapackage, which satisfies the dependency on browser-choice, which may not
+ be wanted by all users.
  .
-  - tb-updater
-  - tb-starter
-  - tb-default-browser
-  - qubes-core-agent-passwordless-root
-  - firefox-esr
+ This package cannot provide a real implementation of that package. It is only
+ a dummy to satisfy the dependency.
+
+Package: dummy-dependency-firefox-esr
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: firefox-esr
+Provides: firefox-esr
+Description: dummy package firefox-esr
+ A metapackage, which satisfies the dependency on firefox-esr, which may not
+ be wanted by all users.
+ .
+ This package cannot provide a real implementation of that package. It is only
+ a dummy to satisfy the dependency.
+
+Package: dummy-dependency-qubes-core-agent-passwordless-root
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: qubes-core-agent-passwordless-root
+Provides: qubes-core-agent-passwordless-root
+Description: dummy package qubes-core-agent-passwordless-root
+ A metapackage, which satisfies the dependency on
+ qubes-core-agent-passwordless-root, which may not be wanted by all users.
+ .
+ This package cannot provide a real implementation of that package. It is only
+ a dummy to satisfy the dependency.
+
+Package: dummy-dependency-tb-starter
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: tb-starter
+Provides: tb-starter
+Description: dummy package tb-starter
+ A metapackage, which satisfies the dependency on tb-starter, which may not be
+ wanted by all users.
+ .
+ This package cannot provide a real implementation of that package. It is only
+ a dummy to satisfy the dependency.
+
+Package: dummy-dependency-tb-updater
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: tb-updater
+Provides: tb-updater
+Description: dummy package tb-updater
+ A metapackage, which satisfies the dependency on tb-updater, which may not be
+ wanted by all users.
  .
  This package cannot provide a real implementation of that package. It is only
  a dummy to satisfy the dependency.
@@ -682,6 +721,7 @@ Description: dummy package to satisfy architecture specific dependencies
 Package: dummy-dependency-bindp
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: bindp
 Provides: bindp
 Description: dummy package to satisfy architecture specific dependency bindp
  A metapackage, which satisfies the dependency on bindp.
@@ -692,6 +732,7 @@ Description: dummy package to satisfy architecture specific dependency bindp
 Package: dummy-dependency-kloak
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: kloak
 Provides: kloak
 Description: dummy package to satisfy architecture specific dependency kloak
  A metapackage, which satisfies the dependency on kloak.
@@ -702,6 +743,7 @@ Description: dummy package to satisfy architecture specific dependency kloak
 Package: dummy-dependency-tirdad
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: tirdad
 Provides: tirdad
 Description: dummy package to satisfy architecture specific dependency tirdad
  A metapackage, which satisfies the dependency on tirdad.
@@ -712,6 +754,7 @@ Description: dummy package to satisfy architecture specific dependency tirdad
 Package: dummy-dependency-hardened-malloc
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: hardened-malloc
 Provides: hardened-malloc
 Description: dummy package to satisfy architecture specific dependency hardened-malloc
  A metapackage, which satisfies the dependency on:
@@ -724,6 +767,7 @@ Description: dummy package to satisfy architecture specific dependency hardened-
 Package: dummy-dependency-electrum
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: electrum
 Provides: dummy-dependency-hardened-electrum, electrum
 Replaces: dummy-dependency-hardened-electrum
 Description: dummy package to satisfy architecture specific dependency electrum
@@ -735,6 +779,7 @@ Description: dummy package to satisfy architecture specific dependency electrum
 Package: dummy-dependency-xorg-vm
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: xserver-xorg-video-vmware
 Provides: xserver-xorg-video-vmware
 Description: dummy dependency xserver-xorg-video-vmware
  A metapackage, which satisfies the dependency on xserver-xorg-video-vmware.
@@ -745,6 +790,7 @@ Description: dummy dependency xserver-xorg-video-vmware
 Package: dummy-dependency-apparmor-profiles-kicksecure
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: apparmor-profiles-kicksecure
 Provides: apparmor-profiles-kicksecure
 Description: dummy package apparmor-profiles-kicksecure
  A metapackage, which satisfies the dependency on apparmor-profiles-kicksecure.
@@ -755,6 +801,7 @@ Description: dummy package apparmor-profiles-kicksecure
 Package: dummy-dependency-sway
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: sway
 Provides: sway
 Description: dummy package sway
  A metapackage, which satisfies the dependency on sway. Used to install wlgreet
