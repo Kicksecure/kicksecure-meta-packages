@@ -766,7 +766,7 @@ Description: dummy package sway
 Package: dummy-dependency-lxqt-policykit
 Architecture: all
 Depends: ${misc:Depends}
-Breaks: lxqt-policykit
+Conflicts: lxqt-policykit
 Provides: lxqt-policykit
 Description: dummy package lxqt-policykit
  A metapackage, which satisfies the dependency on lxqt-policykit.
