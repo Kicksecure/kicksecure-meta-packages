@@ -1,3 +1,35 @@
+commit bccedf58bdfb5f6d8cde53241cd621420d6f20cd
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 7 04:17:19 2025 -0400
+
+    use conflicts rather than breaks to fix lintian warning
+    
+    > dummy-dependency-lxqt-policykit: breaks-without-version lxqt-policykit
+
+commit ad4b6aff393ff81a30e4e59418afbe08fd5d0ec0
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 7 04:15:05 2025 -0400
+
+    fix
+
+commit 60189a12686061c5da0794c395f6d2a532378baf
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 7 04:11:33 2025 -0400
+
+    duplicate
+
+commit 6ce76bcfe7ee252a9874611ec92bdcd6672c6626
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 7 04:10:31 2025 -0400
+
+    fix
+
+commit af0206b43840945b87dca468657c1afe77bc2094
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 7 08:00:05 2025 +0000
+
+    bumped changelog version
+
 commit e7fdd24ec3f5b3bd5f7bd4b9424d11d3bc46b061
 Merge: 7855ad8 30e1cd9
 Author: Patrick Schleizer <adrelanos@whonix.org>
