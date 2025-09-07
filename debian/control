@@ -768,7 +768,7 @@ Architecture: all
 Depends: ${misc:Depends}
 Breaks: lxqt-policykit
 Provides: lxqt-policykit
-Description: dummy package sway
+Description: dummy package lxqt-policykit
  A metapackage, which satisfies the dependency on lxqt-policykit.
  Because lxqt-policykit is buggy. Bugs out on pam-info stdout/stderr output.
  .
