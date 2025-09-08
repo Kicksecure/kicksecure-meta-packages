@@ -97,8 +97,14 @@ Depends: apparmor-profile-dist,
  anon-apt-sources-list,
  tor,
  ${misc:Depends}
-Breaks: kicksecure-dependencies-system, kicksecure-dependencies-cli, kicksecure-recommended-cli, kicksecure-default-applications-cli
-Replaces: kicksecure-dependencies-system, kicksecure-dependencies-cli, kicksecure-recommended-cli, kicksecure-default-applications-cli
+Breaks: kicksecure-dependencies-system,
+ kicksecure-dependencies-cli,
+ kicksecure-recommended-cli,
+ kicksecure-default-applications-cli
+Replaces: kicksecure-dependencies-system,
+ kicksecure-dependencies-cli,
+ kicksecure-recommended-cli,
+ kicksecure-default-applications-cli
 Description: All systems, all hardware, command-line packages
  For all hardened systems.
  .
@@ -127,8 +133,10 @@ Depends: desktop-config-dist,
  icon-pack-dist,
  libasound2t64,
  ${misc:Depends}
-Breaks: kicksecure-desktop-environment-essential-gui, kicksecure-desktop-applications-recommended
-Replaces: kicksecure-desktop-environment-essential-gui, kicksecure-desktop-applications-recommended
+Breaks: kicksecure-desktop-environment-essential-gui,
+ kicksecure-desktop-applications-recommended
+Replaces: kicksecure-desktop-environment-essential-gui,
+ kicksecure-desktop-applications-recommended
 Description: All systems, all hardware, GUI packages
  For all hardened systems.
  .
@@ -178,8 +186,18 @@ Depends: dummy-dependency-sway,
  smart-notifier,
  lxqt-archiver,
  ${misc:Depends}
-Breaks: kicksecure-desktop-environment-essential-lxqt, kicksecure-desktop-applications-lxqt, kicksecure-shared-host-lxqt
-Replaces: kicksecure-desktop-environment-essential-lxqt, kicksecure-desktop-applications-lxqt, kicksecure-shared-host-lxqt
+Breaks: kicksecure-desktop-environment-essential-lxqt,
+ kicksecure-desktop-applications-lxqt,
+ kicksecure-shared-host-lxqt,
+ kicksecure-desktop-environment-essential-xfce,
+ kicksecure-desktop-applications-xfce,
+ kicksecure-shared-host-xfce
+Replaces: kicksecure-desktop-environment-essential-lxqt,
+ kicksecure-desktop-applications-lxqt,
+ kicksecure-shared-host-lxqt,
+ kicksecure-desktop-environment-essential-xfce,
+ kicksecure-desktop-applications-xfce,
+ kicksecure-shared-host-xfce,
 Description: All systems, all hardware, LXQt GUI packages
  For all hardened systems.
  .
@@ -249,8 +267,10 @@ Depends: rads,
  waybar,
  gsmartcontrol,
  ${misc:Depends}
-Breaks: non-qubes-enhancements-gui, non-qubes-audio
-Replaces: non-qubes-enhancements-gui, non-qubes-audio
+Breaks: non-qubes-enhancements-gui,
+ non-qubes-audio
+Replaces: non-qubes-enhancements-gui,
+ non-qubes-audio
 Description: All systems, not Qubes VMs, GUI packages
  For all hardened systems.
  .
@@ -357,8 +377,10 @@ Pre-Depends: legacy-dist
 Depends: network-manager-applet,
  nm-connection-editor,
  ${misc:Depends}
-Breaks: kicksecure-lxqt
-Replaces: kicksecure-lxqt
+Breaks: kicksecure-lxqt,
+ kicksecure-xfce
+Replaces: kicksecure-lxqt,
+ kicksecure-xfce
 Description: Kicksecure systems, all hardware, LXQt GUI packages
  For Kicksecure systems.
  .
@@ -468,8 +490,10 @@ Description: Kicksecure systems, not Qubes VMs, LXQt GUI packages
 Package: kicksecure-baremetal-cli
 Architecture: all
 Pre-Depends: legacy-dist
-Breaks: kicksecure-cli-host, kicksecure-cli-host-packages-recommended
-Replaces: kicksecure-cli-host, kicksecure-cli-host-packages-recommended
+Breaks: kicksecure-cli-host,
+ kicksecure-cli-host-packages-recommended
+Replaces: kicksecure-cli-host,
+ kicksecure-cli-host-packages-recommended
 Description: Kicksecure systems, physical hardware, command-line packages
  For Kicksecure systems.
  .
@@ -512,8 +536,10 @@ Depends: kicksecure-baremetal-cli,
  dist-general-gui-all,
  dist-general-cli,
  ${misc:Depends}
-Breaks: kicksecure-lxqt-host
-Replaces: kicksecure-lxqt-host
+Breaks: kicksecure-lxqt-host,
+ kicksecure-xfce-host,
+Replaces: kicksecure-lxqt-host,
+ kicksecure-xfce-host
 Description: Kicksecure systems, physical hardware, LXQt GUI packages
  For Kicksecure systems.
  .
@@ -567,8 +593,10 @@ Depends: kicksecure-vm-cli,
  dist-general-gui-all,
  dist-general-cli,
  ${misc:Depends}
-Breaks: kicksecure-lxqt-vm
-Replaces: kicksecure-lxqt-vm
+Breaks: kicksecure-lxqt-vm,
+ kicksecure-xfce-vm
+Replaces: kicksecure-lxqt-vm,
+ kicksecure-xfce-vm
 Description: Kicksecure systems, VMs, LXQt GUI packages
  For Kicksecure systems.
  .
@@ -587,28 +615,28 @@ Package: firmware-nonfreedom
 Architecture: all
 Pre-Depends: legacy-dist
 Depends: amd64-microcode,
-         atmel-firmware,
-         firmware-amd-graphics,
-         firmware-ath9k-htc,
-         firmware-atheros,
-         firmware-brcm80211,
-         firmware-intel-sound,
-         firmware-ipw2x00,
-         firmware-iwlwifi,
-         firmware-libertas,
-         firmware-linux,
-         firmware-linux-free,
-         firmware-linux-nonfree,
-         firmware-misc-nonfree,
-         firmware-realtek,
-         firmware-ti-connectivity,
-         firmware-zd1211,
-         firmware-nvidia-graphics,
-         firmware-intel-graphics,
-         firmware-intel-misc,
-         firmware-mediatek,
-         intel-microcode,
-         ${misc:Depends}
+ atmel-firmware,
+ firmware-amd-graphics,
+ firmware-ath9k-htc,
+ firmware-atheros,
+ firmware-brcm80211,
+ firmware-intel-sound,
+ firmware-ipw2x00,
+ firmware-iwlwifi,
+ firmware-libertas,
+ firmware-linux,
+ firmware-linux-free,
+ firmware-linux-nonfree,
+ firmware-misc-nonfree,
+ firmware-realtek,
+ firmware-ti-connectivity,
+ firmware-zd1211,
+ firmware-nvidia-graphics,
+ firmware-intel-graphics,
+ firmware-intel-misc,
+ firmware-mediatek,
+ intel-microcode,
+ ${misc:Depends}
 Section: non-free/metapackages
 Description: Recommended packages for hosts with nonfreedom hardware design
  A metapackage, which includes nonfree firmware useful for hosts with
@@ -620,11 +648,11 @@ Package: apparmor-profiles-kicksecure
 Architecture: all
 Pre-Depends: legacy-dist
 Depends: apparmor-profile-hexchat,
-         apparmor-profile-thunderbird,
-         apparmor-profile-torbrowser,
-         apparmor-profiles,
-         apparmor-profiles-extra,
-         ${misc:Depends}
+ apparmor-profile-thunderbird,
+ apparmor-profile-torbrowser,
+ apparmor-profiles,
+ apparmor-profiles-extra,
+ ${misc:Depends}
 Description: AppArmor profiles developed by the Kicksecure Team
  A metapackage, which installs apparmor profiles packages from Debian:
  .
