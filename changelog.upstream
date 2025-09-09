@@ -1,3 +1,19 @@
+commit bc514186eeac285a058d2da4f37eaa0f69a8aa33
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Sep 9 12:09:30 2025 -0400
+
+    add qubes-core-agent-network-manager to dist-qubes-cli
+    
+    Package `qubes-core-agent-network-manager` is required for NetVM. Otherwise file `/usr/lib/qubes/network-manager-prepare-conf-dir` is missing and journal will show symptom:
+    
+    > NetworkManager.service: Unable to locate executable '/usr/lib/qubes/network-manager-prepare-conf-dir': No such file or directory
+
+commit 6d0dbfeebcceaac253990c5b12d0c38fddc38008
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Sep 9 15:54:00 2025 +0000
+
+    bumped changelog version
+
 commit 3ebe5a9493c4d9667cb196036b1c985fc444f926
 Merge: 60f8ad2 d5ef963
 Author: Patrick Schleizer <adrelanos@whonix.org>
