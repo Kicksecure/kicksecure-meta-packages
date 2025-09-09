@@ -32,7 +32,7 @@ Depends: apparmor-profile-dist,
  timesanitycheck,
  usbguard,
  usrmerge,
- apparmor-profiles-kicksecure | dummy-dependency-apparmor-profiles-kicksecure,
+ apparmor-profiles-kicksecure,
  apparmor-utils,
  bash-completion,
  boot-info-script,
@@ -42,7 +42,7 @@ Depends: apparmor-profile-dist,
  debian-keyring,
  dbus-user-session,
  distro-info-data,
- bind9-dnsutils | dnsutils,
+ bind9-dnsutils,
  e2fsprogs,
  eject,
  file,
@@ -97,8 +97,14 @@ Depends: apparmor-profile-dist,
  anon-apt-sources-list,
  tor,
  ${misc:Depends}
-Breaks: kicksecure-dependencies-system, kicksecure-dependencies-cli, kicksecure-recommended-cli, kicksecure-default-applications-cli
-Replaces: kicksecure-dependencies-system, kicksecure-dependencies-cli, kicksecure-recommended-cli, kicksecure-default-applications-cli
+Breaks: kicksecure-dependencies-system,
+ kicksecure-dependencies-cli,
+ kicksecure-recommended-cli,
+ kicksecure-default-applications-cli
+Replaces: kicksecure-dependencies-system,
+ kicksecure-dependencies-cli,
+ kicksecure-recommended-cli,
+ kicksecure-default-applications-cli
 Description: All systems, all hardware, command-line packages
  For all hardened systems.
  .
@@ -127,8 +133,10 @@ Depends: desktop-config-dist,
  icon-pack-dist,
  libasound2t64,
  ${misc:Depends}
-Breaks: kicksecure-desktop-environment-essential-gui, kicksecure-desktop-applications-recommended
-Replaces: kicksecure-desktop-environment-essential-gui, kicksecure-desktop-applications-recommended
+Breaks: kicksecure-desktop-environment-essential-gui,
+ kicksecure-desktop-applications-recommended
+Replaces: kicksecure-desktop-environment-essential-gui,
+ kicksecure-desktop-applications-recommended
 Description: All systems, all hardware, GUI packages
  For all hardened systems.
  .
@@ -178,8 +186,18 @@ Depends: dummy-dependency-sway,
  smart-notifier,
  lxqt-archiver,
  ${misc:Depends}
-Breaks: kicksecure-desktop-environment-essential-lxqt, kicksecure-desktop-applications-lxqt, kicksecure-shared-host-lxqt
-Replaces: kicksecure-desktop-environment-essential-lxqt, kicksecure-desktop-applications-lxqt, kicksecure-shared-host-lxqt
+Breaks: kicksecure-desktop-environment-essential-lxqt,
+ kicksecure-desktop-applications-lxqt,
+ kicksecure-shared-host-lxqt,
+ kicksecure-desktop-environment-essential-xfce,
+ kicksecure-desktop-applications-xfce,
+ kicksecure-shared-host-xfce
+Replaces: kicksecure-desktop-environment-essential-lxqt,
+ kicksecure-desktop-applications-lxqt,
+ kicksecure-shared-host-lxqt,
+ kicksecure-desktop-environment-essential-xfce,
+ kicksecure-desktop-applications-xfce,
+ kicksecure-shared-host-xfce,
 Description: All systems, all hardware, LXQt GUI packages
  For all hardened systems.
  .
@@ -224,7 +242,7 @@ Depends: dracut,
  acpi-support,
  console-common,
  console-setup,
- grub-live-dracut | grub-live-boot | boot-live,
+ grub-live-dracut,
  kbd,
  keyboard-configuration,
  swap-file-creator,
@@ -249,8 +267,10 @@ Depends: rads,
  waybar,
  gsmartcontrol,
  ${misc:Depends}
-Breaks: non-qubes-enhancements-gui, non-qubes-audio
-Replaces: non-qubes-enhancements-gui, non-qubes-audio
+Breaks: non-qubes-enhancements-gui,
+ non-qubes-audio
+Replaces: non-qubes-enhancements-gui,
+ non-qubes-audio
 Description: All systems, not Qubes VMs, GUI packages
  For all hardened systems.
  .
@@ -273,6 +293,7 @@ Depends: swayidle,
  swaybg,
  wdisplays,
  flameshot,
+ grim,
  xdg-desktop-portal-wlr,
  ${misc:Depends}
 Description: All systems, not Qubes VMs, LXQt GUI packages
@@ -329,19 +350,19 @@ Description: Kicksecure systems, all hardware, command-line packages
 Package: kicksecure-general-gui-all
 Architecture: all
 Pre-Depends: legacy-dist
-Depends: browser-choice | dummy-dependency,
+Depends: browser-choice,
  flatpak,
  keepassxc,
  kicksecure-welcome-page,
  lximage-qt,
  vlc,
  ddrescueview,
- pipewire-audio | pulseaudio,
- pipewire-pulse | pulseaudio,
- wireplumber | pulseaudio,
- rtkit | pulseaudio,
+ pipewire-audio,
+ pipewire-pulse,
+ wireplumber,
+ rtkit,
  catfish,
- electrum | dummy-dependency-electrum,
+ electrum,
  ${misc:Depends}
 Description: Kicksecure systems, all hardware, GUI packages
  For Kicksecure systems.
@@ -356,8 +377,10 @@ Pre-Depends: legacy-dist
 Depends: network-manager-applet,
  nm-connection-editor,
  ${misc:Depends}
-Breaks: kicksecure-lxqt
-Replaces: kicksecure-lxqt
+Breaks: kicksecure-lxqt,
+ kicksecure-xfce
+Replaces: kicksecure-lxqt,
+ kicksecure-xfce
 Description: Kicksecure systems, all hardware, LXQt GUI packages
  For Kicksecure systems.
  .
@@ -467,8 +490,10 @@ Description: Kicksecure systems, not Qubes VMs, LXQt GUI packages
 Package: kicksecure-baremetal-cli
 Architecture: all
 Pre-Depends: legacy-dist
-Breaks: kicksecure-cli-host, kicksecure-cli-host-packages-recommended
-Replaces: kicksecure-cli-host, kicksecure-cli-host-packages-recommended
+Breaks: kicksecure-cli-host,
+ kicksecure-cli-host-packages-recommended
+Replaces: kicksecure-cli-host,
+ kicksecure-cli-host-packages-recommended
 Description: Kicksecure systems, physical hardware, command-line packages
  For Kicksecure systems.
  .
@@ -511,8 +536,10 @@ Depends: kicksecure-baremetal-cli,
  dist-general-gui-all,
  dist-general-cli,
  ${misc:Depends}
-Breaks: kicksecure-lxqt-host
-Replaces: kicksecure-lxqt-host
+Breaks: kicksecure-lxqt-host,
+ kicksecure-xfce-host,
+Replaces: kicksecure-lxqt-host,
+ kicksecure-xfce-host
 Description: Kicksecure systems, physical hardware, LXQt GUI packages
  For Kicksecure systems.
  .
@@ -566,8 +593,10 @@ Depends: kicksecure-vm-cli,
  dist-general-gui-all,
  dist-general-cli,
  ${misc:Depends}
-Breaks: kicksecure-lxqt-vm
-Replaces: kicksecure-lxqt-vm
+Breaks: kicksecure-lxqt-vm,
+ kicksecure-xfce-vm
+Replaces: kicksecure-lxqt-vm,
+ kicksecure-xfce-vm
 Description: Kicksecure systems, VMs, LXQt GUI packages
  For Kicksecure systems.
  .
@@ -586,24 +615,28 @@ Package: firmware-nonfreedom
 Architecture: all
 Pre-Depends: legacy-dist
 Depends: amd64-microcode,
-         atmel-firmware,
-         firmware-amd-graphics,
-         firmware-ath9k-htc,
-         firmware-atheros,
-         firmware-brcm80211,
-         firmware-intel-sound,
-         firmware-ipw2x00,
-         firmware-iwlwifi,
-         firmware-libertas,
-         firmware-linux,
-         firmware-linux-free,
-         firmware-linux-nonfree,
-         firmware-misc-nonfree,
-         firmware-realtek,
-         firmware-ti-connectivity,
-         firmware-zd1211,
-         intel-microcode,
-         ${misc:Depends}
+ atmel-firmware,
+ firmware-amd-graphics,
+ firmware-ath9k-htc,
+ firmware-atheros,
+ firmware-brcm80211,
+ firmware-intel-sound,
+ firmware-ipw2x00,
+ firmware-iwlwifi,
+ firmware-libertas,
+ firmware-linux,
+ firmware-linux-free,
+ firmware-linux-nonfree,
+ firmware-misc-nonfree,
+ firmware-realtek,
+ firmware-ti-connectivity,
+ firmware-zd1211,
+ firmware-nvidia-graphics,
+ firmware-intel-graphics,
+ firmware-intel-misc,
+ firmware-mediatek,
+ intel-microcode,
+ ${misc:Depends}
 Section: non-free/metapackages
 Description: Recommended packages for hosts with nonfreedom hardware design
  A metapackage, which includes nonfree firmware useful for hosts with
@@ -615,11 +648,11 @@ Package: apparmor-profiles-kicksecure
 Architecture: all
 Pre-Depends: legacy-dist
 Depends: apparmor-profile-hexchat,
-         apparmor-profile-thunderbird,
-         apparmor-profile-torbrowser,
-         apparmor-profiles,
-         apparmor-profiles-extra,
-         ${misc:Depends}
+ apparmor-profile-thunderbird,
+ apparmor-profile-torbrowser,
+ apparmor-profiles,
+ apparmor-profiles-extra,
+ ${misc:Depends}
 Description: AppArmor profiles developed by the Kicksecure Team
  A metapackage, which installs apparmor profiles packages from Debian:
  .
@@ -658,23 +691,62 @@ Description: dummy nonfree package
  .
  Useful for testing vrms without installation of an actual nonfree package.
 
-Package: dummy-dependency
+Package: dummy-dependency-browser-choice
 Architecture: all
 Depends: ${misc:Depends}
-Provides: browser-choice,
-          firefox-esr,
-          qubes-core-agent-passwordless-root,
-          tb-default-browser,
-          tb-starter,
-          tb-updater
-Description: dummy package to satisfy architecture specific dependencies
- A metapackage, which satisfies the dependency on:
+Conflicts: browser-choice
+Provides: browser-choice
+Description: dummy package browser-choice
+ A metapackage, which satisfies the dependency on browser-choice, which may not
+ be wanted by all users.
  .
-  - tb-updater
-  - tb-starter
-  - tb-default-browser
-  - qubes-core-agent-passwordless-root
-  - firefox-esr
+ This package cannot provide a real implementation of that package. It is only
+ a dummy to satisfy the dependency.
+
+Package: dummy-dependency-firefox-esr
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: firefox-esr
+Provides: firefox-esr
+Description: dummy package firefox-esr
+ A metapackage, which satisfies the dependency on firefox-esr, which may not
+ be wanted by all users.
+ .
+ This package cannot provide a real implementation of that package. It is only
+ a dummy to satisfy the dependency.
+
+Package: dummy-dependency-qubes-core-agent-passwordless-root
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: qubes-core-agent-passwordless-root
+Provides: qubes-core-agent-passwordless-root
+Description: dummy package qubes-core-agent-passwordless-root
+ A metapackage, which satisfies the dependency on
+ qubes-core-agent-passwordless-root, which may not be wanted by all users.
+ .
+ This package cannot provide a real implementation of that package. It is only
+ a dummy to satisfy the dependency.
+
+Package: dummy-dependency-tb-starter
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: tb-starter
+Provides: tb-starter
+Description: dummy package tb-starter
+ A metapackage, which satisfies the dependency on tb-starter, which may not be
+ wanted by all users.
+ .
+ This package cannot provide a real implementation of that package. It is only
+ a dummy to satisfy the dependency.
+
+Package: dummy-dependency-tb-updater
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: tb-updater
+Provides: tb-updater
+Description: dummy package tb-updater
+ A metapackage, which satisfies the dependency on tb-updater, which may not be
+ wanted by all users.
  .
  This package cannot provide a real implementation of that package. It is only
  a dummy to satisfy the dependency.
@@ -682,6 +754,7 @@ Description: dummy package to satisfy architecture specific dependencies
 Package: dummy-dependency-bindp
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: bindp
 Provides: bindp
 Description: dummy package to satisfy architecture specific dependency bindp
  A metapackage, which satisfies the dependency on bindp.
@@ -692,6 +765,7 @@ Description: dummy package to satisfy architecture specific dependency bindp
 Package: dummy-dependency-kloak
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: kloak
 Provides: kloak
 Description: dummy package to satisfy architecture specific dependency kloak
  A metapackage, which satisfies the dependency on kloak.
@@ -702,6 +776,7 @@ Description: dummy package to satisfy architecture specific dependency kloak
 Package: dummy-dependency-tirdad
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: tirdad
 Provides: tirdad
 Description: dummy package to satisfy architecture specific dependency tirdad
  A metapackage, which satisfies the dependency on tirdad.
@@ -712,6 +787,7 @@ Description: dummy package to satisfy architecture specific dependency tirdad
 Package: dummy-dependency-hardened-malloc
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: hardened-malloc
 Provides: hardened-malloc
 Description: dummy package to satisfy architecture specific dependency hardened-malloc
  A metapackage, which satisfies the dependency on:
@@ -724,6 +800,7 @@ Description: dummy package to satisfy architecture specific dependency hardened-
 Package: dummy-dependency-electrum
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: electrum
 Provides: dummy-dependency-hardened-electrum, electrum
 Replaces: dummy-dependency-hardened-electrum
 Description: dummy package to satisfy architecture specific dependency electrum
@@ -735,6 +812,7 @@ Description: dummy package to satisfy architecture specific dependency electrum
 Package: dummy-dependency-xorg-vm
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: xserver-xorg-video-vmware
 Provides: xserver-xorg-video-vmware
 Description: dummy dependency xserver-xorg-video-vmware
  A metapackage, which satisfies the dependency on xserver-xorg-video-vmware.
@@ -745,6 +823,7 @@ Description: dummy dependency xserver-xorg-video-vmware
 Package: dummy-dependency-apparmor-profiles-kicksecure
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: apparmor-profiles-kicksecure
 Provides: apparmor-profiles-kicksecure
 Description: dummy package apparmor-profiles-kicksecure
  A metapackage, which satisfies the dependency on apparmor-profiles-kicksecure.
@@ -755,6 +834,7 @@ Description: dummy package apparmor-profiles-kicksecure
 Package: dummy-dependency-sway
 Architecture: all
 Depends: ${misc:Depends}
+Conflicts: sway
 Provides: sway
 Description: dummy package sway
  A metapackage, which satisfies the dependency on sway. Used to install wlgreet
