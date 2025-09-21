@@ -222,11 +222,24 @@ Description: All systems, Qubes VMs, command-line packages
  .
  Provides packages for basic command-line-only installations.
 
-Package: dist-qubes-gui-lxqt
+Package: dist-qubes-gui-all
 Architecture: all
 Pre-Depends: legacy-dist
 Depends: qubes-core-agent-thunar,
+ qubes-core-agent-nautilus,
  ${misc:Depends}
+Breaks: qubes-whonix-shared-packages-recommended
+Replaces: qubes-whonix-shared-packages-recommended
+Description: All systems, Qubes VMs, GUI packages
+ For all hardened systems.
+ .
+ For Qubes virtual machines.
+ .
+ Provides packages for all graphical desktop installations.
+
+Package: dist-qubes-gui-lxqt
+Architecture: all
+Pre-Depends: legacy-dist
 Description: All systems, Qubes VMs, LXQt GUI packages
  For all hardened systems.
  .
@@ -450,6 +463,7 @@ Depends: kicksecure-qubes-gui-all,
  kicksecure-general-gui-all,
  kicksecure-general-cli,
  dist-qubes-gui-lxqt,
+ dist-qubes-gui-all,
  dist-qubes-cli,
  dist-general-gui-lxqt,
  dist-general-gui-all,
