@@ -27,7 +27,7 @@ Depends: apparmor-profile-dist,
  menu,
  repository-dist,
  sdwdate,
- security-misc,
+ security-misc-shared,
  setup-dist,
  sudo,
  timesanitycheck,
@@ -113,6 +113,18 @@ Description: All systems, all hardware, command-line packages
  .
  Provides packages for basic command-line-only installations.
 
+Package: dist-general-server
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: security-misc-server,
+ ${misc:Depends}
+Description: All systems, all hardware, server packages
+ For all hardened systems.
+ .
+ For all hardware platforms.
+ .
+ Provides packages for server installations.
+
 Package: dist-general-gui-all
 Architecture: all
 Pre-Depends: legacy-dist
@@ -127,6 +139,7 @@ Depends: desktop-config-dist,
  repository-dist-wizard,
  sdwdate-gui,
  setup-wizard-dist,
+ security-misc-desktop,
  mesa-utils,
  open-link-confirmation,
  accountsservice,
@@ -434,6 +447,7 @@ Pre-Depends: legacy-dist
 Depends: kicksecure-qubes-cli,
  kicksecure-general-cli,
  dist-qubes-cli,
+ dist-general-server,
  dist-general-cli
 Description: Kicksecure systems, Qubes VMs, server packages
  For Kicksecure systems.
@@ -536,6 +550,7 @@ Depends: kicksecure-baremetal-cli,
  kicksecure-general-cli,
  dist-baremetal-cli,
  dist-nonqubes-cli,
+ dist-general-server,
  dist-general-cli,
  ${misc:Depends}
 Description: Kicksecure systems, physical hardware, server packages
@@ -595,6 +610,7 @@ Depends: kicksecure-vm-cli,
  kicksecure-general-cli,
  dist-vm-cli,
  dist-nonqubes-cli,
+ dist-general-server,
  dist-general-cli
 Description: Kicksecure systems, VMs, server packages
  For Kicksecure systems.
