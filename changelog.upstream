@@ -1,3 +1,22 @@
+commit 9db7aa0ccd6e8756c1bd71b13a818412644f1bfd
+Merge: 57ce931 71c6dc0
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Sep 24 10:03:29 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 71c6dc0808ee390e551304639065b7775c8ff369
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Mon Sep 22 14:43:04 2025 -0500
+
+    Add wpasupplicant to Kicksecure on Qubes and baremetal
+
+commit 57ce931b30636917669c9d141e143cf6b7565bb3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Sep 22 17:22:34 2025 +0000
+
+    bumped changelog version
+
 commit aead0dfa7783433eb5d838a590dd17b952130266
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Sep 22 13:21:39 2025 -0400
