@@ -1,3 +1,15 @@
+commit 5d800ed78851fac6569d10293a8693b310d95260
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 28 08:06:45 2025 -0400
+
+    install ram-wipe by default on Kicksecure bare metal
+
+commit 8251ef57454711181f238a7a37624c0450617c21
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Sep 26 08:37:53 2025 +0000
+
+    bumped changelog version
+
 commit 07e0bc270a01247cf7d47f442bfd1858a58d07b5
 Merge: 41b2f8a 086d7e9
 Author: Patrick Schleizer <adrelanos@whonix.org>
