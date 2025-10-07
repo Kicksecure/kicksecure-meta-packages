@@ -1,3 +1,22 @@
+commit 26060c237f381a58d0393fb05bb3a86405ac09fa
+Merge: d99d19e ab29e2a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Oct 7 03:13:38 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit ab29e2a064404b7462dca7e3956712e86799e30f
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sun Oct 5 15:23:36 2025 -0500
+
+    Use the PCManFM-Qt Qubes file manager helper
+
+commit d99d19e479f4049c1749358fadd8367320442d59
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 28 12:07:30 2025 +0000
+
+    bumped changelog version
+
 commit 5d800ed78851fac6569d10293a8693b310d95260
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sun Sep 28 08:06:45 2025 -0400
