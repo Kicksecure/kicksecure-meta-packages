@@ -1,3 +1,22 @@
+commit afb5a26f644ebbc92fe8fa21a190db11925ffe22
+Merge: c814ba8 37913d3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Oct 9 11:40:26 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 37913d3985497c290106f8d9cdd05d745d3578e6
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Wed Oct 8 22:03:53 2025 -0500
+
+    Add wvkbd virtual keyboard to dist-general-gui-lxqt
+
+commit c814ba86579c6a09b8615e5ddb9e13cb42eaa1b5
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Oct 7 08:36:51 2025 +0000
+
+    bumped changelog version
+
 commit 26060c237f381a58d0393fb05bb3a86405ac09fa
 Merge: d99d19e ab29e2a
 Author: Patrick Schleizer <adrelanos@whonix.org>
