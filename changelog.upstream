@@ -1,3 +1,22 @@
+commit 646438ef53c01636088e35294bec1bed42f10237
+Merge: f78602d 8a88da9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Oct 13 09:20:04 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 8a88da99ad1c2d0f204379e9276476316c0c77c7
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Fri Oct 10 14:19:52 2025 -0500
+
+    Add kanshi to dist-nonqubes-gui-lxqt
+
+commit f78602d7177d5402dce8b61dc8cc4af70591b474
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Oct 10 09:07:43 2025 +0000
+
+    bumped changelog version
+
 commit 2416a17fcb23d4b854438af00d123d030edd03e7
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Fri Oct 10 05:03:12 2025 -0400
