@@ -1,3 +1,22 @@
+commit d7e3e330d062e597d2391b2a15f00ead9692bae8
+Merge: d8c0f78 5fc7737
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Oct 18 04:43:13 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 5fc77379d4361f2150972e9f8062cdaa26537533
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Wed Oct 15 17:48:49 2025 -0500
+
+    Add qubes-notification-agent to GUI Qubes systems
+
+commit d8c0f78a39c5538f3ecc974a48b9e363c080127f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Oct 13 13:47:24 2025 +0000
+
+    bumped changelog version
+
 commit 646438ef53c01636088e35294bec1bed42f10237
 Merge: f78602d 8a88da9
 Author: Patrick Schleizer <adrelanos@whonix.org>
