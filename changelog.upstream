@@ -1,3 +1,15 @@
+commit dd66e411f9d3905d96f08489aacc2c7be561510a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Oct 19 04:55:00 2025 -0400
+
+    install `extrepo-offline-data` by default
+
+commit 29249e60e2f5c4686d44f0abee9d196f3273c5a2
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Oct 19 08:37:46 2025 +0000
+
+    bumped changelog version
+
 commit f5959ac9525db6928e871effdf68c0bba7aecca2
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sun Oct 19 04:35:49 2025 -0400
