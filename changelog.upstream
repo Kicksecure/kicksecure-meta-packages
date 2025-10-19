@@ -1,3 +1,22 @@
+commit 4c214874361e8cb7c5714b0a07f33f37a809a88f
+Merge: e04af1a 9cb381b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Oct 19 02:55:36 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 9cb381b3bc06f68f7dfa961d872b52a478576950
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sat Oct 18 21:56:52 2025 -0500
+
+    Add liblxqt-backlight-helper to dist-baremetal-gui-lxqt
+
+commit e04af1a510255096e3ffbf776a00185126f8bca7
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Oct 18 09:09:16 2025 +0000
+
+    bumped changelog version
+
 commit d7e3e330d062e597d2391b2a15f00ead9692bae8
 Merge: d8c0f78 5fc7737
 Author: Patrick Schleizer <adrelanos@whonix.org>
