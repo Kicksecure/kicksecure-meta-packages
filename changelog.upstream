@@ -1,3 +1,22 @@
+commit 2815b6b7fe8c46a3e24d0e5d67a9192fa56db920
+Merge: b973dd6 94ce10a
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Oct 24 00:22:04 2025 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 94ce10a7166cd1e2279e4d89c0bc923d786a8805
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Oct 23 21:39:14 2025 -0500
+
+    Switch kicksecure-qubes-cli from firmware-nonfreedom to firmware-nonfreedom-network
+
+commit b973dd6df730f8035ba64d3176c5f6d6cc66cdbb
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Oct 19 08:56:38 2025 +0000
+
+    bumped changelog version
+
 commit dd66e411f9d3905d96f08489aacc2c7be561510a
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sun Oct 19 04:55:00 2025 -0400
