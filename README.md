@@ -1,11 +1,10 @@
-# Recommended packages for hosts with nonfreedom hardware design #
+# All systems, all hardware, command-line packages #
 
-A metapackage, which includes nonfree firmware useful for hosts with
-nonfreedom hardware design.
+For all hardened systems.
 
-These are not useful in Qubes, since this would be up to Qubes.
+For all hardware platforms.
 
-Safe to remove, if you know what you are doing.
+Provides packages for basic command-line-only installations.
 
 ## How to install `kicksecure-meta-packages` using apt-get ##
 
