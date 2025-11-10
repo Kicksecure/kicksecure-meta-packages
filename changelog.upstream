@@ -1,3 +1,22 @@
+commit d6afa438b502b512f03ae7d36fe87e26518baa99
+Merge: 3c0c6dd eaf6355
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Nov 10 01:56:17 2025 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit eaf63559579b25be66754999ee0cb2734c084034
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sun Nov 9 18:44:21 2025 -0600
+
+    Install vm-config-dist everywhere
+
+commit 3c0c6dd07936e196bdd16a3c5d6b0a6a7f047d6b
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Nov 8 07:06:49 2025 +0000
+
+    bumped changelog version
+
 commit f272674d01775323e542de03ac1f5045148dc7ea
 Merge: d35b4ac 3366da7
 Author: Patrick Schleizer <adrelanos@whonix.org>
