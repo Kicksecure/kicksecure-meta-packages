@@ -665,6 +665,17 @@ Description: Dependencies for Kicksecure that changes network related files
  A metapackage, which installs packages which Kicksecure depends on. Can not
  be merged into another package due to conflicts with chroot build process.
 
+Package: firmware-freedom
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: firmware-linux-free,
+ ${misc:Depends}
+Description: Recommended packages for hosts with freedom hardware design
+ A metapackage, which includes freedom firmware useful for hosts with
+ freedom hardware design.
+ .
+ These are not useful in Qubes, since this would be up to Qubes.
+
 Package: firmware-nonfreedom-network
 Architecture: all
 Pre-Depends: legacy-dist
