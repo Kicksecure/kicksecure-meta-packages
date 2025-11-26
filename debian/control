@@ -697,10 +697,10 @@ Depends: atmel-firmware,
  ${misc:Depends}
 Section: non-free/metapackages
 Description: Recommended packages for hosts with nonfreedom wireless chips
- A metapackage, which includes nonfree firmware useful for hosts with
- nonfreedom wireless chips.
+ A metapackage, which includes nonfree (and free) firmware useful for hosts
+ with nonfreedom wireless chips.
  .
- Useful in Qubes, if the qube this is installed in is intended for use as
+ Also useful in Qubes, if the Qube this is installed in is intended for use as
  sys-net.
 
 Package: firmware-nonfreedom
