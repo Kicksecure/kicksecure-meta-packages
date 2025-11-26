@@ -669,6 +669,7 @@ Package: firmware-freedom
 Architecture: all
 Pre-Depends: legacy-dist
 Depends: firmware-linux-free,
+ firmware-ath9k-htc,
  ${misc:Depends}
 Description: Recommended packages for hosts with freedom hardware design
  A metapackage, which includes freedom firmware useful for hosts with
