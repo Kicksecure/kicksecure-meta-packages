@@ -1,3 +1,33 @@
+commit f942f6c138cf6f62382767955d634d6f15008ea9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Nov 26 07:13:24 2025 -0500
+
+    add firmware-carl9170
+
+commit afc29c687dedef5c804f8415f09a429b1b2aa088
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Nov 26 07:01:54 2025 -0500
+
+    decription
+
+commit 740270f85e1e3458754a21fa6f03cb2e0b8c042f
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Nov 26 06:59:11 2025 -0500
+
+    fix
+
+commit 88dd4c2cec4702960547c17fa2a565d32a1220a8
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Nov 26 05:58:24 2025 -0500
+
+    add new meta package `firmware-freedom`
+
+commit 813e22fa9b0a5c687001b41f9e889bc3a74be3ca
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Nov 10 07:57:01 2025 +0000
+
+    bumped changelog version
+
 commit d6afa438b502b512f03ae7d36fe87e26518baa99
 Merge: 3c0c6dd eaf6355
 Author: Patrick Schleizer <adrelanos@whonix.org>
