@@ -99,6 +99,7 @@ Depends: apparmor-profile-dist,
  anon-apt-sources-list,
  tor,
  vm-config-dist,
+ tor-ctrl,
  ${misc:Depends}
 Breaks: kicksecure-dependencies-system,
  kicksecure-dependencies-cli,
