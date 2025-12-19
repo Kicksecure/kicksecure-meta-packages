@@ -1,3 +1,28 @@
+commit 4188da023d37d92c2ba013aaf8dd1902759b189e
+Merge: 003f7a2 3986726
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Dec 19 03:25:54 2025 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 3986726775317a6dc82054e1ef824fd4c03c59f9
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Dec 18 20:08:08 2025 -0600
+
+    Add LXQt localization packages
+
+commit 5a70f1e5c341ae5f2433ad0cf701180682cdb9af
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Thu Dec 18 19:50:25 2025 -0600
+
+    Add gvfs-backends to dist-general-gui-lxqt
+
+commit 003f7a21e19415b744475c6b654526398602c850
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Dec 3 08:26:07 2025 +0000
+
+    bumped changelog version
+
 commit 0e09501c371c51cfc2d57e3e287bf5049d0fffa8
 Merge: ce10ce6 c9625c7
 Author: Patrick Schleizer <adrelanos@whonix.org>
