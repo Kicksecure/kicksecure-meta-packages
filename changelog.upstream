@@ -1,3 +1,22 @@
+commit ce27876c9f273018f045c573cef5a5721522d2cf
+Merge: 1717685 1f71f84
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Dec 28 00:44:13 2025 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 1f71f84e493a4f903fe7ca97b8412e16d4bdec82
+Author: Aaron Rainbolt <arraybolt3@ubuntu.com>
+Date:   Sat Dec 27 20:42:02 2025 -0600
+
+    Add firmware-sof-signed to firmware-nonfreedom
+
+commit 17176854d4a373b9abd2d8ffd4d02c6303f19adb
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Dec 19 09:48:31 2025 +0000
+
+    bumped changelog version
+
 commit 4188da023d37d92c2ba013aaf8dd1902759b189e
 Merge: 003f7a2 3986726
 Author: Patrick Schleizer <adrelanos@whonix.org>
