@@ -452,7 +452,10 @@ Description: Kicksecure systems, all hardware, LXQt GUI packages
 Package: kicksecure-qubes-cli
 Architecture: all
 Pre-Depends: legacy-dist
-Depends: qubes-gpg-split,
+Depends: kicksecure-general-cli,
+ dist-qubes-cli,
+ dist-general-cli,
+ qubes-gpg-split,
  qubes-img-converter,
  qubes-pdf-converter,
  qubes-core-agent-network-manager,
@@ -554,7 +557,13 @@ Description: Kicksecure systems, not Qubes VMs, LXQt GUI packages
 Package: kicksecure-baremetal-cli
 Architecture: all
 Pre-Depends: legacy-dist
-Depends: ram-wipe, wpasupplicant
+Depends: kicksecure-nonqubes-cli,
+ kicksecure-general-cli,
+ dist-baremetal-cli,
+ dist-nonqubes-cli,
+ dist-general-cli,
+ ram-wipe,
+ wpasupplicant
 Breaks: kicksecure-cli-host,
  kicksecure-cli-host-packages-recommended
 Replaces: kicksecure-cli-host,
@@ -617,6 +626,11 @@ Description: Kicksecure systems, physical hardware, LXQt GUI packages
 Package: kicksecure-vm-cli
 Architecture: all
 Pre-Depends: legacy-dist
+Depends: kicksecure-nonqubes-cli,
+ kicksecure-general-cli,
+ dist-vm-cli,
+ dist-nonqubes-cli,
+ dist-general-cli
 Breaks: kicksecure-cli-vm
 Replaces: kicksecure-cli-vm
 Description: Kicksecure systems, VMs, command-line packages
