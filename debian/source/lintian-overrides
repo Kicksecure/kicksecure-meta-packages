@@ -9,7 +9,7 @@ source: archive-liberty-mismatch
 ## These are placeholder metapackages that exist to cleanly replace older
 ## metapackages. They do not themselves depend on anything, and debhelper
 ## should not be adding extra dependencies to them.
-source: debhelper-but-no-misc-depends kicksecure-qubes-server
-source: debhelper-but-no-misc-depends kicksecure-vm-server
-source: debhelper-but-no-misc-depends kicksecure-baremetal-cli
-source: debhelper-but-no-misc-depends kicksecure-vm-cli
+#source: debhelper-but-no-misc-depends kicksecure-qubes-server
+#source: debhelper-but-no-misc-depends kicksecure-vm-server
+#source: debhelper-but-no-misc-depends kicksecure-baremetal-cli
+#source: debhelper-but-no-misc-depends kicksecure-vm-cli
