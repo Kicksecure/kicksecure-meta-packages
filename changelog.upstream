@@ -1,3 +1,28 @@
+commit c142d5b7698b84a0253d1ec379f134c3f05b7820
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Feb 12 04:52:03 2026 -0500
+
+    lintian
+
+commit 49b2f64483a92a720fd060e81110784660e4612f
+Merge: 5127065 10015d7
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Thu Feb 12 04:49:27 2026 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 10015d7b420b08eb1bc4f61943405f8e79d91cf7
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Tue Feb 10 20:59:01 2026 -0600
+
+    lintian
+
+commit 512706522a66443dbadd9bf428b1af8d4ff0df35
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Feb 10 12:14:29 2026 +0000
+
+    bumped changelog version
+
 commit 8d6e87b42f5ba1ebb9e8862d2ddb09972d46860e
 Merge: b584f88 b7434f3
 Author: Patrick Schleizer <adrelanos@whonix.org>
