@@ -99,6 +99,7 @@ Depends: apparmor-profile-dist,
  tor,
  vm-config-dist,
  tor-ctrl,
+ mokutil,
  ${misc:Depends}
 Breaks: kicksecure-dependencies-system,
  kicksecure-dependencies-cli,
@@ -736,11 +737,10 @@ Description: Recommended packages for hosts with nonfreedom wireless chips
  Also useful in Qubes, if the Qube this is installed in is intended for use as
  sys-net.
 
-Package: firmware-nonfreedom
+Package: firmware-nonfreedom-noarch
 Architecture: all
 Pre-Depends: legacy-dist
-Depends: amd64-microcode,
- firmware-nonfreedom-network,
+Depends: firmware-nonfreedom-network,
  firmware-amd-graphics,
  firmware-intel-sound,
  firmware-sof-signed,
@@ -748,12 +748,28 @@ Depends: amd64-microcode,
  firmware-linux-nonfree,
  firmware-nvidia-graphics,
  firmware-intel-graphics,
+ ${misc:Depends}
+Section: non-free/metapackages
+Description: Recommended packages for hosts with nonfreedom hardware design (arch-independent)
+ A metapackage, which includes nonfree firmware useful for hosts with
+ nonfreedom hardware design.
+ .
+ These are not useful in Qubes, since this would be up to Qubes.
+
+Package: firmware-nonfreedom
+Architecture: amd64
+Pre-Depends: legacy-dist
+Depends: firmware-nonfreedom-noarch,
+ amd64-microcode,
  intel-microcode,
  ${misc:Depends}
 Section: non-free/metapackages
 Description: Recommended packages for hosts with nonfreedom hardware design
  A metapackage, which includes nonfree firmware useful for hosts with
  nonfreedom hardware design.
+ .
+ Only usable on amd64 systems, because of the presence of amd64-microcode and
+ intel-microcode.
  .
  These are not useful in Qubes, since this would be up to Qubes.
 
@@ -980,3 +996,51 @@ Description: dummy package mta
  .
  This package cannot provide a real implementation of a mail transport agent.
  It is only a dummy to satisfy the dependency.
+
+Package: dummy-dependency-mokutil
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: mokutil
+Provides: mokutil
+Description: dummy package mokutil
+ A metapackage, which satisfies the dependency on mokutil. Because mokutil is
+ not available on all architectures.
+ .
+ This package cannot provide a real implementation of that package. It is only
+ a dummy to satisfy the dependency.
+
+Package: dummy-dependency-virtualbox-guest-utils
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: virtualbox-guest-utils
+Provides: virtualbox-guest-utils
+Description: dummy package virtualbox-guest-utils
+ A metapackage, which satisfies the dependency on virtualbox-guest-utils.
+ Because virtualbox-guest-utils is not available on all architectures.
+ .
+ This package cannot provide a real implementation of that package. It is only
+ a dummy to satisfy the dependency.
+
+Package: dummy-dependency-virtualbox-guest-x11
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: virtualbox-guest-x11
+Provides: virtualbox-guest-x11
+Description: dummy package virtualbox-guest-x11
+ A metapackage, which satisfies the dependency on virtualbox-guest-x11.
+ Because virtualbox-guest-x11 is not available on all architectures.
+ .
+ This package cannot provide a real implementation of that package. It is only
+ a dummy to satisfy the dependency.
+
+Package: dummy-dependency-fwupd-signed
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: fwupd-signed
+Provides: fwupd-signed
+Description: dummy package fwupd-signed
+ A metapackage, which satisfies the dependency on fwupd-signed. Because
+ fwupd-signed is not available on all architectures.
+ .
+ This package cannot provide a real implementation of that package. It is only
+ a dummy to satisfy the dependency.
