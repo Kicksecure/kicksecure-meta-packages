@@ -1034,15 +1034,3 @@ Description: dummy package virtualbox-guest-x11
  .
  This package cannot provide a real implementation of that package. It is only
  a dummy to satisfy the dependency.
-
-Package: dummy-dependency-fwupd-signed
-Architecture: all
-Depends: ${misc:Depends}
-Conflicts: fwupd-signed
-Provides: fwupd-signed
-Description: dummy package fwupd-signed
- A metapackage, which satisfies the dependency on fwupd-signed. Because
- fwupd-signed is not available on all architectures.
- .
- This package cannot provide a real implementation of that package. It is only
- a dummy to satisfy the dependency.
