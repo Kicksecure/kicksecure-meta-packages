@@ -1,3 +1,34 @@
+commit 2319ca5cddbd877342af304422d283586ab9f840
+Merge: 58aa9d1 2c9d559
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Feb 27 05:16:26 2026 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 2c9d55999bc6deef8ecddc67747923153e945691
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Wed Feb 25 19:51:20 2026 -0500
+
+    Remove dummy-dependency-fwupd-signed metapackage, because fwupd-signed is a virtual package
+
+commit 39eccf0d14c6490a6bafa8674be927801b15d2fe
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Tue Feb 24 22:02:03 2026 -0500
+
+    Adjust package descriptions to make lintian happy
+
+commit 55660bc8fde6f31b6e22249261cff3bd6754a604
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sun Feb 22 18:35:25 2026 -0500
+
+    Add dependency on mokutil, add additional dummy packages, split firmware-nonfreedom into arch-specific and arch-independent metapackages
+
+commit 58aa9d1929da04ed810a94a1caf1d913e07426d3
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Feb 16 10:56:32 2026 +0000
+
+    bumped changelog version
+
 commit ad83267d73036148c65512cddf85086e11a36113
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Feb 16 05:55:21 2026 -0500
