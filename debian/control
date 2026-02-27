@@ -1011,6 +1011,42 @@ Description: dummy package mokutil
  This package cannot provide a real implementation of that package. It is only
  a dummy to satisfy the dependency.
 
+Package: dummy-dependency-keyutils
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: keyutils
+Provides: keyutils
+Description: dummy package keyutils
+ A metapackage, which satisfies the dependency on keyutils. Because keyutils
+ is not available on all architectures.
+ .
+ This package cannot provide a real implementation of that package. It is only
+ a dummy to satisfy the dependency.
+
+Package: dummy-dependency-efibootmgr
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: efibootmgr
+Provides: efibootmgr
+Description: dummy package efibootmgr
+ A metapackage, which satisfies the dependency on efibootmgr. Because
+ efibootmgr is not available on all architectures.
+ .
+ This package cannot provide a real implementation of that package. It is only
+ a dummy to satisfy the dependency.
+
+Package: dummy-dependency-sbsigntool
+Architecture: all
+Depends: ${misc:Depends}
+Conflicts: sbsigntool
+Provides: sbsigntool
+Description: dummy package sbsigntool
+ A metapackage, which satisfies the dependency on sbsigntool. Because
+ sbsigntool is not available on all architectures.
+ .
+ This package cannot provide a real implementation of that package. It is only
+ a dummy to satisfy the dependency.
+
 Package: dummy-dependency-virtualbox-guest-utils
 Architecture: all
 Depends: ${misc:Depends}
