@@ -1,3 +1,22 @@
+commit 539fe227e43acc99b227d6a2768961bd6b0cbf68
+Merge: 58eee95 d1b44b9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Mar 1 03:58:50 2026 -0500
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit d1b44b922283870f79d3b7b297991776fba3cc4f
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Fri Feb 27 15:41:42 2026 -0500
+
+    Add dummy packages for more Secure Boot-related packages
+
+commit 58eee95317332622f91c219b48e6c3080773c5d7
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Feb 27 10:50:43 2026 +0000
+
+    bumped changelog version
+
 commit 2319ca5cddbd877342af304422d283586ab9f840
 Merge: 58aa9d1 2c9d559
 Author: Patrick Schleizer <adrelanos@whonix.org>
