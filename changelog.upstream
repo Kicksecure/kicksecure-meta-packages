@@ -1,3 +1,22 @@
+commit b528e9bf51afaa9003f52e1fbf6b89c2b451d1dd
+Merge: ea97ff4 0e39817
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Apr 17 03:02:10 2026 -0400
+
+    Merge remote-tracking branch 'ArrayBolt3/arraybolt3/trixie'
+
+commit 0e39817526fa81bb6a022958e3b9017e20d8130d
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Wed Apr 15 21:43:41 2026 -0400
+
+    Stop including qps on LXQt systems by default
+
+commit ea97ff4da2be0c558c818449b1da29d87f053473
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Mar 1 09:07:42 2026 +0000
+
+    bumped changelog version
+
 commit 539fe227e43acc99b227d6a2768961bd6b0cbf68
 Merge: 58eee95 d1b44b9
 Author: Patrick Schleizer <adrelanos@whonix.org>
@@ -308,9 +327,9 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Nov 1 04:23:40 2025 -0400
 
     install `nmap` by default (contains `nping`) (TCP based ping utility)
-    
+
     useful for debugging network issues
-    
+
     https://forums.whonix.org/t/ping-operation-permitted/11056
 
 commit 9a867a0e4d748ddb3f2e0922c4e88db27b2c22a6
@@ -398,7 +417,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sun Oct 19 04:35:49 2025 -0400
 
     install firmware-nonfreedom by default on Qubes
-    
+
     useful for sys-net
 
 commit 199a38f5a7023b7b77a8f6836a6ca27b8d101e4f
@@ -631,9 +650,9 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Sep 9 12:09:30 2025 -0400
 
     add qubes-core-agent-network-manager to dist-qubes-cli
-    
+
     Package `qubes-core-agent-network-manager` is required for NetVM. Otherwise file `/usr/lib/qubes/network-manager-prepare-conf-dir` is missing and journal will show symptom:
-    
+
     > NetworkManager.service: Unable to locate executable '/usr/lib/qubes/network-manager-prepare-conf-dir': No such file or directory
 
 commit 6d0dbfeebcceaac253990c5b12d0c38fddc38008
@@ -678,7 +697,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sun Sep 7 04:17:19 2025 -0400
 
     use conflicts rather than breaks to fix lintian warning
-    
+
     > dummy-dependency-lxqt-policykit: breaks-without-version lxqt-policykit
 
 commit ad4b6aff393ff81a30e4e59418afbe08fd5d0ec0
@@ -899,7 +918,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Aug 7 03:35:39 2025 -0400
 
     no longer install firmware-b43-installer by default
-    
+
     due to upstream bug
     firmware-b43-installer: firmware download fails due to broken upstream URL and checksum mismatch
     https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1109025
@@ -972,7 +991,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Fri May 9 07:42:34 2025 -0400
 
     add `trayer` to `non-qubes-enhancements-gui`
-    
+
     because needed for sysmaint session in X11
 
 commit ce5d409fc8ed634b55611756de2371c257cd302a
@@ -992,9 +1011,9 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Apr 1 08:19:29 2025 -0400
 
     Revert "Add xfce4-notifyd to essential GUI packages"
-    
+
     This reverts commit a67215bd620232a0ce6381cccb37dfa825d73818.
-    
+
     mate-notification-daemon is better since it has not a 32 characters notification message maximum by default.
 
 commit 0691a08b60b95dd85839d2511435796d1aca4b54
@@ -1077,7 +1096,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Jan 20 05:23:52 2025 -0500
 
     Revert "Make kicksecure-qubes-cli and kicksecure-qubes-gui suitable for use with qubes-whonix"
-    
+
     This reverts commit f64178586827b93889aaa8706620c835f378fd2d.
 
 commit 3af969f96c62dd1f14da282964ce60643f934a1f
@@ -1179,11 +1198,11 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Oct 3 02:34:09 2024 -0400
 
     add `gnome-keyring` to `kicksecure-desktop-environment-essential-xfce`
-    
+
     to fix error message
-    
+
     > Error storing passphrase in keyring (The name org.freedesktop.secrets was not provided by any .service files)
-    
+
     https://forums.kicksecure.com/t/error-storing-passphrase-in-keyring-the-name-org-freedesktop-secrets-was-not-provided-by-any-service-files/582
 
 commit d7eb861b7abe66c52240f4e9ffe497ef601d723a
@@ -1222,7 +1241,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Sep 18 06:56:32 2024 -0400
 
     no longer install `alsa-utils` by default
-    
+
     https://forums.whonix.org/t/port-from-pulseaudio-to-pipewire-for-audio-support/16879/45
 
 commit 1f544bfdf9c140603e9e1843101348a3052d172b
@@ -1230,11 +1249,11 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Sep 18 06:51:04 2024 -0400
 
     add `accountservice` to `kicksecure-desktop-environment-essential-xfce`
-    
+
     fixes
-    
+
     > localhost lightdm[911]: Error getting user list from org.freedesktop.Accounts: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Accounts was not provided by any .service files
-    
+
     package `lightdm` `Suggests:` `accountservice`
 
 commit ccf7f1611ab3d90d6364a6f0cf40da50af82887c
@@ -1254,7 +1273,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Sep 17 06:48:43 2024 -0400
 
     add `dbus-user-session` to `kicksecure-recommended-cli`
-    
+
     as required by PipeWire
 
 commit 89a2974aa52db1cf941e96b1c4bb84f9f78b9dfd
@@ -1268,7 +1287,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Sep 16 13:59:08 2024 -0400
 
     add `rtkit` to `non-qubes-audio`
-    
+
     to prevent rtkit related errors in pipewire journal log
 
 commit 9bc00125c833b9d12ea1512135ef37a221455a48
@@ -1276,7 +1295,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Sep 16 13:31:24 2024 -0400
 
     add `debian-keyring` to `kicksecure-recommended-cli`
-    
+
     useful to verify a Debian ISO
 
 commit ea99152114f382f5196cf6d606ac44f53f906ebf
@@ -1284,7 +1303,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Sep 16 13:30:01 2024 -0400
 
     add `gawk` to `kicksecure-dependencies-cli`
-    
+
     missing dependency by dracut-core
     https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1081005
 
@@ -1378,7 +1397,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Jul 27 11:48:13 2024 -0400
 
     remove dependency on hardened-malloc
-    
+
     https://www.kicksecure.com/wiki/Hardened_Malloc#Deprecation_in_Kicksecure
 
 commit 4b22e4483233c7efefad21613be1130779efe846
@@ -1392,7 +1411,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Jul 27 11:25:39 2024 -0400
 
     remove firmware-intelwimax
-    
+
     because unavailable in Debian bookwor and above
 
 commit 96a5672c5e321c1b22f9bc63ceb86307afc7a0fc
@@ -1425,7 +1444,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Jul 27 10:47:57 2024 -0400
 
     rename non-qubes-vm-enhancements-cli to non-qubes-enhancements-cli
-    
+
     to make it re-usable on Kicksecure Host ISO
 
 commit 1e6435187893d9c5c0e9164aa37fee9ba6242755
@@ -1461,7 +1480,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Jul 24 08:24:44 2024 -0400
 
     add `catfish` to `kicksecure-default-applications-cli`
-    
+
     https://forums.whonix.org/t/install-catfish-file-searching-tool-xfce-de-by-default/19837
 
 commit c8acf2e9c206b56b1db5e39e5f384623b252a71c
@@ -1506,7 +1525,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon May 20 10:11:39 2024 -0400
 
     Revert "install auditd by default"
-    
+
     This reverts commit 306f575c3560b9be14ef26a382eca262a3941e58.
 
 commit 6a26d0f5b7d55b3bf8237a1e334f5502c43ad516
@@ -1603,7 +1622,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Dec 25 14:17:29 2023 -0500
 
     Revert "add grub-theme-breeze to kicksecure-cli-host-packages-recommended"
-    
+
     This reverts commit ea063e4a5ae7014dfdc6e4f09425f88e04fae2d9.
 
 commit d0927902d2432f33f912bc9c98e89e63a7e34568
@@ -1647,9 +1666,9 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Nov 20 04:39:12 2023 -0500
 
     add libpam-tmpdir to kicksecure-recommended-cli
-    
+
     https://github.com/Kicksecure/security-misc/pull/147
-    
+
     https://github.com/Kicksecure/security-misc/issues/169
 
 commit bdcc84324441a0702ebc1134cebcafd3865de900
@@ -1663,7 +1682,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Nov 11 13:41:27 2023 -0500
 
     change license to AGPL-3+
-    
+
     https://forums.whonix.org/t/license-change-to-agplv3/17455
 
 commit 225b5e19031f47dfad699b8332b7ade64157e267
@@ -1677,7 +1696,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Oct 21 10:52:57 2023 -0400
 
     pipewire-audio | pulseaudio
-    
+
     to avoid held back packages
 
 commit 15bab4110ef413e1407fe65ea45ed8e0cdb30d42
@@ -1697,7 +1716,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Oct 21 10:44:34 2023 -0400
 
     remove
-    
+
     Conflicts: pulseaudio
     Replaces: pulseaudio
     Provides: pulseaudio
@@ -1749,7 +1768,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Oct 9 00:32:26 2023 -0400
 
     port `non-qubes-audio` from `pulseaudio` to `pipewire`
-    
+
     https://forums.whonix.org/t/port-from-pulseaudio-to-pipewire-for-audio-support/16879
 
 commit d44cc7ad409a18dcf31c5f971ae9e28e01a80fa0
@@ -1763,9 +1782,9 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Jul 20 07:34:09 2023 -0400
 
     drop dependency on busybox since no longer needed
-    
+
     since Kicksecure was ported to dracut
-    
+
     https://forums.whonix.org/t/note-installing-waydroid-will-remove-busybox-which-is-a-dep-to-kicksecure-dependencies-cli/16910
 
 commit 0e914831fc28835fb6452cc1d3db9b76163ef34e
@@ -1821,7 +1840,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Jul 5 10:09:46 2023 -0400
 
     install auditd by default
-    
+
     useful for aa-logprof
 
 commit 38841b3add2c2a780992fd8ffa4bc9076996c51d
@@ -1835,7 +1854,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Fri Jun 23 10:05:35 2023 +0000
 
     lightdm
-    
+
     https://forums.whonix.org/t/display-manager-lightdm-gdm3-sddm-or-no-display-manager-startx/12457
 
 commit 736cdb86e707a62452176cc2dd0560f945d6436f
@@ -1939,9 +1958,9 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat May 13 08:44:09 2023 +0000
 
     install xscreensaver by default
-    
+
     by adding `xscreensaver` to `kicksecure-shared-host-xfce`
-    
+
     https://forums.kicksecure.com/t/kicksecure-no-screen-lock-installed/221
 
 commit d29ed4545a5a344b69b8005f7703a7df5a84bd21
@@ -1955,12 +1974,12 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Fri May 5 17:08:30 2023 +0000
 
     add `fuse` to `kicksecure-default-applications-cli`
-    
+
     because `fuse` is required when
-    
+
     * running `flatpak` as user,
     * by appimages.
-    
+
     https://forums.whonix.org/t/installation-of-monero-gui-from-flatpak-fails-without-sudo-su/16616/
 
 commit 8317fa05bd8bf8cae517eeca2b2ad75eb2dd6361
@@ -1974,9 +1993,9 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Mar 15 19:37:43 2023 -0400
 
     add torsocks to kicksecure-recommended-cli
-    
+
     useful to download from onions using curl
-    
+
     (such as Linux installers)
 
 commit 6a878dc0465906885cd8b649358a2f8aebd77582
@@ -2014,7 +2033,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Nov 24 07:23:03 2022 -0500
 
     remove dependency on xserver-xorg-video-qxl
-    
+
     https://forums.whonix.org/t/help-welcome-kvm-development-staying-the-course/166/501
 
 commit 02d418a3cf531eaa798c9e4b3f8b0ff2aa679ced
@@ -2052,14 +2071,14 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Nov 5 09:29:25 2022 -0400
 
     install more packages by default
-    
+
     - hunspell-en-us
     - gpa
     - ffmpeg
     - pinentry-qt (or pinentry-x11)
     - pdf
     - youtube-dl
-    
+
     https://forums.kicksecure.com/t/add-remove-extra-packages/135/4
 
 commit 4a07e7882e5339c933646fdc3d2228d77a04fbfa
@@ -2073,7 +2092,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Nov 3 13:28:36 2022 -0400
 
     install vlc media player by default
-    
+
     https://forums.kicksecure.com/t/add-remove-extra-packages/135
 
 commit 5804a773bb8076050876c3dede21465a9de83a36
@@ -2081,7 +2100,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Nov 3 13:26:45 2022 -0400
 
     no longer install wget by default
-    
+
     https://forums.kicksecure.com/t/add-remove-extra-packages/135
 
 commit 43598daaaad399f2c31b706f173c60f0c22f9fff
@@ -2107,10 +2126,10 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Oct 1 10:26:36 2022 -0400
 
     `kicksecure-dependencies-cli`: `Depends:` `desktop-config-dist`
-    
+
     because `dist-base-files` sets default shell to `zsh` but the zsh configuration
     folder is shipped by package `desktop-config-dist`.
-    
+
     https://forums.whonix.org/t/change-default-shell-from-bash-to-zsh-by-default/14792
 
 commit 5adbe96831ea4d4c8ffaa636d8fdfefc2db197f0
@@ -2118,9 +2137,9 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Oct 1 10:13:47 2022 -0400
 
     move to kicksecure-desktop-environment-essential-gui
-    
+
     desktop-config-dist, desktop-config-dist-dependencies
-    
+
     https://forums.whonix.org/t/change-default-shell-from-bash-to-zsh-by-default/14792
 
 commit a04c86a1e40e95c87a356a0c0a2fb932897d5a2d
@@ -2128,7 +2147,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sat Oct 1 10:12:08 2022 -0400
 
     add desktop-config-dist-dependencies
-    
+
     https://forums.whonix.org/t/change-default-shell-from-bash-to-zsh-by-default/14792
 
 commit 78930ed0dac34461a10a250c65e8cfc9ad505a27
@@ -2166,19 +2185,19 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Jun 29 03:05:55 2022 -0400
 
     Install `apparmor-profiles-kicksecure` by default.
-    
+
     This results in installing the following packages by default:
-    
+
     - apparmor-profiles
     - apparmor-profiles-extra
     - apparmor-profile-thunderbird
     - apparmor-profile-torbrowser
     - apparmor-profile-hexchat
-    
+
     This was implemented by adding `Depends: apparmor-profiles-kicksecure` to package `kicksecure-recommended-cli`.
-    
+
     Also provide package `dummy-dependency-apparmor-profiles-kicksecure` as an easy opt-out.
-    
+
     https://forums.whonix.org/t/install-apparmor-profiles-apparmor-profiles-extra-apparmor-profiles-kicksecure-by-default/13753
 
 commit ad375c197fb172cab84792ce024d3c3808143ec7
@@ -2186,7 +2205,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Jun 29 02:58:09 2022 -0400
 
     `apparmor-profiles` and `apparmor-profiles-extra` to `apparmor-profiles-kicksecure`
-    
+
     https://forums.whonix.org/t/install-apparmor-profiles-apparmor-profiles-extra-apparmor-profiles-kicksecure-by-default/13753
 
 commit 17949cddf79cd59e92d159f4666ca7f24cdc7d27
@@ -2303,7 +2322,7 @@ Date:   Wed Feb 16 15:15:58 2022 -0500
 
     move a lot packages from kicksecure-dependencies-cli to kicksecure-dependencies-cli
     since this is more apprpriate.
-    
+
     haveged, jitterentropy-rngd,
     man-db,
     bzip2,
@@ -2463,7 +2482,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Oct 25 12:21:29 2021 -0400
 
     remove fasttrack-archive-keyring from kicksecure-recommended-cli
-    
+
     (added to anon-apt-sources-list)
 
 commit fadb6a854dedeaaf8c844e0f2e8a7790653a1557
@@ -2532,7 +2551,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Sep 14 14:44:13 2021 -0400
 
     fix, install policykit-1-gnome by default
-    
+
     https://forums.whonix.org/t/zulucrypt-appears-blank/12322
 
 commit 26e8b70a233d8ffe281052c80f01642953a01ae0
@@ -2558,11 +2577,11 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Sep 8 10:45:18 2021 -0400
 
     install flatpak by default
-    
+
     add flatpak kicksecure-recommended-cli
-    
+
     https://forums.whonix.org/t/flatpak-as-a-software-source-flathub-as-a-source-of-software/8500
-    
+
     https://www.whonix.org/wiki/Install_Software#flatpak
 
 commit 7f4f2930d720836cd4051a4ba6e38959037f2d95
@@ -2570,9 +2589,9 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Sep 8 10:42:35 2021 -0400
 
     install extrepo by default
-    
+
     add extrepo to kicksecure-recommended-cli
-    
+
     https://forums.whonix.org/t/extrepo-safely-adding-repos/8539
 
 commit 60b419145f72545d379c2c484f420caedf3a2e88
@@ -2586,7 +2605,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Sep 6 11:57:54 2021 -0400
 
     switch from lightdm to gdm3
-    
+
     because lightdm autologin is broken
 
 commit bee24e06b75565e5945bf55e9d1ff660fb5df92c
@@ -2642,7 +2661,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Aug 31 14:59:51 2021 -0400
 
     integrate kicksecure-dependencies-system
-    
+
     https://forums.whonix.org/t/replacing-initramfs-tools-with-dracut/4487
 
 commit 033993619b06c4ea82f6c9cc09a53b80b7e91b5d
@@ -2656,7 +2675,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Aug 31 14:53:25 2021 -0400
 
     introduce kicksecure-dependencies-system
-    
+
     https://forums.whonix.org/t/replacing-initramfs-tools-with-dracut/4487
 
 commit 71a04af09ef1f46a65da349292f0c2b70d7bd44d
@@ -2670,7 +2689,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sun Aug 29 15:21:33 2021 -0400
 
     remove initramfs-tools from non-qubes-vm-enhancements-cli
-    
+
     for dracut support
 
 commit 42e0ab1e82cf5ca5bc35cb864ce32aa6e0dac0aa
@@ -2720,7 +2739,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Aug 10 18:28:09 2021 -0400
 
     move obfs4proxy from kicksecure-dependencies-cli to kicksecure-recommended-cli
-    
+
     https://forums.whonix.org/t/meta-packages-development-discussion/11948
 
 commit 96bc990dc0078cb5b519ff15d76d4dd030a6005a
@@ -2740,9 +2759,9 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Tue Aug 10 18:18:37 2021 -0400
 
     introduce kicksecure-recommended-cli
-    
+
     install fasttrack-archive-keyring by default
-    
+
     https://forums.whonix.org/t/install-debian-fasttrack-archive-keyring-by-default/11456
 
 commit 994bc11c6361116c5870d7268eed4e06bdb2fc77
@@ -2788,9 +2807,9 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Jul 15 18:23:56 2021 +0000
 
     Merge branch 'HulaHoop0-master-patch-35409' into 'master'
-    
+
     Added obfs4proxy and firefox-esr
-    
+
     See merge request whonix/kicksecure-meta-packages!1
 
 commit 7ba985581cfd02092186bc8cbe584ac4c0f086f9
@@ -2810,9 +2829,9 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Fri Jun 4 05:25:00 2021 -0400
 
     remove os-prober from non-qubes-vm-enhancements-cli
-    
+
     since only useful for multi boot which is rarely done inside VMs
-    
+
     since it can cause build issues
 
 commit b02dd8e67cea34537f35fe9c27de6d1bdf546dd9
@@ -2826,7 +2845,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Fri May 7 05:37:51 2021 -0400
 
     split repository-dist GUI / CLI dependencies
-    
+
     https://forums.whonix.org/t/kicksecure-minimal-version/11613/4
 
 commit 8e9855fbca920f4af54029c8f47e74cc0883c0bc
@@ -2852,13 +2871,13 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Mon Apr 12 14:17:19 2021 -0400
 
     fix ristretto missing thumbnails and popup by installing tumbler by default
-    
+
     add "Depends: tumbler" to whonix-workstation-packages-recommended-gui
-    
+
     (tumbler is a "Recommends:" of ristretto)
-    
+
     Thanks to @TNT for the bug report!
-    
+
     https://forums.whonix.org/t/which-image-viewer-to-install-by-default/9268/3
 
 commit 899c1d6995c75e0f2cc7b742afdf7cad8e4e8da7
@@ -2878,7 +2897,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Thu Mar 18 07:12:56 2021 -0400
 
     add chromium-sandbox
-    
+
     without chromium will not start by default
 
 commit f9802b33e99e87af292ed5e29f2a7ac8b8b1f658
@@ -2892,7 +2911,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Mar 17 13:39:01 2021 -0400
 
     install curl by default
-    
+
     https://www.whonix.org/wiki/Secure_Downloads
 
 commit f1599e7fc6f5fe23ab3ff7ff4a873f7090c32da7
@@ -2912,7 +2931,7 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed Mar 17 10:22:03 2021 -0400
 
     install Chromium by default in Kicksecure
-    
+
     https://www.whonix.org/wiki/Dev/Kicksecure_Default_Browser
 
 commit 4d742f1b8bd0c0c47d1522e659483161e3ca9659
@@ -2986,11 +3005,11 @@ Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Sun Feb 21 06:28:01 2021 -0500
 
     actually not install orca by default
-    
+
     due to extra services running (speech-dispatcher)
-    
+
     needs more work
-    
+
     https://www.whonix.org/wiki/Orca
 
 commit d838f76e2249e7d2fc7a70d87ac9252ebf896e35
@@ -3076,9 +3095,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Dec 29 10:55:14 2020 -0500
 
     no longer install SecBrowser by default in Kicksecure
-    
+
     https://www.whonix.org/wiki/Dev/Kicksecure_Default_Browser
-    
+
     https://forums.whonix.org/t/chromium-browser-for-kicksecure-discussions-not-whonix/10388
 
 commit 114a853097e11650a591c62f14ba43e4f52423b9
@@ -3092,9 +3111,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Dec 18 06:52:52 2020 -0500
 
     no longer install qtox by default
-    
+
     Thanks to @madaidan for the suggestion!
-    
+
     https://forums.whonix.org/t/tox-qtox-whonix-integration/1219/18
 
 commit 9272c95fe6b798e1aeaf5557d1f8e9f8ee574a3a
@@ -3108,7 +3127,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Oct 8 05:03:36 2020 -0400
 
     dummy-dependency: add support for hardened-malloc-kicksecure-enable
-    
+
     https://forums.whonix.org/t/hardened-malloc-hardened-memory-allocator/7474/82
 
 commit 045924c305001f0026aa655dcb8558a5c8788fbc
@@ -3122,7 +3141,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Aug 6 13:28:31 2020 -0400
 
     add `dialog to kicksecure-dependencies-cli` to fix `dpkg` warning
-    
+
     > debconf: unable to initialize frontend: Dialog
     > debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
     > debconf: falling back to frontend: Readline
@@ -3163,11 +3182,11 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Jul 21 12:51:20 2020 -0400
 
     allow `dummy-dependency` to fullfill dependency of `qubes-core-agent-passwordless-root`
-    
+
     in preparation of
     - removal of dependency on `qubes-core-agent-passwordless-root`
     - support of VM sudo
-    
+
     https://www.qubes-os.org/doc/vm-sudo/
 
 commit 0cf0282711e8161fe1751a1f0a91dd4d17863069
@@ -3187,11 +3206,11 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Jun 14 13:22:48 2020 -0400
 
     allow dummy-dependency to satisfy xserver-xorg-video-vmware dependency
-    
+
     since it is i386/amd64 only
-    
+
     this is to fix distro morphing on non-amd64 platforms
-    
+
     Thanks to @JeremyRand for the bug report!
 
 commit b0261936dbb0f88fde31e97f7eeba8a9e738db97
@@ -3211,7 +3230,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat May 2 17:52:40 2020 -0400
 
     install monero-gui by default
-    
+
     https://forums.whonix.org/t/monero-and-whonix-sitting-in-a-tree/5949
 
 commit 7ceea12d0b312953be34ce89857ee67b107820bf
@@ -3309,7 +3328,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 23 08:02:13 2020 -0400
 
     whonix-host-xfce-kvm-freedom no need to depend on dist-base-files
-    
+
     already depends through kicksecure-cli
 
 commit 37327c6780f93dcbc9fefb681c03be9dec4cacf7
@@ -3347,7 +3366,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 23 07:56:46 2020 -0400
 
     remove xfce4-power-manager from whonix-host-xfce-kvm-freedom
-    
+
     because kicksecure-xfce-host already depends on it
 
 commit e81aa6f1cb07bb0b8a022c94dcfacf9382f1e352
@@ -3373,7 +3392,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 23 07:49:54 2020 -0400
 
     remove network-manager-gnome and network-manager from whonix-host-xfce-kvm-freedom,
-    
+
     because whonix-host-xfce-kvm-freedom depends on kicksecure-xfce-host,
     which depends on kicksecure-network-conf and kicksecure-network-conf-gui,
     which depends on network-manager-gnome and network-manager anyhow
@@ -3389,9 +3408,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Apr 20 08:48:54 2020 -0400
 
     add qemu-utils to whonix-host-xfce-kvm-freedom
-    
+
     Thanks to @tempest for the suggestion!
-    
+
     https://forums.whonix.org/t/whonix-host-operating-system/3931/264
 
 commit 983c7b3e2151e2e13d3f25ccdf59101057beb50a
@@ -3459,13 +3478,13 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Apr 8 08:42:14 2020 +0000
 
     remove command-not-found
-    
+
     since not working out of the box
     causing confusing error messages
-    
+
     not compatible with apt speedup
     https://forums.whonix.org/t/speeding-up-apt-update-with-acquire-languages-none-and-contents-deb-defaultenabled-false-its-so-much-faster/8894/1
-    
+
     https://www.whonix.org/wiki/Command-not-found
 
 commit a19485e1a5c059716e6a53b449a82da894f8c0f4
@@ -3533,7 +3552,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Apr 6 09:30:43 2020 -0400
 
     remove apparmor-profile-gwenview, apparmor-profile-okular since deprecated
-    
+
     https://forums.whonix.org/t/whonix-apparmor-profiles-development-discussion/108/704
 
 commit 598a94ffd703cae81d46f859759808868b3f5da1
@@ -3565,9 +3584,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Apr 5 13:37:36 2020 -0400
 
     add apt-utils to kicksecure-dependencies-cli
-    
+
     actually not a strict dependency but no more "perfectly suited package exists"
-    
+
     https://forums.whonix.org/t/whonix-default-packages-review-mmdebstrap-varriant-related-risk-of-regressions/9254/5
 
 commit ad953b1a804a2d0291dc54466100317c625bb6a0
@@ -3581,7 +3600,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Apr 4 12:51:20 2020 -0400
 
     add udev and dmsetup to non-qubes-vm-enhancements-cli
-    
+
     https://forums.whonix.org/t/disk-usb-automount-in-kicksecure/8728/27
 
 commit 5bd56e3231715c80ddb6ac53ab1a95791774ae13
@@ -3607,7 +3626,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Apr 3 12:18:57 2020 -0400
 
     add e2fsprogs to kicksecure-dependencies-cli
-    
+
     because contains `fsck.ext4`
 
 commit 1c70dea27c6372d58367194b0bb0d084c3f26f5a
@@ -3615,7 +3634,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Apr 3 12:13:32 2020 -0400
 
     add procps to kicksecure-dependencies-cli
-    
+
     because contains ps, kill, free and more
 
 commit 9f9549de87f7b032d5470c74757c94f49629c91d
@@ -3653,7 +3672,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 2 17:51:23 2020 -0400
 
     remove anon-iceweasel-warning since outdated, broken
-    
+
     if re-invented should be added to anon-apps-config
 
 commit 5fd54f5420967c6ba77cd87fbafceda1d13dbb49
@@ -3661,7 +3680,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 2 17:32:15 2020 -0400
 
     remove gpl-sources-download
-    
+
     since merged into usability-misc
 
 commit b5f4952f5b31845e6be35e07692d4025a7f20b10
@@ -3669,9 +3688,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 2 17:31:41 2020 -0400
 
     remove tor-ctrl
-    
+
     since deprecated
-    
+
     https://forums.whonix.org/t/tor-ctrl-tor-control-port-command-line-tool/8074
 
 commit 05ecbc4312a52d9cd4f97c04b61ca6eb99b74f94
@@ -3685,9 +3704,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 2 16:29:38 2020 -0400
 
     remove firmware-b43legacy-installer due to issues
-    
+
     https://api.travis-ci.org/v3/job/670229709/log.txt
-    
+
         Setting up firmware-b43legacy-installer (1:019-4) ...
         A chroot environment has been detected.
         Remember this firmware needs kernel >= 2.6.25.
@@ -3695,11 +3714,11 @@ Date:   Thu Apr 2 16:29:38 2020 -0400
         Connecting to 127.0.0.1:3142... connected.
         Proxy request sent, awaiting response... 403 Forbidden file type or location
         2020-04-02 17:08:45 ERROR 403: Forbidden file type or location.
-    
+
         /var/lib/dpkg/info/firmware-b43legacy-installer.postinst: Some problem occurred during the firmware download. Please check your internet connection.
         dpkg: error processing package firmware-b43legacy-installer (--configure):
          installed firmware-b43legacy-installer package post-installation script subprocess returned error exit status 1
-    
+
     https://forums.whonix.org/t/whonix-host-nonfree-blobs-firmware-linux-nonfree-technical-discussion-only/7356/14
 
 commit 760fef205a8c62faf2981a56e5c3f2201df516ae
@@ -3713,7 +3732,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 2 16:01:46 2020 -0400
 
     remove mupdf from kicksecure-xfce
-    
+
     https://forums.whonix.org/t/remove-mupdf-and-switch-xpdf-for-better-security/7884
 
 commit 4f8cfeb89258c5bc284b55ca0266c59edb370dbf
@@ -3793,7 +3812,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Mar 30 18:28:55 2020 -0400
 
     add ca-certificates to kicksecure-dependencies-cli
-    
+
     for chroot support
 
 commit 96a6a7ddd75b7c75e402176deaf7355cfcc428e1
@@ -3813,12 +3832,12 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Mar 30 17:56:46 2020 -0400
 
     add debootstrap / mmdebstrap support for Whonix repository
-    
+
     remove "Priority: required"
-    
+
     since does not show a warning when trying to remove the package
     which was the original intention
-    
+
     and does not allow to debootstrap / mmdebstrap from Whonix repository
 
 commit a6afdf47e543e64a61de72e685f7dc06f94d0159
@@ -3852,7 +3871,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Mar 27 08:15:13 2020 +0000
 
     Merge pull request #22 from onions-knight/patch-1
-    
+
     Update control
 
 commit 2f50efe61bda1a1038b4ea67ed4576707cf50871
@@ -3860,7 +3879,7 @@ Author: onions-knight <38859709+onions-knight@users.noreply.github.com>
 Date:   Thu Mar 26 20:51:21 2020 +0000
 
     Update control
-    
+
     Adding package ntfs-3g and dosfstools to whonix-host-xfce-kvm-freedom dependencies. See https://forums.whonix.org/t/whonix-host-operating-system/3931/202
 
 commit 4253a0d823338de2ba0e47a54df605da16c65e6e
@@ -3898,7 +3917,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Mar 16 03:08:39 2020 -0400
 
     add lvm2 to kicksecure-cli
-    
+
     https://forums.whonix.org/t/whonix-host-operating-system/3931/179
 
 commit bf475bbf03356764126eba6d345266933134589b
@@ -3912,9 +3931,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Mar 12 10:12:12 2020 -0400
 
     add whonix-base-files to whonix-host-xfce-kvm-freedom
-    
+
     Thanks to @onions-knight for the report!
-    
+
     https://forums.whonix.org/t/whonix-host-operating-system/3931/163
 
 commit ac4c7baa5308beb3594b0be11f46a53679610122
@@ -3928,9 +3947,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Mar 12 04:32:37 2020 -0400
 
     add xfce4-power-manager to whonix-host-xfce-kvm-freedom and kicksecure-xfce
-    
+
     https://phabricator.whonix.org/T928
-    
+
     Thanks to @onions-knight for the suggestion!
 
 commit 7f2bccb3cf5befd018182d803e64fa86a6463225
@@ -3944,7 +3963,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Mar 8 09:16:03 2020 -0400
 
     add xserver-xorg-video-vmware to kicksecure-desktop-environment-essential-gui
-    
+
     because it is required by VirtualBox Graphics Controller VMSVGA for auto resize
     and resize through VirtualBox settings menu
 
@@ -3959,17 +3978,17 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Mar 7 07:23:55 2020 -0500
 
     add non-qubes-audio to kicksecure-xfce
-    
+
     (This results in installation of libasound2, alsa-utils, pulseaudio
     and pavucontrol in Kicksecure XFCE since these are the current dependencies
     of non-qubes-audio. This also install these packages on Whonix Host since
     Whonix Host (whonix-host-xfce-kvm-freedom) currently depends on
     kicksecure-xfce.)
-    
+
     rename non-qubes-vm-audio to non-qubes-audio
-    
+
     http://forums.whonix.org/t/whonix-host-operating-system/3931/115
-    
+
     Thanks to @onion-knight for the bug report!
 
 commit d897c143f0f552ae89ce2371e8ce34eb9c19b101
@@ -3989,19 +4008,19 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Mar 7 07:13:00 2020 -0500
 
     install gvfs by default / fix access LUKS encrypted USB drive with Thunar
-    
+
     add gvfs to kicksecure-desktop-applications-xfce
-    
+
     https://phabricator.whonix.org/T965
-    
+
     https://forums.whonix.org/t/cannot-access-encrypted-usb-drive-with-thunar-in-whonix-15/8131/10
-    
+
     http://forums.whonix.org/t/whonix-host-operating-system/3931/109
-    
+
     https://forums.whonix.org/t/whonix-xfce-development/6213/99
-    
+
     https://forums.whonix.org/t/use-sudoedit-in-whonix-documentation-and-whonix-software/7599/22
-    
+
     Thanks to @onion-knight and @helper for the suggestion!
 
 commit 6eb50ff8040bed20c68e45ddc8d0930bd180d4df
@@ -4009,11 +4028,11 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Mar 7 07:08:35 2020 -0500
 
     add x11-xserver-utils to kicksecure-desktop-environment-essential-gui
-    
+
     to fix XFCE logout button
-    
+
     http://forums.whonix.org/t/whonix-host-operating-system/3931/109
-    
+
     Thanks to @onion-knight for the suggestion!
 
 commit 65da988fbb5d312464b8661a467ee39dd15fb114
@@ -4027,9 +4046,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Feb 14 04:32:08 2020 -0500
 
     do not install i2p by default
-    
+
     as autostart cannot be prevented for stable upgrade
-    
+
     https://forums.whonix.org/t/installation-and-fix-of-i2p-inside-whonix-workstation-by-default/8610/106
 
 commit 4f17b756a8b856fad24c6cb4ec7e11ba12cbbd0c
@@ -4043,7 +4062,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Feb 14 02:56:35 2020 -0500
 
     remove anon-apps-config from Depends: since already a Pre-Depends:
-    
+
     to fix lintian warning
 
 commit 591c6e33b73b6adcfff2aa2c18c06002a71f95ca
@@ -4057,9 +4076,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Feb 14 02:53:43 2020 -0500
 
     whonix-shared-packages-recommended-cli add Pre-Depends: anon-apps-config
-    
+
     to install it earlier during upgrades
-    
+
     to make sure i2p isn't autostarted
 
 commit 7a93c6e1ffd8a99a54b79524becd4dd4437bc48b
@@ -4073,7 +4092,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Feb 13 07:02:28 2020 -0500
 
     install i2p by default on Whonix-Workstation
-    
+
     https://forums.whonix.org/t/installation-and-fix-of-i2p-inside-whonix-workstation-by-default/8610
 
 commit 89520f385e9a483c9a6161cac47e62435409f6b6
@@ -4081,7 +4100,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Feb 13 06:55:25 2020 -0500
 
     install i2p-router, privoxy by default
-    
+
     https://forums.whonix.org/t/installation-and-fix-of-i2p-inside-whonix-workstation-by-default/8610
 
 commit 7ae0f0e054f9cac9496978658fcb97b035f48ee0
@@ -4137,10 +4156,10 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jan 11 08:34:42 2020 -0500
 
     fix
-    
+
     udisksd[572]: failed to load module crypto: libbd_crypto.so.2: cannot open shared object file: No such file or directory
     udisksd[572]: Failed to load the 'crypto' libblockdev plugin
-    
+
     kicksecure-dependencies-cli Depends: libblockdev-crypto2
 
 commit 7dac429106db352cbd8c24ff3fd84eb643fce4d6
@@ -4148,12 +4167,12 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jan 11 08:32:43 2020 -0500
 
     fix
-    
+
     udisksd[572]: failed to load module crypto: libbd_crypto.so.2: cannot open shared object file: No such file or directory
     udisksd[572]: failed to load module mdraid: libbd_mdraid.so.2: cannot open shared object file: No such file or directory
     udisksd[572]: Failed to load the 'mdraid' libblockdev plugin
     udisksd[572]: Failed to load the 'crypto' libblockdev plugin
-    
+
     kicksecure-dependencies-cli Depends: libblockdev-crypto2, libblockdev-mdraid2
 
 commit 714c007c6695210075ba9556e03af949387d4091
@@ -4180,9 +4199,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Dec 16 04:20:41 2019 -0500
 
     add basez to whonix-gateway-packages-dependencies-cli
-    
+
     actually not a dependency but useful for Onion Services Authentication
-    
+
     https://www.whonix.org/wiki/Onion_Services#Step_3:_Configure_Onion_Services_Authentication
 
 commit 995d719d00f5e4b261740ef68181edda207b8145
@@ -4232,7 +4251,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Nov 29 08:01:37 2019 -0500
 
     make architecture specific dependencies fall back to depend on dummy-dependency
-    
+
     https://forums.whonix.org/t/whonix-for-arm64-raspberry-pi-rpi/1788/141
 
 commit 1d46ddaa83788b160bc92c8252578d02a0eefb8b
@@ -4240,7 +4259,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Nov 29 07:57:53 2019 -0500
 
     add dummy-dependency, a package to satisfy architecture specific dependencies:
-    
+
       - bindp
       - lkrg
       - kloak
@@ -4257,7 +4276,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Nov 29 07:48:59 2019 -0500
 
     refactoring, move architecture specific packages to the bottom of Depends:
-    
+
     in preparation of properly marking them as architecture specific
 
 commit 14561c5daa34c4d95fb1ba49ef6b0c0c6d9c5dec
@@ -4265,7 +4284,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Nov 29 07:37:30 2019 -0500
 
     refactoring, move architecture specific packages to the bottom of Depends:
-    
+
     in preparation of properly marking them as architecture specific
 
 commit b4a89d220637c4642ddc10f5ce85796688309aea
@@ -4279,10 +4298,10 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Nov 25 01:54:44 2019 -0500
 
     no longer install firejail by default
-    
+
     reasons:
     https://forums.whonix.org/t/tor-browser-hardening-hardened-malloc-firejail-apparmor-vs-web-fingerprint/7851/54
-    
+
     this reverts:
     https://github.com/Whonix/anon-meta-packages/commit/45ea369055d513c07e28ac81ef113e13b33f3a5a#diff-d837a1c17de0268bcea321239ddbed47
 
@@ -4339,13 +4358,13 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Oct 26 08:51:12 2019 -0400
 
     add serial-console-enable to non-qubes-vm-enhancements-cli
-    
+
     https://www.whonix.org/wiki/Recovery#Serial_Console
-    
+
     https://forums.whonix.org/t/serial-console-in-virtualbox/8021
-    
+
     https://forums.whonix.org/t/grub-serial-menu-in-virsh-console/8097
-    
+
     https://forums.whonix.org/t/how-do-i-enter-the-whonix-shell-from-cli/7271
 
 commit f44f3df5cbff4b7566f5aa446bfec525440f3172
@@ -4365,7 +4384,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Oct 25 08:37:59 2019 -0400
 
     add xpdf to whonix-workstation-packages-recommended-gui
-    
+
     https://forums.whonix.org/t/remove-mupdf-and-switch-xpdf-for-better-security/7884
 
 commit 565b44b4ecf2f47599664024c5372c33cd4a65da
@@ -4385,11 +4404,11 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Oct 24 07:30:12 2019 -0400
 
     remove mupdf
-    
+
     due to unfixed security issues in Debian buster
-    
+
     https://security-tracker.debian.org/tracker/CVE-2019-13290
-    
+
     https://forums.whonix.org/t/remove-mupdf-and-switch-xpdf-for-better-security/7884
 
 commit a1ccb1197cdb58a46de2387ed9d72e4a17f07f46
@@ -4409,7 +4428,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Oct 21 10:12:48 2019 +0000
 
     add swap-file-creator to non-qubes-vm-enhancements-cli
-    
+
     https://forums.whonix.org/t/swap-swap-file-whonix-gateway-freezing-during-apt-get-dist-upgrade-encrypted-swap-file-creator/8317
 
 commit 2d59a11366b4434a9f1c69b88e47c2bbdce5b461
@@ -4465,9 +4484,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Sep 15 10:54:10 2019 +0000
 
     remove apt-transport-https
-    
+
     dummy transitional package
-    
+
     was merged into APT
 
 commit c022805bf5294ac3926c47f8164628fee8125625
@@ -4511,7 +4530,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Sep 14 13:14:04 2019 +0000
 
     kicksecure-xfce add Depends: tb-default-browser
-    
+
     so SecBrowser will be default browser
 
 commit df6be087aeb32167773eb82902b1504ff089fa35
@@ -4543,18 +4562,18 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Sep 13 14:42:38 2019 +0000
 
     introduce kicksecure-cli-vm
-    
+
     introduce kicksecure-xfce-vm
-    
+
     add kicksecure-network-conf to kicksecure-cli-vm
-    
+
     We don't want kicksecure-network-conf for non-VM builds since that could break
     networking.
-    
+
     add non-qubes-vm-audio to non-qubes-vm-enhancements-gui
-    
+
     add non-qubes-vm-enhancements-cli to non-qubes-vm-enhancements-gui
-    
+
     add rads to non-qubes-vm-enhancements-gui
 
 commit 821b29fdd165f533ac3a55137c82d8eb8ec72c76
@@ -4646,7 +4665,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Aug 17 09:15:05 2019 +0000
 
     install SecBrowser by default in Kicksecure
-    
+
     kicksecure-xfce depend on secbrowser
 
 commit 66690bd20a4b5b3e5ca201d1cf48e84fea22319b
@@ -4654,9 +4673,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Aug 17 09:11:50 2019 +0000
 
     remove anon-mixmaster from whonix-workstation-packages-recommended-cli
-    
+
     since deprecated
-    
+
     https://www.whonix.org/wiki/Mixmaster
 
 commit 79e6869430196a2fe2c0e10e9c6fdd76140aace6
@@ -4664,7 +4683,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Aug 17 09:09:29 2019 +0000
 
     install thunar-volman by default
-    
+
     add thunar-volman to kicksecure-desktop-applications-xfce
 
 commit 1215431bd4ba33e44e4165c3ff651ac1cda6b8ca
@@ -4690,17 +4709,17 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Aug 16 10:57:06 2019 -0400
 
     remove vbox-disable-timesync
-    
+
     since broken
-    
+
     shows BUSY in journal log and does not work
-    
+
     VirtualBox VM settings on the host prevent timesync already
-    
+
     which now fails inside VM, creating another error in log
-    
+
     timesync Error: vgsvcTimeSyncWorker: VbglR3GetHostTime failed; rc2=VERR_NOT_SUPPORTED
-    
+
     which is noisy but better than having this broken entirely
 
 commit ab4d2e01424150a21244f295a8c5b86ff1d11c79
@@ -4726,7 +4745,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Aug 15 13:53:39 2019 +0000
 
     move kloak from non-qubes-vm-enhancements-cli to non-qubes-whonix-workstation-cli
-    
+
     so it does not get installed on Whonix-Gateway
 
 commit a830542191c98749990fd1ece508cb33b42cfa5d
@@ -4764,7 +4783,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Aug 11 14:20:51 2019 +0000
 
     kicksecure-cli depend on anon-base-files
-    
+
     which creates user "user"
 
 commit 1d7fd3db995d872d0952727ba13a4da1c4ace9ac
@@ -4820,9 +4839,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Aug 9 09:45:56 2019 +0000
 
     install electrum by default
-    
+
     add package binaries-freedom to whonix-workstation-packages-recommended-gui
-    
+
     https://phabricator.whonix.org/T215
 
 commit a4d025d39babfbf6a9d26127bde00b695b2d6ed9
@@ -4878,7 +4897,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jul 17 20:22:11 2019 +0000
 
     add anon-base-files to whonix-host-xfce-kvm-freedom
-    
+
     for user "user" creation
 
 commit 534ebf9cb8470e7405affc94130033b0185052e0
@@ -4904,9 +4923,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jun 8 09:46:44 2019 +0000
 
     remove ricochet-im, coyim since non-functional
-    
+
     https://github.com/coyim/coyim/issues/527
-    
+
     https://forums.whonix.org/t/ricochet-support/7174/46
 
 commit a817666dd9fd8ddecf41e0c30620c7a08f41cd63
@@ -4950,7 +4969,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon May 13 14:22:36 2019 +0000
 
     remove calamares dependencies so calamares can remove them
-    
+
     make them weak recommended packages instead
 
 commit 738bee328898f61379f7c9dc12120f293a3a7e9d
@@ -5024,7 +5043,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun May 12 10:15:47 2019 +0000
 
     comment out whonix-gateway-xfce-qcow2, whonix-workstation-xfce-qcow2 for now
-    
+
     since not yet existing
 
 commit 60a721fc4ab7322ee28fa6c5b72aff85e48e521f
@@ -5032,7 +5051,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun May 12 09:58:33 2019 +0000
 
     let whonix-host-xfce-kvm-freedom depend on whonix-libvirt
-    
+
     so Whonix VM XML files get set up by default
 
 commit 5daaf63b10add261015559451bf161f4c69d584f
@@ -5040,7 +5059,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun May 12 09:47:39 2019 +0000
 
     move whonix-initializer to hardened-packages-dependencies-cli
-    
+
     (non-perfect solution)
 
 commit a5de1f6abccb30ebd73502597fa4d49ac2395a92
@@ -5048,7 +5067,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun May 12 03:16:32 2019 -0400
 
     remove grub-enable-apparmor since now Debian default
-    
+
     https://www.debian.org/releases/buster/amd64/release-notes/ch-whats-new.en.html#apparmor
 
 commit 3b550f44ba2eddb83536b9a39d80ce9dd8eaa83e
@@ -5056,7 +5075,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat May 11 11:03:17 2019 +0000
 
     add whonix-host-xfce-kvm-freedom dependencies as per
-    
+
     https://github.com/onions-knight/whonix-stuff/blob/master/2900_configure_desktop_sketch#L42-L52
 
 commit 3611122f12c4ba2b73ddf982240063b31bb7a72f
@@ -5064,7 +5083,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat May 11 10:53:59 2019 +0000
 
     implement whonix-host-xfce-kvm-freedom / whonix-host-xfce-kvm-nonfreedom
-    
+
     https://forums.whonix.org/t/whonix-host-operating-system/3931/63
 
 commit 4818d683d1697c12e299be534a0eee1595bb39ee
@@ -5072,7 +5091,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat May 11 06:43:46 2019 -0400
 
     implement meta package firmware-nonfreedom
-    
+
     https://forums.whonix.org/t/whonix-host-nonfree-blobs-firmware-linux-nonfree-technical-discussion-only/7356/2
 
 commit 429daafe265805bfb740ef43e42dcfafaea0d314
@@ -5080,9 +5099,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu May 9 21:37:27 2019 -0400
 
     make it easy to replace (remove) grub-live with grub-default-live
-    
+
     depend on package grub-live or virtual package grub-live-boot
-    
+
     virtual package grub-live-boot is provided by both,
     - grub-live
     - grub-default-live
@@ -5110,15 +5129,15 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Apr 19 10:27:49 2019 +0000
 
     depend on libexo-1-0
-    
+
     implicit dependency of thunar?
-    
+
     Thanks to @TNTBOMBOM for the bug report!
-    
+
     https://github.com/QubesOS/qubes-issues/issues/4981
-    
+
     Thanks to @unman for pointing out a missing package!
-    
+
     https://github.com/QubesOS/qubes-issues/issues/4981#issuecomment-484736841
 
 commit 19bfdd2e8b828fd0d5fc91743674321d4af4ad73
@@ -5140,7 +5159,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Apr 19 03:28:38 2019 -0400
 
     Merge pull request #20 from HulaHoopWhonix/patch-8
-    
+
     Added password gen and LUKS container tools
 
 commit d4e50ba4c2523aff91c0b2624b0df9eb07e58ded
@@ -5160,7 +5179,7 @@ Author: HulaHoopWhonix <bancfc@openmailbox.org>
 Date:   Thu Apr 18 16:25:55 2019 +0000
 
     Added password gen and LUKS container tools
-    
+
     Added diceware, makepasswd, zulucrypt-cli/gui and plugins
 
 commit d7601ff6562dd4ab4a1e59c96360d6549e0416d2
@@ -5174,14 +5193,14 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Apr 14 16:17:59 2019 +0000
 
     install firejail by default
-    
+
     - firejail (does not use 'Recommends:'')
     - firejail-profiles (does not use 'Recommends:')
     - firetools (has 'Recommends:')
     - and same 'Recommends:' packages as firetools
-    
+
     add 'firejail, firetools, firejail-profiles, iproute2, iptables' to hardened-packages-dependencies-cli
-    
+
     add 'xauth, xpra | xserver-xephyr | xvfb' to hardened-desktop-environment-essential-gui
 
 commit 6973c0f343027cd159b952667182ec0ddd706f01
@@ -5201,7 +5220,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Apr 12 10:11:07 2019 -0400
 
     add keepassxc to whonix-workstation-packages-recommended-gui
-    
+
     https://forums.whonix.org/t/add-password-manager-by-default/189/64
 
 commit 08db7e73cb7d237804f3f1aeec156528d649fb9a
@@ -5245,7 +5264,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Apr 10 15:13:52 2019 -0400
 
     remove kloak for now
-    
+
     https://forums.whonix.org/t/kloak-keystroke-anonymization-tool/7089/7
 
 commit acb15aa04982b8e7b0f215712cec97289690f0cf
@@ -5265,11 +5284,11 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Apr 8 06:12:21 2019 -0400
 
     add "policykit-1-gnome | polkit-1-auth-agent" to hardened-desktop-applications-xfce
-    
+
     policykit-1-gnome - specific package, default choice
-    
+
     polkit-1-auth-agent - virtual package to allow installation of an alternative to policykit-1-gnome
-    
+
     https://forums.whonix.org/t/kdesudo-deprecated-replacement-required-for-debian-buster-based-whonix-15/6315/12
 
 commit 0fa590487c57ba87c687419f988c9aadf2710fea
@@ -5313,9 +5332,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Apr 6 14:49:17 2019 +0000
 
     add cryptsetup to non-qubes-vm-enhancements-cli
-    
+
     https://forums.whonix.org/t/have-cryptsetup-installed-by-default-in-whonix/6684
-    
+
     https://phabricator.whonix.org/T890
 
 commit 03d4c6de551f7df4c055aa2f7829176a4b7ec8d9
@@ -5323,7 +5342,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Apr 6 14:42:00 2019 +0000
 
     add qtox to whonix-workstation-packages-recommended-gui
-    
+
     https://phabricator.whonix.org/T889
 
 commit 1d6e7372311995c881b4f556b51573df08d88c1e
@@ -5337,7 +5356,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Apr 6 14:28:32 2019 +0000
 
     add jitterentropy-rngd to hardened-packages-dependencies-cli
-    
+
     https://phabricator.whonix.org/T817
 
 commit 682856655397f7e00728cecc4dda62f53771deca
@@ -5345,7 +5364,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Apr 6 14:26:19 2019 +0000
 
     remove mat and its dependencies and replace with with mat2 instead
-    
+
     https://phabricator.whonix.org/T885
 
 commit fcf9d7de5176ed2721e846832afd6cc6b6d8c5fb
@@ -5353,7 +5372,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Apr 6 14:24:54 2019 +0000
 
     remove python-poppler since not in buster
-    
+
     (related to mat)
 
 commit 55f6381e0170fee595a6aa5ff56272dc39741be7
@@ -5367,7 +5386,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Apr 6 14:18:52 2019 +0000
 
     add mupdf (pdf viewer) and ristretto (image viewer) to qubes-whonix-workstation
-    
+
     remove from qubes-whonix-workstation:
     - kcalc (depends on kde, no replacement yet)
     - okular (depends on kde, use mupdf instead)
@@ -5381,7 +5400,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Apr 6 14:11:01 2019 +0000
 
     add thunar to hardened-desktop-applications-xfce
-    
+
     (so it gets installed in Qubes-Whonix)
 
 commit ef5ed025200ca832da54eb7042b3715c1886d2d9
@@ -5413,11 +5432,11 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Apr 6 13:03:48 2019 +0000
 
     hardened-packages-dependencies-cli no longer depend on ntfs-3g
-    
+
     because ntfs-3g depends on fuse which results in a build error
-    
+
     https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=751015
-    
+
     https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=774028
 
 commit 9cea286d8040289d680b4316f0b43a2acbb27520
@@ -5455,7 +5474,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Apr 5 18:32:44 2019 -0400
 
     add dummy-contrib and dummy-nonfree
-    
+
     Dummy packages without any contents.
     Packages itself are not nonfree.
     Packages itself are Free, Open, Freedom, Libre Software.
@@ -5555,18 +5574,18 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Mar 1 14:31:48 2019 +0000
 
     add improved legal protections clauses
-    
+
     The license for software created by Whonix is the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version with additional terms applicable per GNU GPL version 3 section 7.
-    
+
     The additional terms are based on the Doom 3 license which is Debian refers to as `GPL-3+-with-id-software-additional-terms`, which is Debian DFSG [1] (The Debian Free Software Guidelines) approved and which is therefore suitable for Debian `main`. Whonix made applied minimal changes to it:
-    
+
     * Rewrite `The Doom 3 BFG Edition GPL Source Code` to the more common `this program` which is used throughout the GPL.
     * Added a "trump clause" [2], in other words, any conflicts or disputes between the additional terms and the GPLv3 shall be resolved in favor of the GPLv3 by adding `Notwithstanding any other provision of this License` (as mentioned in GPL FAQ [3]) at the beginning of the additional terms.
-    
+
     [1] https://www.debian.org/social_contract#guidelines
     [2] https://www.fsf.org/news/canonical-updated-licensing-terms
     [3] https://www.gnu.org/licenses/gpl-faq.html#v3Notwithstanding
-    
+
     For more considerations, see also:
     https://www.whonix.org/wiki/Dev/Licensing
 
@@ -5581,7 +5600,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Jan 12 01:24:44 2019 -0500
 
     add magic-wormhole to whonix-workstation-packages-recommended-cli
-    
+
     https://phabricator.whonix.org/T771
 
 commit 8a518cc2cb33864054204174e831527fdb90e2f1
@@ -5603,7 +5622,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 2 21:30:44 2019 -0500
 
     Merge pull request #19 from Algernon-01/archivers
-    
+
     Archivers
 
 commit f90b5fe7d7e036f106bcb44f5f9cb33c60f79dd8
@@ -5656,7 +5675,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Nov 30 06:46:45 2018 -0500
 
     Merge pull request #17 from Algernon-01/master
-    
+
     Adds pavucontrol.
 
 commit 8704ae957af0d1e51499619e2d3d49bc4bda3586
@@ -5689,9 +5708,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Nov 28 03:08:12 2018 -0500
 
     Revert "add xfce4-whiskermenu-plugin to hardened-desktop-applications-xfce"
-    
+
     This reverts commit e1f7d4ac1d2e08616053b6a89158409cf0ee2cf9.
-    
+
     Adding as dependency of whonix-xfce-desktop-config instead.
 
 commit 90016a2c568d92c15bf134291b43fb7b47f5c8a8
@@ -5783,7 +5802,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Nov 15 09:59:58 2018 +0000
 
     Revert "remove superfluous dependency"
-    
+
     This reverts commit b18504c184fc184b0cfc1a809ba390f5c33fb399.
 
 commit b18504c184fc184b0cfc1a809ba390f5c33fb399
@@ -5880,7 +5899,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Nov 14 07:47:05 2018 -0500
 
     remove ristretto from hardened-desktop-applications-xfce
-    
+
     so it won't be installed by default on Whonix-Gateway
 
 commit f63b1ddd7c30a5a95202ad80f7fd565b74b8fcfa
@@ -5907,9 +5926,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Nov 14 03:26:47 2018 -0500
 
     remove pulseaudio from hardened-desktop-applications-xfce
-    
+
     since non-qubes-vm-enhancements-gui already depends on pulseaudio
-    
+
     and non-qubes-whonix-(gateway|workstation)-xfce depends on non-qubes-vm-enhancements-gui
 
 commit 90ae1674084b89cf1ee02411e95f5ba04fdbf4da
@@ -5951,9 +5970,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Nov 13 13:41:25 2018 +0000
 
     remove dependency on non-existing package whonix-gateway-packages-recommended-gui
-    
+
     thanks to @Algernon for the bug report
-    
+
     https://forums.whonix.org/t/whonix-cli-development/6309/3?u=patrick
 
 commit 48b4c3c545df91dbc2a807fe040fccc83d6f4357
@@ -6060,7 +6079,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Nov 13 04:22:32 2018 -0500
 
     deprecate desktop shortcuts due to warning in XFCE
-    
+
     https://forums.whonix.org/t/whonix-xfce-development/6213/36?u=patrick
 
 commit c2db1dcc28f33b0453fafa541d52f1e89f349671
@@ -6074,9 +6093,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Nov 8 00:03:38 2018 -0500
 
     install spellchecker by default (useful for thunderbird and hexchat)
-    
+
     add hunspell-en-us to whonix-workstation-default-applications-gui
-    
+
     https://forums.whonix.org/t/thunderbird-and-hexchat-english-dictionaries-spell-checker-enhancement/6241/3
 
 commit 2e8382036a09a85d396fea5e77c1e07bd727ab28
@@ -6122,7 +6141,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Nov 1 00:02:44 2018 -0400
 
     Merge pull request #15 from Algernon-01/master
-    
+
     Added Xfce related meta-packages
 
 commit b215d1c6b1345c5a555cbb8c0cc50c3b7026b98b
@@ -6178,9 +6197,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Sep 17 10:20:10 2018 +0000
 
     Revert "Essential: yes"
-    
+
     This reverts commit c000291e8b3390b4eee24bda3e8d1b49b427a5bb.
-    
+
     https://forums.whonix.org/t/protecting-bricking-whonix-whonix-meta-pacakges-from-removal-using-essential-yes/5969
 
 commit f368daae8c396a4287995b6695848f08ab29aabf
@@ -6255,7 +6274,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Sep 14 16:07:57 2018 -0400
 
     fix
-    
+
     https://forums.whonix.org/t/package-conflicts/5936
 
 commit c74e5d15ad4927ab98a01319057bea65ed7a2c96
@@ -6297,58 +6316,58 @@ Date:   Tue Sep 11 08:39:35 2018 +0000
     - debian-vm-kde
     - hardened-debian-cli
     - hardened-debian-kde
-    
+
     - tor-ctrl
     - uwt
     - anon-apps-config
-    
+
     anon-shared-packages-dependencies -> hardened-packages-dependencies-cli
-    
+
     anon-shared-packages-recommended -> hardened-packages-recommended-cli
-    
+
     split non-qubes-vm-enhancements into non-qubes-vm-enhancements-cli and non-qubes-vm-enhancements-gui
-    
+
     anon-shared-default-applications -> whonix-shared-default-applications-gui
-    
+
     anon-gateway-default-applications -> whonix-gateway-default-applications-gui
     whonix-gateway-default-applications -> whonix-gateway-default-applications-gui
-    
+
     anon-shared-desktop -> hardened-desktop-environment-essential-gui
-    
+
     anon-shared-desktop-kde -> hardened-desktop-environment-essential-kde
-    
+
     apparmor-profiles-whonix -> apparmor-profiles-hardened-debian
-    
+
     whonix-gateway-default-applications -> whonix-gateway-default-applications-gui
-    
+
     whonix-shared-packages-dependencies -> whonix-shared-packages-dependencies-cli
-    
+
     anon-shared-desktop -> hardened-desktop-environment-essential-gui
-    
+
     anon-shared-desktop-kde -> hardened-desktop-environment-essential-kde
-    
+
     anon-shared-applications-kde -> hardened-desktop-applications-kde
-    
+
     anon-shared-kde-accessibility -> hardened-desktop-kde-accessibility-gui
-    
+
     anon-workstation-default-applications -> whonix-workstation-default-applications-gui
-    
+
     apparmor-profiles-whonix -> apparmor-profiles-hardened-debian
-    
+
     whonix-gateway-packages-dependencies -> whonix-gateway-packages-dependencies-cli
-    
+
     whonix-gateway-packages-recommended -> whonix-gateway-packages-recommended-cli
-    
+
     whonix-shared-packages-dependencies -> whonix-shared-packages-dependencies-cli
-    
+
     whonix-shared-packages-recommended -> whonix-shared-packages-recommended-cli
-    
+
     whonix-workstation-packages-dependencies -> whonix-workstation-packages-dependencies-cli
-    
+
     whonix-workstation-packages-recommended -> whonix-workstation-packages-recommended-cli
-    
+
     non-qubes-whonix-gateway -> non-qubes-whonix-gateway-kde
-    
+
     non-qubes-whonix-workstation -> non-qubes-whonix-workstation-kde
 
 commit 4f3cde092eb3b24f99b98e6897fc9014d3aa7d98
@@ -6357,7 +6376,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Sep 11 04:37:44 2018 -0400
 
     Merge pull request #13 from Algernon-01/master
-    
+
     Install kernel from backports for HDMI support.
 
 commit cc3c727255f56fdc0be2637fbe200db4aeff3a2c
@@ -6392,7 +6411,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Sep 8 17:50:52 2018 +0000
 
     Merge pull request #12 from Algernon-01/master
-    
+
     Use official raspi3-firmware package from buster.
 
 commit cf59b22e92fb84d3dc1b385bacb73bf15be338f3
@@ -6432,15 +6451,15 @@ Date:   Mon Aug 27 19:15:45 2018 +0000
 
     remove from anon-workstation-packages-recommended
     since already in anon-workstation-default-applications
-    
+
     - thunderbird
     - xul-ext-torbirdy
     - enigmail
     - youtube-dl
-    
+
     move from anon-workstation-packages-recommended
     to anon-workstation-default-applications
-    
+
     - xchat-improved-privacy
     - anon-torchat
 
@@ -6475,7 +6494,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Aug 28 00:33:59 2018 +0800
 
     Merge pull request #11 from Algernon-01/master
-    
+
      New version of non-qubes-whonix-gateway-cli and whonix-gateway-rpi.
 
 commit d98e92a05047f9e643fd454a970931c1f9e87222
@@ -6501,7 +6520,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Aug 20 22:12:29 2018 +0800
 
     move anon-iceweasel-warning from anon-shared-packages-recommended to anon-shared-default-applications (GUI)
-    
+
     move anon-icon-pack from anon-shared-packages-recommended to anon-shared-default-applications (GUI)
 
 commit 53b9039bca53b55397a9ee363b3228b8ae9280c1
@@ -6509,7 +6528,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Aug 20 22:07:25 2018 +0800
 
     removed gtk2-engines-pixbuf from anon-shared-packages-recommended
-    
+
     since already part of anon-shared-desktop
 
 commit 1545d349c28181ffecadc702d2d095fa626e6cce
@@ -6517,7 +6536,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Aug 17 20:02:17 2018 +0000
 
     fix, install pinentry-qt by default
-    
+
     remove "pinentry-curses | pinentry" from anon-workstation-default-applications
     but keep "pinentry-qt | pinentry-x11" in anon-workstation-default-applications
 
@@ -6532,7 +6551,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Aug 17 19:25:24 2018 +0000
 
     add coyim to anon-workstation-default-applications
-    
+
     https://phabricator.whonix.org/T803
 
 commit f083598a9dd8c9b7adc6978a1d6f23514a2d1bd5
@@ -6571,13 +6590,13 @@ Date:   Thu Aug 9 18:04:21 2018 +0000
 
     add anon-shared-default-applications
     Recommended desktop packages for both, Anon-Gateway and Anon-Workstation
-    
+
     add anon-gateway-default-applications
     Recommended desktop packages for Anon-Gateway GUI
-    
+
     remove anon-shared-desktop-recommended (never released)
     (anon-shared-default-applications will replace it)
-    
+
     install tor-control-panel by default
 
 commit 5302549ffe4142246fb3e93e24d821e178f660e9
@@ -6591,7 +6610,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Aug 9 17:20:32 2018 +0000
 
     add anon-shared-desktop-recommended
-    
+
     A metapackage, which installs desktop packages useful in desktop environments on anonymity distributions.
 
 commit df412af79da91a9140ca48a3641bc5e00103f9e9
@@ -6617,7 +6636,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Aug 9 03:48:14 2018 +0800
 
     move sdwdate-gui from anon-shared-packages-dependencies to anon-shared-packages-recommended
-    
+
     for better cli-only support
 
 commit d82306408b47e9a36d2746c4a2098bb610e256cc
@@ -6631,7 +6650,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Jul 22 12:54:04 2018 +0800
 
     Revert "Move kde-l10n-{ar,ru,zhcn} to Depends"
-    
+
     This reverts commit 900316fb5ae04ed9abe11b101e5f5544bef70c41.
 
 commit 525274ba27bfde2390f489c9dccfd11be987d84b
@@ -6647,7 +6666,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Jul 22 04:48:20 2018 +0000
 
     Merge pull request #9 from irykoon/master
-    
+
      Move kde-l10n-{ar,ru,zhcn} to Depends
 
 commit 06733c120c111d1b318a626873ab293063a5d911
@@ -6662,7 +6681,7 @@ Author: irykoon <irykoon@gmail.com>
 Date:   Sat Jul 21 15:41:47 2018 +0000
 
     Move kde-l10n-{ar,ru,zhcn} to Depends
-    
+
     Please correct me if I am wrong. My understanding is Whonix will
     install packages with --no-recommends. Therefore, this changes should
     be enough to get those packages installed by default.
@@ -6684,7 +6703,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 12 14:36:40 2018 +0200
 
     remove apparmor-profiles-virtualbox from apparmor-profiles-whonix
-    
+
     http://forums.whonix.org/t/whonix-apparmor-profiles-development-discussion/108/671
 
 commit faeb630deb811fdae765d03beba4f0e39256e86b
@@ -6698,7 +6717,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Mar 8 14:51:50 2018 +0000
 
     remove pkg-manager-longer-timeouts and pkg-manager-no-autoupdate
-    
+
     since merged into anon-apps-config
 
 commit a7ddcb9eab7e4aa179005005315310cc192e301b
@@ -6778,11 +6797,11 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Jan 28 21:59:38 2018 +0000
 
     no longer install whonix-setup-wiazrd on Whonix-Workstation by default
-    
+
     not required there anymore
-    
+
     move whonix-setup wizard from whonix-shared-packages-recommended to whonix-gateway-packages-recommended
-    
+
     https://forums.whonix.org/t/graphical-gui-whonix-setup-wizard-anon-connection-wizard-technical-discussion/650/527
 
 commit 3f77940eacac603821e724a06f41cc524a095d88
@@ -6844,13 +6863,13 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Dec 21 12:43:06 2017 +0100
 
     move okular from anon-shared-applications-kde to anon-workstation-default-applications
-    
+
     so it does not get installed on Whonix-Gateway
-    
+
     so also phonon (dependency of okular) does not get installed on Whonix-Gateway
-    
+
     thanks to @TNTBOMBOM for the bug report
-    
+
     https://forums.whonix.org/t/whonix-virtualbox-14-0-0-5-5-testers-wanted/4642/2
 
 commit 8aa5b1fe18bf90363b7730d60f7a71338936fa6c
@@ -6896,9 +6915,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Sep 24 12:55:30 2017 +0200
 
     no longer install anon-gw-dns-conf and anon-gw-dhcp-conf
-    
+
     to make Whonix-Gateway DNS functional
-    
+
     to make meek (meek-lite) functional
 
 commit 07253d96646f244d83df1e39df8e6723129c2c16
@@ -6912,7 +6931,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Aug 31 11:16:11 2017 +0000
 
     remove onionshare to unbreak build because it has been removed from stretch
-    
+
     https://forums.whonix.org/t/feature-request-onionshare-support/300/11
 
 commit 260cd60aaecbab9aa57d399208600e1e9ffa9c6e
@@ -6965,7 +6984,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jul 13 17:21:21 2017 +0200
 
     Merge pull request #5 from irykoon/master
-    
+
     Added onioncircuits to anon-workstation-packages-recommended
 
 commit 7d3ff699f8010c833484abae5b108a3ec1348c00
@@ -6992,13 +7011,13 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Apr 9 17:41:39 2017 +0200
 
     install busybox by default
-    
+
     by adding it as dependency to anon-shared-packages-dependencies
-    
+
     required for grsecurity kernel support
-    
+
     Thanks to WillyPillow for the suggestion!
-    
+
     https://groups.google.com/d/msg/qubes-devel/lbeVnhxNIP8/MOoj4rqCDQAJ
 
 commit 4caf2f0174558db6cf80650dff83a2c8d6ef97a2
@@ -7006,7 +7025,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Mar 30 15:05:16 2017 +0000
 
     anon-workstation-packages-recommended add depend on gnupg2 gnupg-agent dirmngr
-    
+
     https://phabricator.whonix.org/T652
 
 commit 2882c67461517c57ddae6d2a902b96636b3a5149
@@ -7028,7 +7047,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Mar 16 13:05:18 2017 +0100
 
     Merge pull request #4 from HulaHoopWhonix/patch-4
-    
+
     added codecrypt
 
 commit d3234b989c0c6b72e9bae04e61e4cad5107e8b9e
@@ -7042,7 +7061,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Mar 9 21:09:49 2017 +0000
 
     add console-setup to non-qubes-vm-enhancements
-    
+
     to persist tty keyboard settings
 
 commit 6f99a0b13339ec7b297d6ef51c8bcba1832cf45d
@@ -7134,24 +7153,24 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Feb 17 14:33:15 2017 +0100
 
     readd desktop configuration packages
-    
+
     - kde-no-move-max-win, kde-apper-no-autoupdate, kde-privacy,
     - kde-dolphin-menubar-enable, kde-kgpg-tweaks, kde-konsole-unlim-scrollback,
     - kde-lowfat, kde-mouse-doubleclick, kde-sounds-off, kde-common-resolution,
     - kmix-disable-autostart, anon-kde-streamiso
-    
+
     - anon-gw-kde-startmenu
     - anon-ws-kde-startmenu
-    
+
     - whonix-ws-start-menu-additions,
-    
+
     do not readd:
-    
+
     - whonix-gw-kde-desktop-conf (broken since kde plasma 5?)
     - whonix-ws-kde-desktop-conf (same as above)
-    
+
     do not readd:
-    
+
     - whonix-gw-desktop-shortcuts (broken in Debian stretch)
     - whonix-ws-desktop-shortcuts (same as above)
 
@@ -7160,11 +7179,11 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Feb 16 22:06:06 2017 +0100
 
     add python-msgpack to anon-workstation-packages-recommended
-    
+
     to simplify installation of zeronet
-    
+
     just 67.8 kB
-    
+
     https://phabricator.whonix.org/T597
 
 commit 2a72c485153d8f12593890c505c6018b6a031dd7
@@ -7178,7 +7197,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sat Feb 11 06:57:14 2017 +0100
 
     add fteproxy to anon-gateway-packages-recommended
-    
+
     https://phabricator.whonix.org/T520
 
 commit d76e9e4f37ed2ee62c27794efaca2267f369cde0
@@ -7192,7 +7211,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Feb 10 15:47:49 2017 +0000
 
     remove faketime from Build-Depends:
-    
+
     since no longer used for reproducible builds
 
 commit 616f44f9af1df53096f1ce0e43ff1e0421427169
@@ -7236,7 +7255,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 18 13:30:47 2017 +0000
 
     move apt-transport-tor to anon-shared-packages-dependencies
-    
+
     https://phabricator.whonix.org/T610
 
 commit 5e6779f10c8c615d818183f021a67f12c670034c
@@ -7244,7 +7263,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 18 13:28:06 2017 +0000
 
     explicit depend on libkf5kipi31.0.0 libkf5kipi-data to work around gwenview
-    
+
     dependency bug
 
 commit bad339b38a23a83f4d1373ac6bfd6e5c4a9799f3
@@ -7252,9 +7271,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 18 09:29:23 2017 +0000
 
     install onionshare and ricochet by default
-    
+
     add onionshare and ricochet to anon-workstation-packages-recommended
-    
+
     https://phabricator.whonix.org/T595
 
 commit 5894a9bcafb1fc5bf7ef7de59a745c8bd555900f
@@ -7268,7 +7287,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Jan 16 15:00:26 2017 +0100
 
     remove password manager fpm2 because not in stretch
-    
+
     https://forums.whonix.org/t/add-password-manager-by-default
 
 commit 599deaa70f87e62414f41c56a9b27b901dfc4afd
@@ -7317,7 +7336,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Jan 13 10:32:06 2017 +0000
 
     plasma-workspace -> plasma-desktop
-    
+
     because plasma-workspace alone is not a functional desktop meta package
 
 commit b6cf81320b2cac8d979cab8a8cb21980df0dbf6b
@@ -7325,7 +7344,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jan 12 21:13:46 2017 +0000
 
     add missing dependency kwin-x11
-    
+
     https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=824939
 
 commit db7227aca18f1782103e86f664b962fd656c3a6e
@@ -7333,7 +7352,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jan 12 18:01:57 2017 +0000
 
     add missing dependency plasma-desktop-data to work around Debian bug
-    
+
     http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=851175
 
 commit aa5cc2df118b78f153293c2dcdea730c7ffb9658
@@ -7347,7 +7366,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jan 12 09:19:35 2017 +0000
 
     removed gtk3-engines-oxygen for now since not in stretch
-    
+
     https://phabricator.whonix.org/T601
 
 commit 08873f448cd6235eab52595f830ad7ceaedad9d7
@@ -7373,7 +7392,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Jan 9 03:43:06 2017 +0000
 
     (temporarily?) remove broken desktop / kde config packages
-    
+
     kde-no-move-max-win
     kde-apper-no-autoupdate,
     kde-privacy
@@ -7432,12 +7451,12 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Nov 29 00:46:57 2016 +0100
 
     move audio related packages from anon-workstation-packages-recommended to non-qubes-vm-enhancements
-    
+
     libasound2
     alsa-base
     alsa-utils
     pulseaudio
-    
+
     Setting up audio in Qubes(-Whonix) is up to the Qubes Debian template / qubes-gui-agent, not Whonix.
 
 commit f1b7dfbf2dde1563006b00305ddff09ef9e07d2d
@@ -7445,7 +7464,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Nov 29 00:07:40 2016 +0100
 
     remove dbus from anon-shared-packages-recommended
-    
+
     Packages that require it should depend on it anyhow.
 
 commit ac465f75ccf1810bf3a188236f859fcc59387b36
@@ -7453,7 +7472,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Nov 29 00:00:12 2016 +0100
 
     move some packages from anon-shared-packages-dependencies to non-qubes-vm-enhancements
-    
+
     keyboard-configuration
     kbd
     acpi-support,
@@ -7472,9 +7491,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Nov 28 23:45:21 2016 +0100
 
     moved some packages from anon-shared-packages-recommended to non-qubes-vm-enhancements
-    
+
     because we do not need them in Qubes
-    
+
     poweroff-passwordless (Qubes has passwordless sudo by default https://www.qubes-os.org/doc/vm-sudo/)
     power-savings-disable-in-vms (not required)
     rads (Qubes uses seamless window by default, does not start VNs in text mode and then switches to graphical mode)
@@ -7487,9 +7506,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Nov 28 22:29:22 2016 +0100
 
     add pulseaudio to anon-workstation-packages-recommended
-    
+
     Thanks to entropy for the suggestion!
-    
+
     https://forums.whonix.org/t/no-sound-in-workstation-virtualbox-on-linux-host
 
 commit cd23ef486c1f404f9903f2605fdc2b5972c3bd2e
@@ -7497,9 +7516,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Nov 27 21:35:44 2016 +0100
 
     no longer install accessibility tools by default due to issues
-    
+
     no longer depend on anon-shared-kde-accessibility
-    
+
     https://phabricator.whonix.org/T457
 
 commit f8127ffe22273907c59521f3c72ba8155979f0bb
@@ -7513,7 +7532,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Oct 11 20:17:03 2016 +0200
 
     no longer install apparmor-notify by default
-    
+
     https://phabricator.whonix.org/T557
 
 commit 6bd004b9b145975cff79728d2fb7e74a62655adb
@@ -7521,13 +7540,13 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Oct 11 20:14:35 2016 +0200
 
     no longer install by default brltty, brltty-speechd, brltty-x11
-    
+
     because it opens a local listener
-    
+
     We should try to tame it at some later point.
-    
+
     https://phabricator.whonix.org/T563
-    
+
     https://phabricator.whonix.org/T457
 
 commit 90658cf9a9a5e3bf2843d5ac6fb767744d05bdce
@@ -7549,7 +7568,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Sep 21 17:53:19 2016 +0200
 
     Merge pull request #3 from HulaHoopWhonix/patch-3
-    
+
     added youtube-dl
 
 commit eed9849c872622c1d4e8d10fe1e2991a3f43edff
@@ -7577,7 +7596,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Aug 17 11:52:46 2016 +0000
 
     Merge pull request #2 from HulaHoopWhonix/patch-2
-    
+
     pwgen
 
 commit 9872e7c2cd0198aee4612f902141a915ff74b244
@@ -7591,12 +7610,12 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Aug 15 22:22:33 2016 +0000
 
     no longer install iceweasel by default
-    
+
     since we install Tor Browser by default
-    
+
     and to fix issue
     'iceweasel rather than Tor Browser is default browser bug / has higher mime priority / hexchat opens urls with iceweasel'
-    
+
     https://phabricator.whonix.org/T517
 
 commit ec2e7930c3b0f8cc5c97211514a8f9796e242a4a
@@ -7604,13 +7623,13 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jun 29 23:21:47 2016 +0000
 
     added baloo to anon-shared-applications-kde
-    
+
     This fixes dolphin's search function.
-    
+
     Thanks to @invalidprotocol for the report!
-    
+
     http://forums.whonix.org/t/cant-search-files-getting-invalid-protocol-latest-whonix-v12
-    
+
     https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=766426
 
 commit ff1f6c6a09d420d2bdc1f75e9c840e06ac3f6eb1
@@ -7618,11 +7637,11 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Jun 2 14:34:34 2016 +0000
 
     fix, added gtk2-engines-pixbuf to anon-shared-packages-recommended
-    
+
     So it gets installed in Qubes-Whonix also. Makes dialogs look better.
-    
+
     Thanks to entropy for the bug report!
-    
+
     https://forums.whonix.org/t/qubes-whonix-13-0-0-0-7-testers-wanted/2432/11
 
 commit 4cb7c3be487650483dfb741f978ad1dfaf97b5f8
@@ -7648,7 +7667,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Apr 20 03:20:07 2016 +0000
 
     added missing Qubes-Whonix packages dependencies
-    
+
     since we are no longer using Whonix build script to build Qubes-Whonix
 
 commit efccf51e7c638c2daad4284621768c9940dcc661
@@ -7668,9 +7687,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Apr 15 00:36:01 2016 +0000
 
     removed anon-gw-build-upgrade-tor from whonix-gateway-shared-packages-shared-meta
-    
+
     because no longer required / existing
-    
+
     https://phabricator.whonix.org/T472
 
 commit 08645156bb85fc9bfb1cce39ba64cf67a24fe1b8
@@ -7684,7 +7703,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 7 23:27:21 2016 +0000
 
     removed dependency on packages with chroot scripts
-    
+
     https://phabricator.whonix.org/T461
 
 commit b219f52f820369cbfb6345f37b0f3e27d8d15e9f
@@ -7698,7 +7717,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Apr 7 22:25:27 2016 +0000
 
     fixed lintian warning
-    
+
     anon-meta-packages source: debhelper-but-no-misc-depends anon-shared-desktop-langpack-kde
 
 commit f0c23f5604613349b52ea7cb2fad022b9eb4cc4e
@@ -7713,11 +7732,11 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Mar 31 15:28:16 2016 +0000
 
     have anon-shared-packages-dependencies depend on security-misc
-    
+
     rather then tcp-timestamps-disable.
-    
+
     (tcp-timestamps-disable has been deprecated and merged inti security-misc.)
-    
+
     https://phabricator.whonix.org/T486
 
 commit b09696279bf678c480ed900123cfe1696bb49fdf
@@ -7726,7 +7745,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Mar 31 15:25:01 2016 +0000
 
     Merge pull request #1 from HulaHoopWhonix/patch-1
-    
+
     Update control
 
 commit aef18e64ad1bb1f91592d0a9dcc306f23ec02c9e
@@ -7740,7 +7759,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Mar 21 13:38:37 2016 +0100
 
     added systemsettings to anon-shared-applications-kde
-    
+
     https://phabricator.whonix.org/T429
 
 commit 2f67cb5530030715825ffe07af115a6b828dd4ca
@@ -7748,13 +7767,13 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Mar 21 13:01:58 2016 +0100
 
     removed anon-shared-desktop-kde from whonix-[gateway|workstation]-shared-packages-shared-meta
-    
+
     so it no longer gets installed by default in Qubes-Whonix.
     And readded it to non-qubes-whonix-[gateway|workstation].
-    
+
     This results in no longer installing kde-workspace, kdm,
     plasma-widget-folderview, kde-baseapps-bin in Qubes by default.
-    
+
     https://phabricator.whonix.org/T429
 
 commit c10485620cf8859bc6394b942fe17ff04f844274
@@ -7762,13 +7781,13 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Mar 21 12:52:02 2016 +0100
 
     Removed polkit-kde-1 as dependency from anon-shared-desktop-kde and added it to anon-shared-applications-kde.
-    
+
     polkit-kde-1 is important as long as Whonix is kde-ish, uses kdesudo, otherwise
     leads to issues with kdesudo authentication.
-    
+
     This is required for a clean separation so the anon-shared-desktop-kde package
     is no longer required to be installed by default on Qubes.
-    
+
     https://phabricator.whonix.org/T429
 
 commit 42c42535720b17a0a230546d538bd60cbbcca500
@@ -7782,9 +7801,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Mar 21 12:33:26 2016 +0100
 
     added xserver-xorg-video-fbdev and xserver-xorg-video-vesa to anon-shared-desktop
-    
+
     so X also works without functional VirtualBox guest additions
-    
+
     http://forums.whonix.org/t/virtualbox-guest-additions-uninstalled-no-more-kde-desktop
 
 commit b5c8d2d9a8706de3ce7fbf13a98b78b37d1a0d17
@@ -7798,16 +7817,16 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Feb 23 10:40:24 2016 +0000
 
     split whonix-(gateway|workstation) packages
-    
+
     into:
     - qubes-whonix-(gateway|workstation)
     - non-qubes-whonix-(gateway|workstation)
-    
+
     The Qubes-Whonix version does not depend on the anon-shared-desktop package,
     while the Non-Qubes-Whonix package does. This is to spare Qubes-Whonix users
     from installing packages that are only required to set up a desktop environment
     for Non-Qubes-Whonix users. (Qubes dom0 hosts these packages such as kdm etc.)
-    
+
     https://phabricator.whonix.org/T429
 
 commit bbf35dd494b08607b917ddd8bf16bccddb2f8cdd
@@ -7821,9 +7840,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Feb 22 11:58:04 2016 +0000
 
     split anon-shared-desktop-kde package
-    
+
     into anon-shared-desktop-kde and anon-shared-applications-kde
-    
+
     https://phabricator.whonix.org/T429
 
 commit a984760b00f1cc85eece227a222537335b10507b
@@ -7837,9 +7856,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Feb 21 22:42:24 2016 +0100
 
     removed no longer existing sdwdate plugin packagtes from dependencies
-    
+
     since those were merged into sdwdate
-    
+
     sdwdate-plugin-anon-shared-con-check and sdwdate-plugin-anon-shared-streamiso
 
 commit 63b82c372253a70e45c7c9c079bf35082f55fb0b
@@ -7847,7 +7866,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Feb 21 22:39:44 2016 +0100
 
     deprecated Whonix host packages as no Whonix host is on the horizon anyhow
-    
+
     and since there is now Qubes as host for Whonix (Qubes-Whonix)
 
 commit 38c395cb7cd0e3845e0dd0ca653aad1c146653b9
@@ -7867,11 +7886,11 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Jan 20 19:20:31 2016 +0100
 
     removed AppArmor profiles from apparmor-profiles-whonix that were merged
-    
+
         - apparmor-profile-sdwdate
         - apparmor-profile-timesync
         - apparmor-profile-whonixcheck
-    
+
     https://phabricator.whonix.org/T201
 
 commit dc2b97efef5af2ae67a4134480d1eb32f50da809
@@ -7879,9 +7898,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Jan 8 17:40:13 2016 +0000
 
     install more accessibility tools by default
-    
+
     anon-shared-kde-accessibility
-    
+
     gnome-orca espeakup brltty brltty-speechd brltty-x11 console-braille florence dasher kdeaccessibility kvkbd kmousetool kmag kmouth jovie xbrlapi festival qt-at-spi
 
 commit a8d9e666da27e04abf5e567cdcddd97eaee54339
@@ -7889,7 +7908,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Jan 5 00:17:33 2016 +0000
 
     removed anon-shared-build-log-build-version
-    
+
     Because that is now implemented in anon-base-files postinst.
 
 commit c3e851fb58370ee1aeb06428c00428d6f06097af
@@ -7897,9 +7916,9 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Jan 4 22:10:04 2016 +0000
 
     transition from xchat to hexchat
-    
+
     have anon-workstation-default-applications depend on hexchat rather than xchat
-    
+
     https://phabricator.whonix.org/T40
 
 commit 6a08e96030d5c15cacf4c174d40aab7f2305bf46
@@ -7913,7 +7932,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Dec 25 10:39:52 2015 +0100
 
     fix, pinentry-gtk -> pinentry-gtk2
-    
+
     Thanks to @HulaHoopWhonix for the report!
 
 commit 3d725e5b0553fa0ad1e785c01244ba9c5f4acf41
@@ -7921,7 +7940,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Dec 25 10:11:28 2015 +0100
 
     updated package name plasma-widget-networkmanagement -> plasma-nm
-    
+
     for compatibility with Debian stretch based build
 
 commit 59e2dfd2cbe1c8fac55383d42e745b0e4860de8a
@@ -7941,7 +7960,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Dec 15 04:20:15 2015 +0000
 
     added security-misc to anon-shared-packages-recommended
-    
+
     https://phabricator.whonix.org/T418
 
 commit 29fe18d9e08c46915b680f84af7f9a28500449c8
@@ -7955,7 +7974,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Wed Dec 2 16:07:54 2015 +0000
 
     added gnome-orca and espeakup to anon-shared-kde-accessibility
-    
+
     for better support of visually impaired users
 
 commit 84e21ed0dc0e958c7b32b3e57e55b621fe84e700
@@ -7969,11 +7988,11 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Nov 12 17:48:31 2015 +0000
 
     added gtk2-engines-pixbuf to anon-shared-desktop
-    
+
     Fixes "whonix-ws testing template missing gtk2-engines-pixbuf package"
-    
+
     https://github.com/QubesOS/qubes-issues/issues/1410
-    
+
     Thanks to @qubesuser for the report!
 
 commit 8f5033d2b320c6bc423f66fb2bcc228b4e3741de
@@ -7987,7 +8006,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Nov 6 11:33:05 2015 +0000
 
     added ntfs-3g to anon-shared-packages-recommended
-    
+
     Prevents users from seeing error such as:
     An error occurred while accessing 'USB-STICK', the system responded: The requested operation has failed: Error mounting /dev/xvdi1 at /media/user/USB-STICK: Command-line `mount -t "ntfs" -o "uhelper=udisks2,nodev,nosuid,uid=1000,gid=1000,dmask=0077,fmask=0177" "/dev/xvdi1" "/media/user/USB-STICK"' exited with non-zero exit status 32: mount: unknown filesystem type 'ntfs'
 
@@ -8128,7 +8147,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Apr 17 17:10:30 2015 +0000
 
     Revert "added console-setup to anon-shared-packages-dependencies so users can use /etc/default/keyboard as alternative mechanism to change the keyboard layout"
-    
+
     This reverts commit 626ba2ef951f76bfd26f1dee9f28743698e5180a.
 
 commit 828ebdc945623b5f50b9e471223075e0da330d13
@@ -8136,7 +8155,7 @@ Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Fri Apr 17 17:10:22 2015 +0000
 
     Revert "added console-data to anon-shared-packages-dependencies to make sure all three packages console-setup, console-data and console-common are installed."
-    
+
     This reverts commit 14e76f29589393d1326d864105cd7834688a474e.
 
 commit bb00b5cf249e65ef5e3f108c52004e1d05fa0118
