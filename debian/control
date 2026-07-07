@@ -362,6 +362,22 @@ Description: All systems, physical hardware, command-line packages
  .
  Provides packages for basic command-line-only installations.
 
+Package: dist-baremetal-gui-all
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: virtualbox-guest-additions-iso | virtualbox-7.2 | virtualbox-7.3 | virtualbox-7.4 | virtualbox-8.0 | virtualbox-8.1 | virtualbox-8.2 | virtualbox-8.3 | virtualbox-8.4,
+ ${misc:Depends}
+Breaks: virtualbox-guest-x11,
+ virtualbox-guest-utils
+Replaces: virtualbox-guest-x11,
+ virtualbox-guest-utils
+Description: All systems, physical hardware, GUI packages
+ For all hardened systems.
+ .
+ For physical hardware.
+ .
+ Provides packages for all graphical desktop installations.
+
 Package: dist-baremetal-gui-lxqt
 Architecture: all
 Pre-Depends: legacy-dist
@@ -385,6 +401,22 @@ Description: All systems, VMs, command-line packages
  For non-Qubes virtual machines.
  .
  Provides packages for basic command-line-only installations.
+
+Package: dist-vm-gui-all
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: virtualbox-guest-additions-iso | virtualbox-7.2 | virtualbox-7.3 | virtualbox-7.4 | virtualbox-8.0 | virtualbox-8.1 | virtualbox-8.2 | virtualbox-8.3 | virtualbox-8.4,
+ ${misc:Depends}
+Breaks: virtualbox-guest-x11,
+ virtualbox-guest-utils
+Replaces: virtualbox-guest-x11,
+ virtualbox-guest-utils
+Description: All systems, VMs, GUI packages
+ For all hardened systems.
+ .
+ For non-Qubes virtual machines.
+ .
+ Provides packages for all graphical desktop installations.
 
 Package: kicksecure-general-cli
 Architecture: all
@@ -605,6 +637,7 @@ Depends: kicksecure-baremetal-cli,
  kicksecure-general-gui-all,
  kicksecure-general-cli,
  dist-baremetal-gui-lxqt,
+ dist-baremetal-gui-all,
  dist-baremetal-cli,
  dist-nonqubes-gui-lxqt,
  dist-nonqubes-gui-all,
@@ -670,6 +703,7 @@ Depends: kicksecure-vm-cli,
  kicksecure-general-gui-lxqt,
  kicksecure-general-gui-all,
  kicksecure-general-cli,
+ dist-vm-gui-all,
  dist-vm-cli,
  dist-nonqubes-gui-lxqt,
  dist-nonqubes-gui-all,
