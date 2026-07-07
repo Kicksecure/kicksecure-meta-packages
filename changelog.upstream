@@ -1,3 +1,22 @@
+commit a555b77a9ac40db790a8b596e80212411a7f886a
+Merge: 403170b b1b4c96
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jul 7 06:16:38 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/ArrayBolt3/arraybolt3/trixie'
+
+commit b1b4c9669fa2aa7b76016e9316c53d88a6348e79
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sun Jun 28 15:23:13 2026 -0400
+
+    Replace virtualbox-guest-x11 and virtualbox-guest-utils with virtualbox-guest-additions-iso or a sufficiently new Oracle build of VirtualBox
+
+commit 403170b2d2a5743d586dbe3bf6754e4e209d373e
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed May 20 22:07:01 2026 +0000
+
+    bumped changelog version
+
 commit be4962b715e1b98623157545b9f347534f5979fb
 Author: Patrick Schleizer <adrelanos@whonix.org>
 Date:   Wed May 20 16:56:55 2026 -0400
