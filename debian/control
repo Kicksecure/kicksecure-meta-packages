@@ -736,6 +736,7 @@ Depends: kicksecure-base-files,
  usability-misc,
  serial-console-enable,
  systemcheck,
+ user-sysmaint-split,
  ${misc:Depends}
 Description: Kicksecure minimal boot-test / debug image
  A deliberately minimal package set for fast boot-test iteration: the boot chain
