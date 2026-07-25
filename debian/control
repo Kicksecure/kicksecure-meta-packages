@@ -728,6 +728,7 @@ Architecture: all
 Pre-Depends: legacy-dist
 Depends: kicksecure-base-files,
  dist-base-files,
+ initializer-dist,
  vm-config-dist,
  security-misc-server,
  tirdad-dkms,
