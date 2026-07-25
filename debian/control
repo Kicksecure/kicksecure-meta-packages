@@ -723,6 +723,27 @@ Description: Kicksecure systems, VMs, LXQt GUI packages
  .
  Provides packages for LXQt graphical desktop installations.
 
+Package: kicksecure-debug
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: kicksecure-base-files,
+ dist-base-files,
+ vm-config-dist,
+ security-misc-server,
+ tirdad-dkms,
+ rads,
+ ram-wipe,
+ usability-misc,
+ serial-console-enable,
+ systemcheck,
+ ${misc:Depends}
+Description: Kicksecure minimal boot-test / debug image
+ A deliberately minimal package set for fast boot-test iteration: the boot chain
+ (the GRUB SMBIOS cmdline reader, serial console, RAM wipe, headless GPU-skip),
+ the core hardening configuration and systemcheck -- WITHOUT the GUI, browser or
+ anonymity application layer. NOT for production use; intended only to speed up
+ boot/grub/systemcheck iteration.
+
 Package: kicksecure-packages-dependencies-pre
 Architecture: all
 Depends: dist-base-files, kicksecure-network-conf, ${misc:Depends}
