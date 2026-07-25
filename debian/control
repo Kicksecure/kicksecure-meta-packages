@@ -729,6 +729,8 @@ Pre-Depends: legacy-dist
 Depends: kicksecure-base-files,
  dist-base-files,
  initializer-dist,
+ apparmor,
+ apparmor-profile-dist,
  vm-config-dist,
  security-misc-server,
  tirdad-dkms,
