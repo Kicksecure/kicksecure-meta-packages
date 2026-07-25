@@ -739,6 +739,8 @@ Depends: kicksecure-base-files,
  usability-misc,
  systemcheck,
  user-sysmaint-split,
+ sudo,
+ libpam-tmpdir,
  ${misc:Depends}
 Description: Kicksecure minimal boot-test / debug image
  A deliberately minimal package set for fast boot-test iteration: the boot
