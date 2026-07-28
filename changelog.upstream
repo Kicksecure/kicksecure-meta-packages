@@ -1,3 +1,126 @@
+commit 54e0c35c7ad91b72a93cd4f50f0a828bdbe411ee
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jul 28 08:11:23 2026 -0400
+
+    description
+
+commit 57edf4aecfca2228ea0f7910b2882eff61d43d59
+Merge: 85ff14e 399dad9
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jul 28 08:06:57 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/org-ai-assisted/master'
+
+commit 399dad96844aba6ba9e84bd61ddea57824972927
+Merge: 85ff14e a48ff67
+Author: assisted-by-ai (Bot Account) (Machine Account) <228987186+assisted-by-ai@users.noreply.github.com>
+Date:   Sun Jul 26 11:42:24 2026 -0400
+
+    Merge pull request #1 from org-ai-assisted/ai-boot-test-minimal-fixes
+
+    kicksecure-debug: sudo + libpam-tmpdir + repository-dist
+
+commit a48ff6789f29d0571cc0b42596ba3a621bc7a09c
+Author: claude (dev74 3cdbae8e-30ec-412d-8ce2-ba63d1c9b6af) <noreply@anthropic.com>
+Date:   Sat Jul 25 20:29:07 2026 -0400
+
+    kicksecure-debug: depend on repository-dist (enable the derivative APT repo)
+
+    systemcheck's check_apt_repository sets EXIT_CODE=1 when neither
+    /etc/apt/sources.list.d/derivative.sources nor the legacy .list exists ("APT
+    Repository: Disabled"). repository-dist ships the tool + initializer that create
+    the derivative sources, so the repo reads as Enabled.
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+commit abfd9737dbf6a0dbb140cf4f58ce8ef24e94c652
+Author: claude (dev74 3cdbae8e-30ec-412d-8ce2-ba63d1c9b6af) <noreply@anthropic.com>
+Date:   Sat Jul 25 15:44:18 2026 -0400
+
+    kicksecure-debug: depend on sudo + libpam-tmpdir
+
+    Two systemcheck checks fail on the minimal kicksecure-debug image because the
+    packages they exercise are absent:
+    - check-sudo: '/usr/bin/sudo: No such file or directory' -> add sudo.
+    - check-privleap-environment-variables: TMP not '/tmp/user/0' -> add
+      libpam-tmpdir (sets the per-user private TMP/TMPDIR), the same dependency the
+      full kicksecure meta package pulls in.
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+commit f114881c1f07f3ebcac565452e4d2dc6a2d46fd6
+Author: claude (dev74 3cdbae8e-30ec-412d-8ce2-ba63d1c9b6af) <noreply@anthropic.com>
+Date:   Sat Jul 25 12:35:28 2026 -0400
+
+    kicksecure-debug: add apparmor + apparmor-profile-dist (systemcheck AppArmor)
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+commit d1cd3b7949cb8fab72d85dfbebc5f3b5d7442a5f
+Author: claude (dev74 3cdbae8e-30ec-412d-8ce2-ba63d1c9b6af) <noreply@anthropic.com>
+Date:   Sat Jul 25 10:41:26 2026 -0400
+
+    kicksecure-debug: wrap description to <=80 cols (lintian fails closed)
+
+    lintian extended-description-line-too-long failed the meta-packages build.
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+commit 68b5291097d840cbd134e1a3d92adcefacdfeb82
+Author: claude (dev74 3cdbae8e-30ec-412d-8ce2-ba63d1c9b6af) <noreply@anthropic.com>
+Date:   Sat Jul 25 10:02:12 2026 -0400
+
+    kicksecure-debug: add initializer-dist (build hard dependency)
+
+    3500_install-packages runs /usr/libexec/initializer-dist/75_growfs in the image
+    (a documented hard dependency) and 4300 runs its chroot-scripts-post.d framework.
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+commit 86567d71c7081cd363083eb2f373e5d9ca8748b0
+Author: claude (dev74 3cdbae8e-30ec-412d-8ce2-ba63d1c9b6af) <noreply@anthropic.com>
+Date:   Sat Jul 25 09:50:57 2026 -0400
+
+    kicksecure-debug: drop serial-console-enable (SMBIOS injection only)
+
+    serial-console-enable is for manual user installation only; it must not be a
+    default dependency. The boot-test serial console is provided exclusively by the
+    SMBIOS-injected kernel cmdline (console=ttyS0 + systemd.debug_shell) via the GRUB
+    SMBIOS reader, so the package was redundant here.
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+commit e9f68de0c9ab38d8ee98dbee2a5dba3090a1dc07
+Author: claude (dev74 3cdbae8e-30ec-412d-8ce2-ba63d1c9b6af) <noreply@anthropic.com>
+Date:   Sat Jul 25 08:09:44 2026 -0400
+
+    kicksecure-debug: add user-sysmaint-split
+
+    Lets the minimal boot-test image exercise the sysmaint session (boot-role=
+    sysmaint) so debug builds can iterate on the sysmaint legs, not just user.
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+commit 7a1afe606d6fdaa5ed26ddfe40b86b6c3f003d73
+Author: claude (dev74 3cdbae8e-30ec-412d-8ce2-ba63d1c9b6af) <noreply@example.com>
+Date:   Sat Jul 25 06:20:20 2026 -0400
+
+    Add kicksecure-debug meta-package (minimal boot-test image)
+
+    A deliberately minimal package set for fast boot/grub/systemcheck iteration: the
+    boot chain (vm-config-dist SMBIOS reader, serial-console-enable, ram-wipe,
+    rads GPU-skip), the hardening core (kicksecure-base-files, dist-base-files,
+    security-misc-server, tirdad-dkms, usability-misc) and systemcheck -- without the
+    GUI, browser or anonymity layer. NOT for production; used by --flavor kicksecure-debug.
+
+    Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
+
+commit 85ff14ed1e6805dc870626eeab43764ced3d4504
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Jul 7 10:36:00 2026 +0000
+
+    bumped changelog version
+
 commit a555b77a9ac40db790a8b596e80212411a7f886a
 Merge: 403170b b1b4c96
 Author: Patrick Schleizer <adrelanos@whonix.org>
