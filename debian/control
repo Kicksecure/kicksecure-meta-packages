@@ -745,13 +745,10 @@ Depends: kicksecure-base-files,
  ${misc:Depends}
 Description: Kicksecure minimal boot-test / debug image
  A deliberately minimal package set for fast boot-test iteration: the boot
- chain (GRUB SMBIOS cmdline reader, RAM wipe, headless GPU-skip), the core
- hardening configuration and systemcheck -- WITHOUT the GUI, browser or
- anonymity application layer. NOT for production use; intended only to speed
- up boot/grub/systemcheck iteration. The serial console is not shipped: it is
- provided exclusively by the SMBIOS-injected kernel cmdline (console=ttyS0 +
- systemd.debug_shell) supplied by the boot-test harness via the GRUB SMBIOS
- reader; serial-console-enable is for manual user installation only.
+ chain (GRUB SMBIOS cmdline reader, RAM wipe).
+ .
+ NOT for production use. Intended only to speed
+ up boot/grub/systemcheck iteration.
 
 Package: kicksecure-packages-dependencies-pre
 Architecture: all
