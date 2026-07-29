@@ -1,0 +1,49 @@
+#!/bin/bash
+
+## Copyright (C) 2012 - 2025 ENCRYPTED SUPPORT LLC <adrelanos@whonix.org>
+## See the file COPYING for copying conditions.
+
+if [ -f /usr/libexec/helper-scripts/pre.bsh ]; then
+   source /usr/libexec/helper-scripts/pre.bsh
+fi
+
+#set -x
+set -e
+
+true "
+#####################################################################
+## INFO: BEGIN: $DPKG_MAINTSCRIPT_PACKAGE $DPKG_MAINTSCRIPT_NAME $*
+#####################################################################
+"
+
+trigger_vbox_guest_installer() {
+  if [ -f "/var/lib/kicksecure-meta-packages/do_once/${FUNCNAME[0]}_dist-vm-gui-all_version_1" ]; then
+    return 0
+  fi
+  mkdir --parents "/var/lib/kicksecure-meta-packages/do_once"
+
+  dpkg-trigger vm-config-dist-manual-vbox-guest-installer
+
+  touch "/var/lib/kicksecure-meta-packages/do_once/${FUNCNAME[0]}_dist-baremetal-gui-all_version_1"
+}
+
+case "$1" in
+  configure)
+    trigger_vbox_guest_installer
+    ;;
+esac
+
+true "INFO: debhelper beginning here."
+
+#DEBHELPER#
+
+true "INFO: Done with debhelper."
+
+true "
+#####################################################################
+## INFO: END  : $DPKG_MAINTSCRIPT_PACKAGE $DPKG_MAINTSCRIPT_NAME $*
+#####################################################################
+"
+
+## Explicitly "exit 0", so eventually trapped errors can be ignored.
+exit 0
