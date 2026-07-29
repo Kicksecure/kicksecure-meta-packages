@@ -16,9 +16,20 @@ true "
 #####################################################################
 "
 
+trigger_vbox_guest_installer() {
+  if [ -f "/var/lib/kicksecure-meta-packages/do_once/${FUNCNAME[0]}_dist-vm-gui-all_version_1" ]; then
+    return 0
+  fi
+  mkdir --parents "/var/lib/kicksecure-meta-packages/do_once"
+
+  dpkg-trigger vm-config-dist-manual-vbox-guest-installer
+
+  touch "/var/lib/kicksecure-meta-packages/do_once/${FUNCNAME[0]}_dist-baremetal-gui-all_version_1"
+}
+
 case "$1" in
   configure)
-    dpkg-trigger vm-config-dist-manual-vbox-guest-installer
+    trigger_vbox_guest_installer
     ;;
 esac
 
