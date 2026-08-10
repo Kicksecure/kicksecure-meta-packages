@@ -1,3 +1,22 @@
+commit 60099a91981e0a719f3412223ad11850421b4357
+Merge: 807ecd0 7b0f66d
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Aug 9 02:50:13 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/ArrayBolt3/arraybolt3/trixie'
+
+commit 7b0f66db11580cb663c36da4c4b1ec343c2c8c5f
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Sun Aug 2 18:20:23 2026 -0400
+
+    Make VirtualBox Guest Additions dependencies arch-specific
+
+commit 807ecd0b540538806e8c6ff5f22569d78770e419
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Wed Jul 29 12:16:33 2026 +0000
+
+    bumped changelog version
+
 commit 31fa46853dbc7e4d087adba8392017eb4e684cb3
 Merge: 667afec 64c2b41
 Author: Patrick Schleizer <adrelanos@whonix.org>
