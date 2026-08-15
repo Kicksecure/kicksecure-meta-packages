@@ -8,6 +8,7 @@ Vcs-Browser: https://github.com/Kicksecure/kicksecure-meta-packages
 Vcs-Git: https://github.com/Kicksecure/kicksecure-meta-packages.git
 Standards-Version: 4.7.2
 Rules-Requires-Root: no
+X-Private-Trivially-Cross-Buildable: yes
 
 Package: dist-general-cli
 Architecture: all
@@ -363,7 +364,7 @@ Description: All systems, physical hardware, command-line packages
  Provides packages for basic command-line-only installations.
 
 Package: dist-baremetal-gui-all
-Architecture: all
+Architecture: any
 Pre-Depends: legacy-dist
 Depends: virtualbox-guest-additions-iso [amd64 arm64] | virtualbox-7.2 [amd64] | virtualbox-7.3 [amd64] | virtualbox-7.4 [amd64] | virtualbox-8.0 [amd64] | virtualbox-8.1 [amd64] | virtualbox-8.2 [amd64] | virtualbox-8.3 [amd64] | virtualbox-8.4 [amd64],
  ${misc:Depends}
@@ -403,7 +404,7 @@ Description: All systems, VMs, command-line packages
  Provides packages for basic command-line-only installations.
 
 Package: dist-vm-gui-all
-Architecture: all
+Architecture: any
 Pre-Depends: legacy-dist
 Depends: virtualbox-guest-additions-iso [amd64 arm64] | virtualbox-7.2 [amd64] | virtualbox-7.3 [amd64] | virtualbox-7.4 [amd64] | virtualbox-8.0 [amd64] | virtualbox-8.1 [amd64] | virtualbox-8.2 [amd64] | virtualbox-8.3 [amd64] | virtualbox-8.4 [amd64],
  ${misc:Depends}
