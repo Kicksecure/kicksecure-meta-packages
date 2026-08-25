@@ -1,3 +1,16 @@
+commit 04f4ef4ab3ef1ec43467da9272ab54722c588771
+Merge: 7f8433a 338dd11
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Aug 24 01:32:54 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/org-ai-assisted/ai'
+
+commit 7f8433aca69a99494c15ba6a74f51580528424a2
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sat Aug 15 15:58:11 2026 +0000
+
+    bumped changelog version
+
 commit 6f564b38cdd8efc62e41b61fa677a5872f7fc180
 Merge: 2945df6 51a7c01
 Author: Patrick Schleizer <adrelanos@whonix.org>
@@ -24,11 +37,58 @@ Date:   Sun Aug 9 02:50:13 2026 -0400
 
     Merge remote-tracking branch 'refs/remotes/ArrayBolt3/arraybolt3/trixie'
 
+commit 338dd1169d7822bfe22358c4c89338f207b92fe4
+Author: claude (dev163 38f9745c-aed1-4fb4-b6ae-9899f20f8de2) <noreply@anthropic.com>
+Date:   Sat Aug 8 06:11:18 2026 -0400
+
+    CI: enrol in the pre-push static gate
+
+    This repo had no GitHub Actions workflow at all, so nothing verified its PRs on
+    the server side -- the only gate was ci-repro run locally.
+
+    The workflow file is the canonical consumer template, copied verbatim from
+    developer-meta-files/consumer-templates/.github/workflows/. It is managed: once
+    present, dm-packaging-helper-script's pkg_update_consumer_workflows keeps it in
+    sync, so it must not be hand-edited here.
+
+    Enrolment is deliberately a SEPARATE act from propagation: that function uses
+    pkg_update_if_exists, which only updates a workflow that already exists, and
+    pkg_install_dependabot_yml skips any repo with no .github/workflows/ directory.
+    Neither creates the first one. Hence this commit.
+
+    Scope: the repos this session actually changed and that ship shell code -- not
+    every repo lacking CI. Enrolling a repo consumes shared org-wide Actions
+    concurrency (20 jobs, the real limit; public repos are not minute-billed), so it
+    is worth spending where there is signal.
+
+    Verified BEFORE enrolling: 'ci-repro.sh --worktree' passes for this repo, so the
+    gate arrives green rather than turning someone's PR red on arrival.
+
+    NOTE, so it is not a surprise: creating .github/workflows/ makes this repo
+    eligible for the canonical .github/dependabot.yml on the next propagation pass,
+    which pkg_install_dependabot_yml installs into any repo that uses Actions.
+
 commit 7b0f66db11580cb663c36da4c4b1ec343c2c8c5f
 Author: Aaron Rainbolt <arraybolt3@gmail.com>
 Date:   Sun Aug 2 18:20:23 2026 -0400
 
     Make VirtualBox Guest Additions dependencies arch-specific
+
+commit 20d2d56a1a4d59b1ebd9abe5f082512d5424aa71
+Author: claude (dev141 763ccfe0-7bd8-4e8c-afd0-c39aceb48d72) <noreply@anthropic.com>
+Date:   Sat Aug 1 12:48:35 2026 -0400
+
+    kicksecure-debug: add grub-live-dracut, bootclockrandomization, sdwdate
+
+    The flavor is what both the boot-test and reproducibility lanes now build, so
+    what it omits is what those lanes cannot cover.
+
+    - grub-live-dracut: the live-boot grub integration
+    - bootclockrandomization: boot-time clock randomization
+    - sdwdate: time synchronization
+
+    dracut already arrived transitively through ram-wipe's own Depends; these three
+    had no such path in.
 
 commit 807ecd0b540538806e8c6ff5f22569d78770e419
 Author: Patrick Schleizer <adrelanos@whonix.org>
