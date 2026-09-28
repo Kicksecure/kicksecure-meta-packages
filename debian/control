@@ -101,6 +101,9 @@ Depends: apparmor-profile-dist,
  vm-config-dist,
  tor-ctrl,
  mokutil,
+ squashfs-tools,
+ wget,
+ zstd,
  ${misc:Depends}
 Breaks: kicksecure-dependencies-system,
  kicksecure-dependencies-cli,
@@ -355,6 +358,8 @@ Package: dist-baremetal-cli
 Architecture: all
 Pre-Depends: legacy-dist
 Depends: nvme-cli,
+ cryptsetup-initramfs,
+ firmware-freedom,
  ${misc:Depends}
 Description: All systems, physical hardware, command-line packages
  For all hardened systems.
@@ -367,6 +372,7 @@ Package: dist-baremetal-gui-all
 Architecture: any
 Pre-Depends: legacy-dist
 Depends: virtualbox-guest-additions-iso [amd64 arm64] | virtualbox-7.2 [amd64] | virtualbox-7.3 [amd64] | virtualbox-7.4 [amd64] | virtualbox-8.0 [amd64] | virtualbox-8.1 [amd64] | virtualbox-8.2 [amd64] | virtualbox-8.3 [amd64] | virtualbox-8.4 [amd64],
+ spice-vdagent,
  ${misc:Depends}
 Breaks: virtualbox-guest-x11,
  virtualbox-guest-utils
@@ -407,6 +413,7 @@ Package: dist-vm-gui-all
 Architecture: any
 Pre-Depends: legacy-dist
 Depends: virtualbox-guest-additions-iso [amd64 arm64] | virtualbox-7.2 [amd64] | virtualbox-7.3 [amd64] | virtualbox-7.4 [amd64] | virtualbox-8.0 [amd64] | virtualbox-8.1 [amd64] | virtualbox-8.2 [amd64] | virtualbox-8.3 [amd64] | virtualbox-8.4 [amd64],
+ spice-vdagent,
  ${misc:Depends}
 Breaks: virtualbox-guest-x11,
  virtualbox-guest-utils
@@ -661,7 +668,8 @@ Description: Kicksecure systems, physical hardware, LXQt GUI packages
 Package: kicksecure-vm-cli
 Architecture: all
 Pre-Depends: legacy-dist
-Depends: kicksecure-nonqubes-cli,
+Depends: kicksecure-network-conf,
+ kicksecure-nonqubes-cli,
  kicksecure-general-cli,
  dist-vm-cli,
  dist-nonqubes-cli,
@@ -694,10 +702,23 @@ Description: Kicksecure systems, VMs, server packages
  .
  Provides packages for server installations.
 
+Package: kicksecure-vm-gui-all
+Architecture: all
+Pre-Depends: legacy-dist
+Depends: kicksecure-network-conf-gui,
+ ${misc:Depends}
+Description: Kicksecure systems, VMs, GUI packages
+ For Kicksecure systems.
+ .
+ For non-Qubes virtual machines.
+ .
+ Provides packages for all graphical desktop installations.
+
 Package: kicksecure-vm-gui-lxqt
 Architecture: all
 Pre-Depends: legacy-dist
-Depends: kicksecure-vm-cli,
+Depends: kicksecure-vm-gui-all,
+ kicksecure-vm-cli,
  kicksecure-nonqubes-gui-lxqt,
  kicksecure-nonqubes-gui-all,
  kicksecure-nonqubes-cli,
