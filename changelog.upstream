@@ -1,3 +1,22 @@
+commit cab7017ce791f5e20220ee3525fe9aea9b511d35
+Merge: a65f754 a0de360
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Mon Sep 28 01:58:16 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/ArrayBolt3/arraybolt3/trixie'
+
+commit a0de3606b82e946a4353160c2f4436806eab99c9
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Thu Sep 24 16:17:29 2026 -0400
+
+    Move ISO dependencies into metapackages where possible
+
+commit a65f75485d72011deb86316edf6afcdad5abd980
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Sun Sep 6 16:38:41 2026 +0000
+
+    bumped changelog version
+
 commit 86d259b8b2fe7f0f1bc9a19b7f6c5c62fdfb1711
 Merge: 8ba8f18 b1b5132
 Author: Patrick Schleizer <adrelanos@whonix.org>
