@@ -1,3 +1,22 @@
+commit 576ebd31bb93781329ba588c6b232f1a2ee0fe6e
+Merge: bb0f3dd dc99691
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Fri Oct 2 04:10:30 2026 -0400
+
+    Merge remote-tracking branch 'refs/remotes/ArrayBolt3/arraybolt3/trixie'
+
+commit dc99691010b3f905c72c1d5888dff14e5cbdd780
+Author: Aaron Rainbolt <arraybolt3@gmail.com>
+Date:   Wed Sep 30 23:52:36 2026 -0400
+
+    Add keyutils as a dependency, as calamares-settings-debian previously installed it if LUKS is being used
+
+commit bb0f3dd2eac0b67963b9a77121bab1a839fe6b78
+Author: Patrick Schleizer <adrelanos@whonix.org>
+Date:   Tue Sep 29 08:01:13 2026 +0000
+
+    bumped changelog version
+
 commit cab7017ce791f5e20220ee3525fe9aea9b511d35
 Merge: a65f754 a0de360
 Author: Patrick Schleizer <adrelanos@whonix.org>
